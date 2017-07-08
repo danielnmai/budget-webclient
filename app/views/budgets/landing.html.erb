@@ -1,0 +1,22 @@
+<h3>Having a budget has never been easier. Let's started. </h3>
+<%= form_tag '/budgets', method: :get do %>
+<div>
+  <h4> What is your yearly income? </h4>
+  <input type="text" name="income" value="80000">
+</div>
+<div>
+  <h4>Where do you live? </h4>
+  <input type="text" name="location" value="San Jose">
+</div>
+
+<input type="submit" value="Find Your Budget">
+<% end %>
+
+<% if current_user %>
+  <a href="/logout"> Log Out </a>
+  <a href="/users/<%=  current_user.id%>"> Profile </a>
+<% else %>
+  <a href="/users/new">Sign Up</a>
+  <a href="/login"> Log In </a>
+<% end %>
+

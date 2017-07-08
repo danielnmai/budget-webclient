@@ -1,0 +1,31 @@
+Location: <%= @location %>
+Income: <%= @income %>
+
+<table>
+  <tr>
+    <th>  Categories  </th>
+    <th>   Amount </th>
+    <th>  Percentage  </th>
+  </tr>
+   <% sum = 0 %>
+  <% @category_percentages.each do |category| %>
+  <tr>
+    <% percent =  category['percent'] %>
+    <% amount  =  percent * @monthly_income %>
+    <td> <label> <%= category['name'] %> </label> </td>
+    <td> <label> <%= number_to_currency(amount.round, precision: 0) %> </label> </td>
+    <% sum += amount.round %>
+    <td> <label> <%= (percent * 100).round %>% </label> </td>  
+  <% end %>
+   </tr> 
+  <td> Total </td>
+  <td> <%= number_to_currency(sum, precision: 0) %> </td>
+  <td> 100% </td>
+  </tr>
+</table>
+
+<%= form_tag '/budgets', method: :post do %>
+  <input type="submit" value="Choose this budget">  
+<% end %>
+<!-- <a href="/budgets/<%= @budget['id'] %>" > Choose this budget</a> -->
+<a href="/budgets/new"> Create your own budget</a>

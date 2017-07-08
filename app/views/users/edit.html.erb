@@ -1,0 +1,19 @@
+<h2>Update profile </h2>
+<%= form_tag "/users/#{@user.id}", method: :patch do %>
+  <div>
+    <%= label_tag :first_name %>
+    <%= text_field_tag :first_name, @user.first_name %>
+  </div>
+
+  <div>
+    <%= label_tag :last_name %>
+    <%= text_field_tag :last_name, @user.last_name %>
+  </div>
+
+  <div>
+    <%= label_tag :email%>
+    <%= text_field_tag :email, @user.email %>
+  </div>
+  <%= submit_tag "Update" %>
+
+<% end %>

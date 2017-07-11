@@ -40,6 +40,8 @@ gem 'seed_dump'
 gem 'rename'
 # API calls
 gem 'unirest', '~> 1.1.2'
+# User Chart.js to render charts
+gem 'chart-js-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

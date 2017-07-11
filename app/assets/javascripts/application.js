@@ -13,5 +13,45 @@
 //= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require turbolinks
+//= require angular
+//= require app
+//= require Chart.min
 //= require_tree .
+
+
+function loadBarChart(category_names, category_percent) {
+  var ctx = document.getElementById('barChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: category_names,
+      datasets: [{
+        label: 'Category Percent',
+        data: category_percent,
+        backgroundColor: "rgba(153,255,51,0.4)"
+      }]
+    }
+  });
+}
+
+function loadPieChart(category_names, category_percent) {
+  var ctx = document.getElementById("pieChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: category_names,
+      datasets: [{
+        backgroundColor: [
+          "#2ecc71",
+          "#3498db",
+          "#95a5a6",
+          "#9b59b6",
+          "#f1c40f",
+          "#e74c3c",
+          "#34495e"
+        ],
+        data: category_percent
+      }]
+    }
+  });
+}

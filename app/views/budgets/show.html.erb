@@ -1,13 +1,3 @@
-<h3>Something here</h3>
-Budget belongs to:
-First Name: <%= @current_user.first_name %>
-Last Name: <%= @current_user.id%>
-<% @budget.category_percentages.each do |category| %>
-<h3> Name: <%= category['name'] %> </h3>
-<h3> Percentages: <%= category['percent'] %> </h3>
-
-
-<% end %>
-
-
-
+Budget: <%= @budget.name %>
+Budget Categories <%= @budget.categories %>
+Budget Percent <%= @budget.category_percentages %>

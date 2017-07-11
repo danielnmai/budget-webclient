@@ -1,31 +1,70 @@
-Location: <%= @location %>
-Income: <%= @income %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  Location: <%= @location %>
+  Income: <%= @income %>
 
-<table>
-  <tr>
-    <th>  Categories  </th>
-    <th>   Amount </th>
-    <th>  Percentage  </th>
-  </tr>
-   <% sum = 0 %>
-  <% @category_percentages.each do |category| %>
-  <tr>
-    <% percent =  category['percent'] %>
-    <% amount  =  percent * @monthly_income %>
-    <td> <label> <%= category['name'] %> </label> </td>
-    <td> <label> <%= number_to_currency(amount.round, precision: 0) %> </label> </td>
-    <% sum += amount.round %>
-    <td> <label> <%= (percent * 100).round %>% </label> </td>  
-  <% end %>
-   </tr> 
-  <td> Total </td>
-  <td> <%= number_to_currency(sum, precision: 0) %> </td>
-  <td> 100% </td>
+  <table>
+    <tr>
+      <th>  Categories  </th>
+      <th>   Amount </th>
+      <th>  Percentage  </th>
+    </tr>
+    <% sum = 0 %>
+    <% @categories.each do |category| %>
+    <tr>
+      <% percent =  category['percent'] %>
+      <% amount  =  percent * @monthly_income * 0.01 %>
+      <td> <label> <%= category['name'] %> </label> </td>
+      <td> <label> <%= number_to_currency(amount.round, precision: 0) %> </label> </td>
+      <% sum += amount.round %>
+      <td> <label> <%= percent %>% </label> </td>  
+      <% end %>
+    </tr> 
+    <td> Total </td>
+    <td> <%= number_to_currency(sum, precision: 0) %> </td>
+    <td> 100% </td>
   </tr>
 </table>
 
+<!-- If there's no current user, ask user to log in or sign up -->
+<% if !current_user %>
+<a data-toggle="modal" href="/login" data-target="#myModal"> Choose this Budget</a>
+<a data-toggle="modal" href="/budgets/new" data-target="#myModal"> Create your own Budget</a>
+<% else %>
 <%= form_tag '/budgets', method: :post do %>
-  <input type="submit" value="Choose this budget">  
+<%= hidden_field_tag :location, value: @location %>
+<%= hidden_field_tag :income, value: @income %>
+<%= hidden_field_tag :user_id, value: current_user.id %>
+<%= hidden_field_tag :name, value: :name %>
+<input type="submit" value="Choose this budget">
 <% end %>
-<!-- <a href="/budgets/<%= @budget['id'] %>" > Choose this budget</a> -->
 <a href="/budgets/new"> Create your own budget</a>
+<% end %>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+     </div>
+     <div class="modal-body">
+       
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary">Save changes</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+</body>
+</html>

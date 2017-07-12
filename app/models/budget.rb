@@ -1,5 +1,5 @@
 class Budget < ApplicationRecord
-  attr_accessor :id, :user_id, :name, :category_name, :category_percentages, :categories
+  attr_accessor :id, :user_id, :name, :category_name, :category_percentages, :category_percentages, :categories, :category_percent
   def initialize(input_hash)
     @id = input_hash['id']
     @user_id = input_hash['user_id']
@@ -22,26 +22,24 @@ class Budget < ApplicationRecord
     end
   end
 
-  def self.create(user_id, budget_name, category_name, category_percent)
+  def self.create(user_id, budget_name, cat_names, cat_percent)
     api_budget = Unirest.post("http://localhost:3001/api/v1/users/#{user_id}/budgets",
       headers:{ 'Accept' => 'application/json' },
       parameters: {
         name: budget_name,
         user_id: user_id}
         ).body
-    budget = Budget.new(api_budget) 
-    Unirest.post("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{budget.id}/categories",
-      headers:{ 'Accept' => 'application/json' },
-      parameters: {
-        category_name: category_name,
-        category_percent: category_percent}
-        ).body
-    
-  
-     budget
+    budget = Budget.new(api_budget)
+    cat_names.each_with_index do |name, index|
+     percent = cat_percent[index]
+     Unirest.patch("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories/#{index + 1}",
+       headers:{ 'Accept' => 'application/json' },
+       parameters: {name: name, percent: percent}
+         ).body
+   end
   end
 
-  def all_category_names
+  def category_names
     names = []
     api_categories = Unirest.get("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories").body
     api_categories.each do |api_category|
@@ -50,7 +48,7 @@ class Budget < ApplicationRecord
     names
   end
 
-  def all_category_percent
+  def category_percent
     percent = []
     api_categories = Unirest.get("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories").body
     api_categories.each do |api_category|
@@ -66,5 +64,19 @@ class Budget < ApplicationRecord
       categories << api_category
     end
     categories
+  end
+
+  def update(budget_name, cat_names, cat_percent)
+    Unirest.patch("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/",
+      headers:{ 'Accept' => 'application/json' },
+      parameters: {name: budget_name}  
+        ).body
+    cat_names.each_with_index do |name, index|
+      percent = cat_percent[index]
+      Unirest.patch("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories/#{index + 1}",
+        headers:{ 'Accept' => 'application/json' },
+        parameters: {name: name, percent: percent}
+          ).body
+    end
   end
 end

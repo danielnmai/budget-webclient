@@ -1,3 +1,44 @@
-Budget: <%= @budget.name %>
-Budget Categories <%= @budget.categories %>
-Budget Percent <%= @budget.category_percentages %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body onload="loadBarChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)"> 
+
+  <div class="container">
+    <h2>Bar Chart</h2>
+    <div>
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <p id='first'>Something </p>
+
+  <button onclick="loadChart()">Change Color</button>
+
+  <div class="container">
+    <h2>Pie Chart</h2>
+    <div>
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+
+  <button onclick="loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %> )"> Load Pie Chart</button>
+
+  Budget belongs to:
+  First Name: <%= @current_user.first_name %>
+  Last Name: <%= @current_user.id%>
+
+  <% @budget.categories.each do |category| %>
+  <h3 > Name: <%= category['name'] %> </h3>
+  <h3> Percentages: <%= category['percent'] %> </h3>
+  <% end %>
+  
+</body>
+</html>
+
+
+
+
+

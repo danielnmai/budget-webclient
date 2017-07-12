@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get '/' => 'budgets#landing'
+  post '/budgets/default' => 'budgets#create_default'
   resources :budgets
   #      Prefix Verb   URI Pattern                 Controller#Action
   #     budgets GET    /budgets(.:format)          budgets#index

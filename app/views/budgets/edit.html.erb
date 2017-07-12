@@ -1,0 +1,19 @@
+<h2>Update Budget </h2>
+<%= form_tag "/budgets/#{@budget.id}", method: :patch do %>
+  <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @budget.name %>
+  </div>
+  <% @budget.categories.each do |category| %>
+  <div>
+    <%= label_tag :category_name %>
+    <%= text_field_tag "category_names[]", category['name'] %>
+  </div>
+ <div>
+   <%= label_tag :category_percent %>
+   <%= text_field_tag "category_percent[]", category['percent'] %> 
+ </div>
+  
+  <% end %>
+  <%= submit_tag "Update" %>
+<% end %>

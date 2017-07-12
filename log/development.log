@@ -22625,3 +22625,2699 @@ Processing by BudgetsController#show as HTML
 Completed 200 OK in 147ms (Views: 70.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-10 20:56:22 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 189ms (Views: 101.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-10 21:05:15 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A8MbL60+VFjjI95hFzplAXIjr/odDdLtNUp7bnhkXgpDVF+d1z615oMMbiABDDWEusq/0DCFBZPm12vwd7NOog==", "name"=>"default2", "category_name"=>"SomethingNew", "category_percent"=>"12"}
+Redirected to http://localhost:3000/budgets/4
+Completed 302 Found in 209ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets/4" for 127.0.0.1 at 2017-07-10 21:05:15 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all_category_name' for #<Budget not initialized>):
+    4:   <meta charset="UTF-8">
+    5:   <title>Document</title>
+    6: </head>
+    7: <body onload="loadBarChart(<%= @budget.all_category_name %>, <%= @budget.all_category_percent %>)"> 
+    8: 
+    9:   <div class="container">
+   10:     <h2>Bar Chart</h2>
+  
+app/views/budgets/show.html.erb:7:in `_app_views_budgets_show_html_erb__2765760704789764053_70330456218320'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-10 21:05:45 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A8MbL60+VFjjI95hFzplAXIjr/odDdLtNUp7bnhkXgpDVF+d1z615oMMbiABDDWEusq/0DCFBZPm12vwd7NOog==", "name"=>"default3", "category_name"=>"SomethingNew", "category_percent"=>"12"}
+Redirected to http://localhost:3000/budgets/5
+Completed 302 Found in 111ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/5" for 127.0.0.1 at 2017-07-10 21:05:46 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all_category_names' for #<Budget not initialized>):
+    4:   <meta charset="UTF-8">
+    5:   <title>Document</title>
+    6: </head>
+    7: <body onload="loadBarChart(<%= @budget.all_category_names %>, <%= @budget.all_category_percent %>)"> 
+    8: 
+    9:   <div class="container">
+   10:     <h2>Bar Chart</h2>
+  
+app/views/budgets/show.html.erb:7:in `_app_views_budgets_show_html_erb__2765760704789764053_70330464070100'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-10 21:06:25 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A8MbL60+VFjjI95hFzplAXIjr/odDdLtNUp7bnhkXgpDVF+d1z615oMMbiABDDWEusq/0DCFBZPm12vwd7NOog==", "name"=>"default4", "category_name"=>"SomethingNew", "category_percent"=>"12"}
+Redirected to http://localhost:3000/budgets/6
+Completed 302 Found in 119ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/budgets/6" for 127.0.0.1 at 2017-07-10 21:06:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (144.2ms)
+Completed 200 OK in 282ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-10 21:07:01 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 221ms (Views: 122.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-10 21:07:12 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 111ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-10 21:07:13 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 224ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-10 21:07:15 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obcyj54ADGDWaSURTonpDwUcTwOYf+IWf+Xr+YYhjvjhIHY95ADt3rZGlVBYv7mKzfVfKbX3NWisePtnifaeUA==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/7
+Completed 302 Found in 123ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-10 21:07:15 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 275ms (Views: 192.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-10 21:08:44 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 209ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-10 21:08:45 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 145ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-10 21:08:58 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c011KuTvn+Wv6Abay+POyTXtljafNzu/g4E5erTs+qsz2jGYnu9+W8/Htpvd1Z5M/QSGHLK/7MFQHCnkuzvqAw==", "name"=>"default6", "category_name"=>"Default2", "category_percent"=>"29.0"}
+Redirected to http://localhost:3000/budgets/8
+Completed 302 Found in 108ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/8" for 127.0.0.1 at 2017-07-10 21:08:58 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (151.5ms)
+Completed 200 OK in 297ms (Views: 197.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-10 21:09:16 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (141.4ms)
+Completed 200 OK in 288ms (Views: 190.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 21:09:19 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (300.2ms)
+Completed 200 OK in 443ms (Views: 349.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 21:09:38 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (298.4ms)
+Completed 200 OK in 472ms (Views: 380.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-10 21:11:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 101ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-10 21:11:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 169ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-10 21:11:51 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 120ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-10 21:13:32 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 119ms (Views: 116.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-10 21:18:23 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 232ms (Views: 130.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 21:18:30 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (296.5ms)
+Completed 200 OK in 444ms (Views: 345.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:18:34 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 149ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:18:51 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 142ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:19:46 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 147ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:20:41 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 203ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:21:12 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (128.9ms)
+Completed 200 OK in 277ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-10 21:21:44 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 308ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-10 21:21:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 106ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-10 21:21:50 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 217ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-10 21:21:51 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJ/KVsfLwmlcBUKXHXTce/waYqPiKufdUy69lIWpz2D8CI7kvcsj1zwq8tYLQoz+NPNyic+iMKOAs60Kin7fyA==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/9
+Completed 302 Found in 128ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/9" for 127.0.0.1 at 2017-07-10 21:21:51 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (151.8ms)
+Completed 200 OK in 292ms (Views: 201.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-10 21:25:16 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 241ms (Views: 138.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 21:25:22 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (304.0ms)
+Completed 200 OK in 504ms (Views: 394.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-10 21:25:25 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 203ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 21:25:29 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (290.0ms)
+Completed 200 OK in 448ms (Views: 348.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-10 21:25:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-10 21:25:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 176ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-10 21:25:43 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 204ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 21:25:47 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (314.0ms)
+Completed 200 OK in 471ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:25:54 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 229ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:26:25 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 212ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:26:58 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 223ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 21:27:13 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 220ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:07:48 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 139ms (Views: 45.6ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:08:24 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 124ms (Views: 49.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:09:47 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 118ms (Views: 51.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:14:37 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 112ms (Views: 42.8ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:15:18 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 126ms (Views: 55.2ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:15:32 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 159ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:15:34 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 105ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:18:11 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 125ms (Views: 56.5ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:18:21 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 110ms (Views: 43.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:18:46 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 123ms (Views: 51.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:18:48 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 105ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:19:50 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 119ms (Views: 44.5ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:19:53 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 110ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:20:24 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 126ms (Views: 50.8ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:20:29 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:21:58 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ET6tF+vh4QqfdspRp07VdYHhQoieSciNL/S8WL0mt28074GJa9mOkpSa2hQq2vQHu6VIA/x8FznIsJvbSOKdQ==", "name"=>"default_budget", "category_name"=>"Other", "category_percent"=>"6.7", "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 115ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:22:01 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 211ms (Views: 108.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:22:21 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cnZCNt+xdCPuIODNwiOlCKlMYgeCv/YuzVR0anuUdVgy4QaEpbGVnY4PUIzUFfWNYaVyLa83IVAeyWT0dENl8A==", "name"=>"default_budget", "some_fields"=>["default_budget", "default_budget", "default_budget"], "food"=>"Food1", "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 165ms (Views: 89.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:23:01 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 232ms (Views: 109.4ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:23:03 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dva0Umz2BiOWJtzWnsRAAopXjF/fnyI9lhW67/O+Jmg2YfDgFvbnnfYJbJeI8hCHQr6cdfIX9UNFiKpx/Gk2wA==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 114ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:23:36 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (66.5ms)
+Completed 200 OK in 212ms (Views: 111.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:25:03 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIAukJkwxReHndhvFpNq+e4lK/Ru2GhbppIEG1xxjOTQF2oi4zAkqeeyaC4ApTp8Jsw73kNQvyV1DxSFU6acTA==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 126ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:26:06 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIAukJkwxReHndhvFpNq+e4lK/Ru2GhbppIEG1xxjOTQF2oi4zAkqeeyaC4ApTp8Jsw73kNQvyV1DxSFU6acTA==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 128ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:26:18 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIAukJkwxReHndhvFpNq+e4lK/Ru2GhbppIEG1xxjOTQF2oi4zAkqeeyaC4ApTp8Jsw73kNQvyV1DxSFU6acTA==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 132ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:26:21 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 207ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:26:22 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yQAqUDcv6ED8qmT+zSUlobyj29ROWMlgguJLrgPeiyOJl27iTS8J/pyF1L/bE3UkdErL/mPQHh5Rf1swDAmbiw==", "name"=>"default_budget", "category_names"=>{"2"=>"Housing", "3"=>"Medical", "4"=>"Savings", "5"=>"Transportation", "6"=>"Taxes", "7"=>"Other", "1"=>"Food1"}, "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:27:27 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 210ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:27:28 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEbmCWJitFaOmJF4ScTO/GL5ZEgUeUB0oygk9bw1JyZ80aK7GGJV6O63ITlf8p55qhB0YjnxlwpwtTRrs+I3jg==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 109ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:28:08 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 204ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:28:09 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"peWnHfGJdCQiQmhrtSgdb2Vf4uiApMoHIH8F+qEZLqPlcuOvi4mVmkJt2CqjHk3qrbbywq0sHXnz4hVkrs4+Cw==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>{"Housing"=>"30.1", "Medical"=>"5.1", "Savings"=>"7.0", "Transportation"=>"12.4", "Taxes"=>"29.5", "Other"=>"6.7", "Food1"=>"9.3"}, "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:29:31 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:14: syntax error, unexpected $undefined, expecting ']'
+er.safe_append=']", category[\'percent\'] %> 
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/budgets/edit.html.erb:14: syntax error, unexpected $undefined, expecting ']'
+app/views/budgets/edit.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/budgets/edit.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/budgets/edit.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/budgets/edit.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-10 22:29:53 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.5ms)
+Completed 200 OK in 419ms (Views: 325.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:29:56 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 207ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:30:23 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:14: syntax error, unexpected $undefined, expecting ']'
+er.safe_append=']", category[\'percent\'] %> 
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/edit.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/budgets/edit.html.erb:14: syntax error, unexpected $undefined, expecting ']'
+app/views/budgets/edit.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/budgets/edit.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/budgets/edit.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/budgets/edit.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:31:03 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 213ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:31:05 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePUBsfxXmrt3FwT/hrLxyXDhPbHmKBj5Q47L8phliBA4YkUDhld7BRc4tL6QhKFMuAgtm8ugz4eQE9tsl7KYuA==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>{"Housing"=>"30.1", "Medical"=>"5.1", "Savings"=>"7.0", "Transportation"=>"12.4", "Taxes"=>"29.5", "Other"=>"6.7", "Food1"=>"9.3"}, "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 142ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:32:17 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 232ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:32:19 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I9lb84Bz/C1xWqL/Q2TmUkml6/2Q4rn723hTZxejFV1jTh9B+nMdkxF1Er5VUrbXgUz7171qboUI5UP5GHQF9Q==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>{"Housing"=>"30.1", "Medical"=>"5.1", "Savings"=>"7.0", "Transportation"=>"12.4", "Taxes"=>"29.5", "Other"=>"6.7", "Food1"=>"9.3"}, "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 106ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:35:15 -0700
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/controllers/budgets_controller.rb:39: syntax error, unexpected tIVAR, expecting ')'
+    @name = params[:name]
+         ^):
+  
+app/controllers/budgets_controller.rb:39: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:35:37 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 214ms (Views: 102.4ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:35:39 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ufFRlV/FCQNfkogbHVkdJW9uF8HNQCRqyEedeYvBx835ZhUnJcXovT+9OFoLb02gp4cH6+DI8xQb2o3nhBbXZQ==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 146ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:35:50 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ufFRlV/FCQNfkogbHVkdJW9uF8HNQCRqyEedeYvBx835ZhUnJcXovT+9OFoLb02gp4cH6+DI8xQb2o3nhBbXZQ==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 142ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:41:35 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 232ms (Views: 113.0ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:41:44 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6sFKSVrqLikxQcBGqmAMrVXOD9XLrEbKeZd8OgpJ15eqVg77IOrPl1FucAe8VlwonScf/+YkkbSqCmykBZ7HPw==", "name"=>"default_new", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `budget' for #<Budget not initialized>):
+  
+app/models/budget.rb:70:in `update'
+app/controllers/budgets_controller.rb:39:in `update'
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:42:49 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 224ms (Views: 103.5ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:42:54 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kqICu/mhK9u9ytTnn0fnKUqOdXz9OJX0ZEWNQoLXlCbSNUYJg6HKZd3lZKaJcbesgmdlVtCwQoq32J3cjQCEjg==", "name"=>"default", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 189ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:42:58 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kqICu/mhK9u9ytTnn0fnKUqOdXz9OJX0ZEWNQoLXlCbSNUYJg6HKZd3lZKaJcbesgmdlVtCwQoq32J3cjQCEjg==", "name"=>"default", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 271ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-10 22:43:14 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 223ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:43:23 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wbzqqquNG7usZIDBMv5cwk5M7GB/SM4oP8ZMPGzBFFiBK64Y0Y36BcxLMIAkyAxHhqX8SlLAGVbsW1yiYxYE8A==", "name"=>"fucking_bullshit", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 171ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-10 22:43:27 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wbzqqquNG7usZIDBMv5cwk5M7GB/SM4oP8ZMPGzBFFiBK64Y0Y36BcxLMIAkyAxHhqX8SlLAGVbsW1yiYxYE8A==", "name"=>"fucking_bullshit", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 175ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:07:30 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 365ms (Views: 139.1ms | ActiveRecord: 39.8ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:07:42 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3X6W1nD6Vzgq6Mwae5iMqd1hnKk7wzzorrRKBeUOTSSd6dJkCvq2hkrHfFttrtwsFYiMgxZL65Z9KVqb6tldjA==", "name"=>"default", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.9", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 672ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:08:12 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3X6W1nD6Vzgq6Mwae5iMqd1hnKk7wzzorrRKBeUOTSSd6dJkCvq2hkrHfFttrtwsFYiMgxZL65Z9KVqb6tldjA==", "name"=>"default", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Food1"], "category_percent"=>["30.9", "5.1", "7.0", "12.4", "29.5", "6.7", "9.3"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 593ms (Views: 106.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:08:47 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 223ms (Views: 123.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 17:11:13 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (311.7ms)
+Completed 200 OK in 477ms (Views: 365.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:11:15 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 206ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:11:18 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NrWknwF8tBmuSznIHZTfGUsO73fPvPGjVf4VQGBu9K12IuAte3xVp85kiYkLoo+cg+f/XeI0Jt2GYwXeb7nkBQ==", "name"=>"default", "category_names"=>["Other", "Savings", "Transportation", "Taxes", "Other", "Food1", "Food"], "category_percent"=>["6.7", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 148ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:13:05 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 234ms (Views: 117.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:13:20 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 254ms (Views: 143.1ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:13:23 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y2a0v+nGmUH13mgE0tEQzDT7OgReD1CA73rD/QB/7Z0j8fANk8Z4/5Xx2EXE50BJ/BIqLnOHh/4859NjD6j9NQ==", "name"=>"default", "category_names"=>["Other", "Savings", "Transportation", "Taxes", "Other", "Food1", "Food"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 904ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:13:33 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 208ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:14:43 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 235ms (Views: 122.9ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:15:00 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tBKu0a/ZVzXq3sr9VUJw3LOTIEcxxMxROZOs2c7PMWP0hepj1dm2i4rxerxDdCBZe3owbRxMGy/qDrxHwRghyw==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 601ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:15:08 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 195ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:15:16 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VRP9FrsFaAEWbGyoE7FRdu4Dod10xYyK/tXTTylj0QAVhLmkwQWJv3ZD3OkFhwHzJuqx91lNW/QtSMPRJrTBqA==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 522ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:15:23 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 207ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:15:26 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 206ms (Views: 104.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:15:32 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQDRCw9BYvl5rY/HFDvD3Tlt0in7pi6fiYV0E5+1U64Zl5W5dUGDRxmCP4YCDZNY8YTCA9Yu+eFaGGSNkGJDBg==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 518ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:15:36 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQDRCw9BYvl5rY/HFDvD3Tlt0in7pi6fiYV0E5+1U64Zl5W5dUGDRxmCP4YCDZNY8YTCA9Yu+eFaGGSNkGJDBg==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 550ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:15:39 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQDRCw9BYvl5rY/HFDvD3Tlt0in7pi6fiYV0E5+1U64Zl5W5dUGDRxmCP4YCDZNY8YTCA9Yu+eFaGGSNkGJDBg==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 520ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:16:02 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQDRCw9BYvl5rY/HFDvD3Tlt0in7pi6fiYV0E5+1U64Zl5W5dUGDRxmCP4YCDZNY8YTCA9Yu+eFaGGSNkGJDBg==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 522ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-11 17:16:07 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 206ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 17:16:08 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 110ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 17:16:18 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 192ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 17:16:20 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b8py9vO/WyMO1uOX4qE7W0AbD2SU8tpp+ngBPMMvnaEvXTZEib+6nW75U9b0l2veiPIfTrl6DRcp5RGizPiNCQ==", "location"=>"{:value=>nil}", "income"=>"{:value=>nil}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/10
+Completed 302 Found in 122ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/10" for 127.0.0.1 at 2017-07-11 17:16:20 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (160.8ms)
+Completed 200 OK in 303ms (Views: 212.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 17:16:24 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.7ms)
+Completed 200 OK in 421ms (Views: 322.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:16:28 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 194ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:16:33 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/MI78NuMwtpaik6YCqugC/6MhGUrZExRGhqLs6p26EbZExduW7StQlFmXt2HP4F5xMiO7klRk+X9XqwwX7LCQ==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 509ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:17:53 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 218ms (Views: 102.9ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:17:57 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TMpZoCy8s3cp30KHb6VyFEV2zSq3/WpbFeUgs/T+atsMXR0SVrxSyUnw8sZ5kyKRjZ/dAJp1vSXGeDAt+yl6cw==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "7.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 519ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:19:46 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 219ms (Views: 100.9ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:19:51 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DzST0Ig1bK3vt+8nqvUnmjPv8wz9aMMt93dfZMgg3p1Po9di8jWNE4+YX2a8w3cf+wbjJtDgFFMk6k/6x/fONQ==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "5.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 512ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:19:54 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DzST0Ig1bK3vt+8nqvUnmjPv8wz9aMMt93dfZMgg3p1Po9di8jWNE4+YX2a8w3cf+wbjJtDgFFMk6k/6x/fONQ==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "5.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 583ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:22:07 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 206ms (Views: 98.2ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:22:09 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Udq3SqKQUhhfNWSUlC+MxsNADeozOKKgkChMVPjgs7YRTfP42JCzpj8a1NWCGdxDC6kdwB6wdd5DtVzK9zejHg==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "5.0", "12.4", "29.5", "6.7", "9.3", "7.1"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 530ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:22:58 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 206ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:23:56 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uxbuuRz2ns40fQ7B/i4lY/9rORCC+SpORSpQ//1bgIn7gaoLZvZ/cFRSvoDoGHXmN4IpOq9x/TCWt0Bh8oyQIQ==", "name"=>"default", "category_names"=>["Something", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 556ms (Views: 56.1ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:24:14 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uxbuuRz2ns40fQ7B/i4lY/9rORCC+SpORSpQ//1bgIn7gaoLZvZ/cFRSvoDoGHXmN4IpOq9x/TCWt0Bh8oyQIQ==", "name"=>"default", "category_names"=>["Something", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 509ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:27:35 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uxbuuRz2ns40fQ7B/i4lY/9rORCC+SpORSpQ//1bgIn7gaoLZvZ/cFRSvoDoGHXmN4IpOq9x/TCWt0Bh8oyQIQ==", "name"=>"default", "category_names"=>["Something", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 530ms (Views: 43.1ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:27:50 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uxbuuRz2ns40fQ7B/i4lY/9rORCC+SpORSpQ//1bgIn7gaoLZvZ/cFRSvoDoGHXmN4IpOq9x/TCWt0Bh8oyQIQ==", "name"=>"default", "category_names"=>["Something", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 542ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:29:02 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uxbuuRz2ns40fQ7B/i4lY/9rORCC+SpORSpQ//1bgIn7gaoLZvZ/cFRSvoDoGHXmN4IpOq9x/TCWt0Bh8oyQIQ==", "name"=>"default", "category_names"=>["Something", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.2", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 521ms (Views: 42.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:29:14 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 206ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-11 17:29:17 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 202ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 17:29:20 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yJaLUibpBlRHL+2U+QV0nG5BFw78qMM3dYB8S/eCMrCIAc/gXOnn6icAXdXvMyQZpqgHJNEgFEmmHWzV+FUiGA==", "location"=>"{:value=>nil}", "income"=>"{:value=>nil}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/11
+Completed 302 Found in 117ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/11" for 127.0.0.1 at 2017-07-11 17:29:20 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (152.1ms)
+Completed 200 OK in 304ms (Views: 200.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 17:29:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (278.4ms)
+Completed 200 OK in 421ms (Views: 322.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:29:30 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 199ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:29:37 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+nreM8+7mbEEcPdLMsRbgZHeQhYWLyeIPIK4kJ7xG3i67ZqBtbt4D2RfRwok8gsEWTdSPDun8PbvH6gOkSYL0A==", "name"=>"default", "category_names"=>["OtherHAHA", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 539ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:29:50 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+nreM8+7mbEEcPdLMsRbgZHeQhYWLyeIPIK4kJ7xG3i67ZqBtbt4D2RfRwok8gsEWTdSPDun8PbvH6gOkSYL0A==", "name"=>"default", "category_names"=>["OtherHAHA", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 530ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:30:27 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+nreM8+7mbEEcPdLMsRbgZHeQhYWLyeIPIK4kJ7xG3i67ZqBtbt4D2RfRwok8gsEWTdSPDun8PbvH6gOkSYL0A==", "name"=>"default", "category_names"=>["OtherHAHA", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.9", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 577ms (Views: 47.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 17:30:30 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 199ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 17:30:32 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.6ms)
+Completed 200 OK in 424ms (Views: 325.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:30:37 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 212ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:30:46 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bOJs2yppbWT1WahapvCeAwhBIfj4We8x4r4Ny6jLytAsdShpUGmM2pV2GBuwxs6GwKgx0tXROE8xIx1VpxzaeA==", "name"=>"default", "category_names"=>["Name", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["6.7", "2.22", "3.33", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 519ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:31:48 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 225ms (Views: 108.9ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:32:05 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FM3cqlGg2kYVCpAL7XBPp0y6hNcLbbDelLIdOD3hx21UWpgYK6A7+HUlIEr7Rh8ihFOU/SblZ6BHLw2mMjbXxQ==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["1", "2", "3", "4", "5", "6", "7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 538ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:32:21 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 209ms (Views: 99.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:32:39 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kMN5I35EE+dZej7UBGPnsLa/alRttgxR0TZMHhzj16PQVD2RBETyWTlVjpUSVbc1flZ6fkA+2y8Cq1yAEzTHCw==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["1", "2", "3", "4", "5", "6", "7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 517ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-11 17:32:56 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 199ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:33:02 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 219ms (Views: 107.8ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:33:07 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YZlud34P03DR0jllZG79KGV5W+8iAeR/IXD9Sk8C9/EhDirFBA8yzrH9iSRyWK2trZBLxQ+JMwHy7e3UQNXnWQ==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["2", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 543ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:34:24 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 216ms (Views: 102.8ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:34:46 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pC+cax8sgNyterHk9WSii3feqmV9t6jRJ/XKcOZ4CBLkuNjZZSxhYs1VAaXjUvIOvze6T1A/f6/0aNru6a8Yug==", "name"=>"default", "category_names"=>["Other", "Food", "Trans", "Taxes", "Housing", "Something", "Ala"], "category_percent"=>["1", "2.2", "3.3", "4.4", "5.5", "6.6", "7.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 349ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:35:39 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 216ms (Views: 104.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 17:36:15 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (99.4ms)
+Completed 200 OK in 1015ms (Views: 491.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 17:36:18 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 89ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 17:36:21 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 17:36:21 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 17:37:52 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 140ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 17:37:55 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 17:37:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WRN86NPv11cs1hlz6pn4S9oeqUcvkVAgZCF7otEoODlJMzSwfZUs5gwXYZx7yNGtTk3EeAq6L/XTvBhPTyTb+A==", "email"=>"dan@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Array:0x007fbe85c8faa0>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-07-11 17:38:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 68ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 17:38:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OB5uMwyonqdVXkXnGy9fUTB07We9mAbvQZSNPO/yMs0oPiZrotJlFnWfPQiKfna3pCeAWJizeTr2Ce7Rcf7RDA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 128ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 17:38:23 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 184ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 17:38:25 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AbOwH3l2wVURGVAEQ7xYYMU5jdDjT97Xykqto4mzkWdBJPStA3Yg63E24EVVigjlDdCd+s7HCakZ1709hmSBzw==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/2
+Completed 302 Found in 114ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-11 17:38:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (143.8ms)
+Completed 200 OK in 262ms (Views: 189.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2/edit" for 127.0.0.1 at 2017-07-11 17:38:33 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 159ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:38:41 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 189ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:39:02 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDMVPDe6UokAgltNvaZjuuaPFECMm2061zmmnDZGg3PIpFGOTbqzN2Ct6wyrkDM/LmYEaqETukQEpLYCOZGT2w==", "name"=>"default_budget", "category_names"=>["Food", "Housing", "Medical", "Savings", "Transportation", "Taxes", "Other"], "category_percent"=>["9.12", "30.1", "5.1", "7.0", "12.4", "29.5", "6.7"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 312ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 17:40:32 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-11 17:41:30 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (144.6ms)
+Completed 200 OK in 265ms (Views: 195.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2/edit" for 127.0.0.1 at 2017-07-11 17:41:34 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 143ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/2" for 127.0.0.1 at 2017-07-11 17:41:50 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"be9S4MyxtdAt9WjHPDAWbaogdkoOitwTqI5qFPvV1LwteBZStrFUbk3a2IYqBkboYslmYCMCC217E3qK9ALEFA==", "name"=>"default_2", "category_names"=>["Sports"], "category_percent"=>["300"], "commit"=>"Update", "id"=>"2"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 383ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2/edit" for 127.0.0.1 at 2017-07-11 17:45:32 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 250ms (Views: 77.8ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/budgets/2" for 127.0.0.1 at 2017-07-11 17:45:40 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjS6z7jrzc4rnlqDa04ym1WAmEz47O4waTGwCZXcsfjCo/59wusscEux6sJ9eGIenWmIZtVkOU66rKCXmguhUA==", "name"=>"default_2", "category_names"=>["Sport"], "category_percent"=>["200"], "commit"=>"Update", "id"=>"2"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 396ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2/edit" for 127.0.0.1 at 2017-07-11 17:46:22 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 161ms (Views: 73.8ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/budgets/2" for 127.0.0.1 at 2017-07-11 17:46:27 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjqzDzlDf5lk940PRH4ZsSrvAHzLpg1Ms/zQdgjqvifmrfe9Q0OeJwTYPU5SSEk04gYQVuYu2jJgYcDoBz2ujw==", "name"=>"default_2", "category_names"=>["gaga"], "category_percent"=>["123"], "commit"=>"Update", "id"=>"2"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 379ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:48:18 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 184ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 17:48:29 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 97ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 17:48:41 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqZ95nfv4iBfTn8mcIafwyF8/JoPSlv+EzqIkOTqZILaMTlUDe8Dnj9hz2dmsM9G6ZXssCLCjIDAp5gO6z10Kg==", "name"=>"gaga", "category_name"=>"sotb", "category_percent"=>"123"}
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/models/budget.rb:39:in `+'
+app/models/budget.rb:39:in `create'
+app/controllers/budgets_controller.rb:17:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 17:49:00 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqZ95nfv4iBfTn8mcIafwyF8/JoPSlv+EzqIkOTqZILaMTlUDe8Dnj9hz2dmsM9G6ZXssCLCjIDAp5gO6z10Kg==", "name"=>"gaga", "category_name"=>"sotb", "category_percent"=>"123"}
+Redirected to http://localhost:3000/budgets/4
+Completed 302 Found in 114ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/budgets/4" for 127.0.0.1 at 2017-07-11 17:49:00 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (135.1ms)
+Completed 200 OK in 256ms (Views: 178.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/4/edit" for 127.0.0.1 at 2017-07-11 17:49:07 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 154ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 17:50:09 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.3ms)
+Completed 200 OK in 408ms (Views: 324.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 17:50:13 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 187ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 17:50:21 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EG0IKyG8/23sY7FgPJSf1IFZh8e9UH+XbTuakXzelJtQ+kyZW7we04xMASEqos9RSbCX7ZDYqOm+pooPcwmEMw==", "name"=>"default_shittt", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"], "commit"=>"Update", "id"=>"1"}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 333ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:07:54 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 100ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:07:56 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 180ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:07:57 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"McMT+aTfKu3sl8DDGll7XzWDtNf2GdloLu0oLK+InNNxVFdL3t/LU4y4cIIMbyva/Wqk/duRDhb9cDiyoF+Mew==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/5
+Completed 302 Found in 98ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/5" for 127.0.0.1 at 2017-07-11 18:07:57 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (134.4ms)
+Completed 200 OK in 261ms (Views: 183.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:08:00 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"McMT+aTfKu3sl8DDGll7XzWDtNf2GdloLu0oLK+InNNxVFdL3t/LU4y4cIIMbyva/Wqk/duRDhb9cDiyoF+Mew==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/6
+Completed 302 Found in 101ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/6" for 127.0.0.1 at 2017-07-11 18:08:00 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (141.3ms)
+Completed 200 OK in 265ms (Views: 184.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:15:50 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (123.0ms)
+Completed 200 OK in 169ms (Views: 166.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 18:15:52 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:15:52 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:15:53 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 168ms (Views: 52.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 18:15:59 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 18:16:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e1pnLYBR+zFbsMJx631YBZVNJQaAT23Ve5Xe14afSkRrei91LisAgHtxup56LHHjAR5IOaVkEgDMCL06GJOphQ==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 121ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:16:03 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 206ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:16:06 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i7Biswt3silqX/O4fzgsSr5susve35z+8zazEGxOvLHLJyYBcXdTlwpwQ/lpDnzPdoWq4fNXS4Agq6OOY5msGQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}"}
+Redirected to http://localhost:3000/budgets/7
+Completed 302 Found in 118ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-11 18:16:06 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (154.9ms)
+Completed 200 OK in 288ms (Views: 201.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:17:45 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 106ms (Views: 103.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 18:17:47 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:17:47 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:17:48 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (117.2ms)
+Completed 200 OK in 366ms (Views: 161.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:22:55 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (168.2ms)
+Completed 200 OK in 362ms (Views: 212.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 18:22:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 69ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 18:23:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DrgiDb7xtfUPrLIkO8Bn1EsDZpyeobK/mRzxTGy/n8kemGpVEItORC9tysuqkU4y31ALo7uKzWougZKh8rN8CA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 131ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:23:01 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (338.7ms)
+Completed 200 OK in 532ms (Views: 382.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:23:04 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe886014d8>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:24:47 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe89862f28>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:25:42 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 2.1ms)
+
+
+  
+NameError (undefined local variable or method `default_cat_names' for #<BudgetsController:0x007fbe89143468>
+Did you mean?  default_static_extension):
+  
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:26:05 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe8e09c820>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:23:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:27:40 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe8cdb39e8>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:23:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:28:33 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 2.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/budgets_controller.rb:21:in `[]'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:29:22 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 2.1ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/budgets_controller.rb:21:in `[]'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:30:55 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe886298c0>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:25:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:31:32 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 2.2ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/budgets_controller.rb:23:in `[]'
+app/controllers/budgets_controller.rb:23:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:32:00 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe85f714a8>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:25:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:34:14 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for #<String:0x007fbe8d56e3b8>
+Did you mean?  each_line):
+  
+app/models/budget.rb:75:in `update'
+app/controllers/budgets_controller.rb:25:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:35:20 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Redirected to http://localhost:3000/budgets/19
+Completed 302 Found in 146ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets/19" for 127.0.0.1 at 2017-07-11 18:35:21 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"19"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (142.5ms)
+Completed 200 OK in 314ms (Views: 196.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:36:30 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 2.3ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/budgets_controller.rb:21:in `+'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:37:00 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Redirected to http://localhost:3000/budgets/21
+Completed 302 Found in 150ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets/21" for 127.0.0.1 at 2017-07-11 18:37:00 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (153.9ms)
+Completed 200 OK in 317ms (Views: 201.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:39:12 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `values' for #<String:0x007fbe8c988468>):
+  
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:41:05 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `to_h' for #<String:0x007fbe8d6079a0>
+Did you mean?  to_s
+               to_d
+               to_f
+               to_i
+               to_c
+               to_r):
+  
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:41:37 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `to_h' for #<String:0x007fbe8d316b38>
+Did you mean?  to_s
+               to_d
+               to_f
+               to_i
+               to_c
+               to_r):
+  
+app/controllers/budgets_controller.rb:22:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:42:01 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Redirected to http://localhost:3000/budgets/25
+Completed 302 Found in 165ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets/25" for 127.0.0.1 at 2017-07-11 18:42:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"25"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (141.0ms)
+Completed 200 OK in 328ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:42:32 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `to_h' for #<String:0x007fbe88419d78>
+Did you mean?  to_s
+               to_d
+               to_f
+               to_i
+               to_c
+               to_r):
+  
+app/controllers/budgets_controller.rb:22:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:46:58 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 2.1ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/budgets_controller.rb:22:in `+'
+app/controllers/budgets_controller.rb:22:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:47:51 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/budgets_controller.rb:22:in `+'
+app/controllers/budgets_controller.rb:22:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:47:56 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPdC1zviIblNxHjD6PHaFZaTfN3sLy8NSkgK2qQ3WM2AYAZlQeLABy3ryIL+x4qQXnps98Gn+HOZ1RpEq+BIZQ==", "location"=>"{:value=>\"San Jose\"}", "income"=>"{:value=>\"80000\"}", "user_id"=>"{:value=>1}", "name"=>"{:value=>:name}", "default_cat_names"=>"{:value=>[\"Housing\", \"Medical\", \"Savings\", \"Transportation\", \"Taxes\", \"Other\", \"gaga\"]}", "default_cat_percent"=>"{:value=>[30.1, 5.1, 7.0, 12.4, 29.5, 6.7, 9.12]}"}
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/budgets_controller.rb:22:in `+'
+app/controllers/budgets_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:47:58 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 166ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:47:59 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (411.7ms)
+Completed 200 OK in 617ms (Views: 457.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:48:02 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sJncOoNLUolEGs3DVs5F4rNEHDk1cFze6VVwwiWxEHjwDpiI+UuzNyQ1fYJA+BVne60MExj4i6A6yGBcKmYA0A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/controllers/budgets_controller.rb:22:in `+'
+app/controllers/budgets_controller.rb:22:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:48:13 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sJncOoNLUolEGs3DVs5F4rNEHDk1cFze6VVwwiWxEHjwDpiI+UuzNyQ1fYJA+BVne60MExj4i6A6yGBcKmYA0A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/31
+Completed 302 Found in 187ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/31" for 127.0.0.1 at 2017-07-11 18:48:14 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"31"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (152.7ms)
+Completed 200 OK in 349ms (Views: 199.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:49:29 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (125.6ms)
+Completed 200 OK in 173ms (Views: 170.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 18:49:31 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:49:31 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:49:32 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (203.4ms)
+Completed 200 OK in 423ms (Views: 255.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 18:49:34 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 18:49:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QQZ75G3tNqIBWivMwDjNStq047qmK0jf84mb8vHUWGBRJjO8w5fNEyGbUyNRaeSsTueOhYMANwpEFPgfb9i7oQ==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 185ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:49:37 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (475.6ms)
+Completed 200 OK in 677ms (Views: 521.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:49:39 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/32
+Completed 302 Found in 1815ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/32" for 127.0.0.1 at 2017-07-11 18:49:41 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"32"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (164.4ms)
+Completed 200 OK in 365ms (Views: 219.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:52:00 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 2.1ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/controllers/budgets_controller.rb:21:in `+'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:52:16 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/34
+Completed 302 Found in 1851ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets/34" for 127.0.0.1 at 2017-07-11 18:52:18 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"34"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (168.5ms)
+Completed 200 OK in 389ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:52:56 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/35
+Completed 302 Found in 1839ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/35" for 127.0.0.1 at 2017-07-11 18:52:58 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"35"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (140.8ms)
+Completed 200 OK in 340ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:53:51 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/36
+Completed 302 Found in 1832ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/36" for 127.0.0.1 at 2017-07-11 18:53:53 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"36"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 360ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:56:21 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/37
+Completed 302 Found in 200ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/37" for 127.0.0.1 at 2017-07-11 18:56:21 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"37"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (138.9ms)
+Completed 200 OK in 342ms (Views: 185.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 18:56:35 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDwkgmBEV4pr3/d9L8teD2IvWC9ucV3dDgCuooCfzkh0q2AwGkS2NAvwRzw5/Q6KqsZIBUP5iqPdnb48j0je4A==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"]}
+Redirected to http://localhost:3000/budgets/38
+Completed 302 Found in 197ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets/38" for 127.0.0.1 at 2017-07-11 18:56:36 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"38"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (142.8ms)
+Completed 200 OK in 349ms (Views: 196.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 18:56:39 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (138.6ms)
+Completed 200 OK in 186ms (Views: 184.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 18:56:41 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (409.8ms)
+Completed 200 OK in 604ms (Views: 459.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 18:56:43 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGIxGhABR8GTKJTMEPPz+A+ieunNnNPLUwmpAsJz3+zc9XWoagGmf/MHJI0GxaN9x0tqw+AUBLWAlLmczaTPRA==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30", "5", "7", "12", "29", "6", "9"]}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    2: Budget Name: <%= @name %>
+    3: <%= @category_names %>
+    4: <%= @category_percent %>
+    5: <%= @budget.id %>
+    6: <%= @category %>
+  
+app/views/budgets/update.html.erb:5:in `_app_views_budgets_update_html_erb__737169940778905502_70228160278060'
+app/controllers/budgets_controller.rb:20:in `create_default'
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 18:58:08 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGIxGhABR8GTKJTMEPPz+A+ieunNnNPLUwmpAsJz3+zc9XWoagGmf/MHJI0GxaN9x0tqw+AUBLWAlLmczaTPRA==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30", "5", "7", "12", "29", "6", "9"]}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 180ms (Views: 44.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:03:07 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGIxGhABR8GTKJTMEPPz+A+ieunNnNPLUwmpAsJz3+zc9XWoagGmf/MHJI0GxaN9x0tqw+AUBLWAlLmczaTPRA==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30", "5", "7", "12", "29", "6", "9"]}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 195ms (Views: 53.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:05:26 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGIxGhABR8GTKJTMEPPz+A+ieunNnNPLUwmpAsJz3+zc9XWoagGmf/MHJI0GxaN9x0tqw+AUBLWAlLmczaTPRA==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30", "5", "7", "12", "29", "6", "9"]}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 180ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:05:40 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGIxGhABR8GTKJTMEPPz+A+ieunNnNPLUwmpAsJz3+zc9XWoagGmf/MHJI0GxaN9x0tqw+AUBLWAlLmczaTPRA==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "cat_percent"=>["30", "5", "7", "12", "29", "6", "9"]}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 182ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:29:39 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:24: syntax error, unexpected '<', expecting ')'
+      <% amount  =  percent * @monthl
+       ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:24: syntax error, unexpected '=', expecting ')'
+      <% amount  =  percent * @monthly_income * 
+                  ^):
+  
+app/views/budgets/index.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/budgets/index.html.erb:24: syntax error, unexpected '=', expecting ')'
+app/controllers/budgets_controller.rb:16:in `index'
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:30:17 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (463.8ms)
+Completed 200 OK in 666ms (Views: 511.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:30:37 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (493.8ms)
+Completed 200 OK in 707ms (Views: 549.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:30:45 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (527.4ms)
+Completed 200 OK in 725ms (Views: 575.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:30:58 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (518.9ms)
+Completed 200 OK in 721ms (Views: 566.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:34:25 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"md4eKK6Rqefci8AQoDoOSsaXpwclFOiM/QKYqLKT7fPZSVqa1JFIWbykcFG2DF7PDn63LQicP/Iun4g2vUT9Ww==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"]}
+No template found for BudgetsController#create_default, rendering head :no_content
+Completed 204 No Content in 226ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:34:27 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (530.1ms)
+Completed 200 OK in 735ms (Views: 578.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:34:30 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNgTGYm2/2Im9tM0PU2T/dAhRnAl90vCSqrRn4nfGXo4T1er87Ye3EbZY3Ure8N4GMhWWgh/nLyZN8EBhggJ0g==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"]}
+No template found for BudgetsController#create_default, rendering head :no_content
+Completed 204 No Content in 215ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 19:34:45 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (144.7ms)
+Completed 200 OK in 203ms (Views: 199.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:34:48 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNgTGYm2/2Im9tM0PU2T/dAhRnAl90vCSqrRn4nfGXo4T1er87Ye3EbZY3Ure8N4GMhWWgh/nLyZN8EBhggJ0g==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"]}
+  Rendering budgets/update.html.erb within layouts/application
+  Rendered budgets/update.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 344ms (Views: 155.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:36:27 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNgTGYm2/2Im9tM0PU2T/dAhRnAl90vCSqrRn4nfGXo4T1er87Ye3EbZY3Ure8N4GMhWWgh/nLyZN8EBhggJ0g==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"]}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (309.3ms)
+Completed 200 OK in 602ms (Views: 363.1ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:37:21 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNgTGYm2/2Im9tM0PU2T/dAhRnAl90vCSqrRn4nfGXo4T1er87Ye3EbZY3Ure8N4GMhWWgh/nLyZN8EBhggJ0g==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name", "cat_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"]}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (317.0ms)
+Completed 200 OK in 544ms (Views: 363.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 19:44:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (132.9ms)
+Completed 200 OK in 188ms (Views: 185.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:44:40 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (385.3ms)
+Completed 200 OK in 476ms (Views: 434.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:46:07 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (326.1ms)
+Completed 200 OK in 418ms (Views: 372.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:46:28 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (275.8ms)
+Completed 200 OK in 370ms (Views: 321.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 19:46:30 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8A94r65aOceUBpDrPZneC9JPwc4rJNDlWodzhoKIL/awmDwd1FrYefQpIKorr46OGqbR5AasB5uJGmMYjV8/Xg==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (283.5ms)
+Completed 200 OK in 499ms (Views: 327.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 19:48:11 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 201ms (Views: 58.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 19:49:50 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (319.1ms)
+Completed 200 OK in 561ms (Views: 371.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 19:50:17 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 287ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 19:50:27 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E4eO3ZOVyGoNYKspiaSavVoxZ+dgBGlltudl4HmQyrlTEMpv6ZUp1G1PG2ifkso4kth3zU2MvhtlenV+dkfaEQ==", "name"=>"default_budget", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"], "commit"=>"Update", "id"=>"1"}
+Redirected to http://localhost:3000/budgets/params[:id]
+Completed 302 Found in 366ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/params[:id]" for 127.0.0.1 at 2017-07-11 19:50:27 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"params[:id]"}
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): http://localhost:3001/api/v1/users/1/budgets/params[:id]):
+  
+app/models/budget.rb:13:in `find'
+app/controllers/budgets_controller.rb:38:in `show'
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 19:51:04 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 305ms (Views: 116.1ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 19:51:09 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CPosObKXzhCgW4jsI5t8YiYQPQu0TLoRjAOQA1RPdm5IbWiLyJcvrsB0OK01rSzn7vktIZnEbW9fnoCdW5hmxg==", "name"=>"default_this", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "category_percent"=>["30.1", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"], "commit"=>"Update", "id"=>"1"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 365ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 19:51:10 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (304.7ms)
+Completed 200 OK in 535ms (Views: 352.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 19:51:20 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CPosObKXzhCgW4jsI5t8YiYQPQu0TLoRjAOQA1RPdm5IbWiLyJcvrsB0OK01rSzn7vktIZnEbW9fnoCdW5hmxg==", "name"=>"default_this", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "category_percent"=>["10", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"], "commit"=>"Update", "id"=>"1"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 378ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 19:51:21 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (302.8ms)
+Completed 200 OK in 542ms (Views: 358.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 19:56:44 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (266.2ms)
+Completed 200 OK in 355ms (Views: 312.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 19:56:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (145.1ms)
+Completed 200 OK in 204ms (Views: 201.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 19:56:53 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (259.7ms)
+Completed 200 OK in 348ms (Views: 307.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=20000&location=Milpitas" for 127.0.0.1 at 2017-07-11 19:57:07 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"20000", "location"=>"Milpitas"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (276.2ms)
+Completed 200 OK in 365ms (Views: 325.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 19:57:24 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 207ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-11 19:57:34 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MogPFWae7B1PZJn/OpHHlC3hu7nusshL9ktdgLEjLrNyH0unHJ4Noy9LKb4sp5cR5Qirk8M6HzUl1k0evvQ+Gw==", "name"=>"default_new", "category_name"=>"haha", "category_percent"=>"123"}
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  
+app/models/budget.rb:33:in `create'
+app/controllers/budgets_controller.rb:21:in `create'
+Started GET "/" for 127.0.0.1 at 2017-07-11 19:57:47 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (146.7ms)
+Completed 200 OK in 204ms (Views: 201.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 20:00:20 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (188.2ms)
+Completed 200 OK in 235ms (Views: 232.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 20:00:22 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 20:00:22 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 20:00:24 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 20:00:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgbwRREvIZKdGA9g9ZjX/pd6hUXz82hgSqYJVCV4CaASkbT3ay/ALP03vyHjrod7X5OVb957vx6ZOxnKKq8ZCA==", "email"=>"luna@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=20000&location=Milpitas
+Completed 302 Found in 202ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=20000&location=Milpitas" for 127.0.0.1 at 2017-07-11 20:00:30 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"20000", "location"=>"Milpitas"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 218ms (Views: 183.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 20:00:32 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IYP2G7gDDL/DN4IEzpKfF6NH2VFkxMelQSxk9MFrn+lhFLKpwgPtAaMYMkXYpM+Sa67Je0lMENuSsXRqzryPQQ==", "location"=>"Milpitas", "income"=>"20000", "user_id"=>"2", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.6ms)
+Completed 200 OK in 399ms (Views: 333.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 20:03:06 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (143.4ms)
+Completed 200 OK in 225ms (Views: 188.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 20:03:08 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vb0MVVs94Cz9eeP4Z33XVuSrMSRRmxbcsWQ4xHkCii39KkjnIT0Bkp1WU7lxS4fTLEIhDnwTwaJi+ShadtWahQ==", "location"=>"", "income"=>"", "user_id"=>"2", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (274.9ms)
+Completed 200 OK in 389ms (Views: 320.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 20:03:12 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 20:03:13 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 20:03:13 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 20:03:17 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 20:03:20 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IKBludWNwtAvBJjUPPlG3ifdte59wuHOUgNMbDHtZ7JgNyELr40jbk8rKJUqzxZb7zSlxFBKNrCBnlzyPjp3Gg==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 203ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 20:03:20 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (259.2ms)
+Completed 200 OK in 343ms (Views: 306.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 20:03:24 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 20:03:28 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (248.3ms)
+Completed 200 OK in 347ms (Views: 305.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 20:03:30 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 198ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+

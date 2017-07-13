@@ -32,10 +32,11 @@ class Budget < ApplicationRecord
     budget = Budget.new(api_budget)
     cat_names.each_with_index do |name, index|
      percent = cat_percent[index]
-     Unirest.patch("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories/#{index + 1}",
+     Unirest.post("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{budget.id}/categories",
        headers:{ 'Accept' => 'application/json' },
-       parameters: {name: name, percent: percent}
-         ).body
+       parameters: {category_name: name, category_percent: percent}
+         ).body 
+     return budget
    end
   end
 
@@ -78,5 +79,5 @@ class Budget < ApplicationRecord
         parameters: {name: name, percent: percent}
           ).body
     end
-  end
+  end 
 end

@@ -19,6 +19,8 @@ class BudgetsController < ApplicationController
 
   def create
     @budget = Budget.create(current_user.id, params[:name], params[:cat_names], params[:cat_percent])
+    p params[:cat_names]
+    p params[:cat_percent]
 
     if @budget.user_id == current_user.id
       flash[:success] = 'Successfully created budget!'
@@ -46,5 +48,11 @@ class BudgetsController < ApplicationController
     @category_names = params[:category_names]
     @category_percent = params[:category_percent]
     redirect_to "/budgets/#{params[:id]}"
+  end
+
+  def destroy
+    Unirest.delete("http://localhost:3001/api/v1/users/#{current_user.id}/budgets/#{params[:id]}", headers:{'Accept' => 'Application/json'} )
+    flash[:warning] = 'Budget successfully deleted'
+    redirect_to '/budgets'
   end
 end

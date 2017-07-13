@@ -25321,3 +25321,2644 @@ Processing by BudgetsController#new as HTML
 Completed 200 OK in 198ms (Views: 46.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:08:53 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (262.7ms)
+Completed 200 OK in 362ms (Views: 322.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:09:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 21:10:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BQ1gDzTQWsnf2E4b/dVhAhx0iL+lHHCtKnDgFbJqYIhFmiS9TtC7d7/3/lrr4zGH1J2YlYiUp9P57fCLvb1wIA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 231ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:10:01 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (269.5ms)
+Completed 200 OK in 368ms (Views: 329.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:10:05 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Yv5hUvflZmv/Al452h75nulawnazZOHlVCKfSwKyTu5HL03Md90J8/TuTnxXitjs0x7I/dFRPlGzZrjI93Zkw==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (308.1ms)
+Completed 200 OK in 524ms (Views: 357.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/css/bootstrap.min.css" for 127.0.0.1 at 2017-07-11 21:10:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/css/bootstrap.min.css"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/css/bootstrap-responsive.min.css" for 127.0.0.1 at 2017-07-11 21:10:06 -0700
+Started GET "/budgets/css/font-awesome.min.css" for 127.0.0.1 at 2017-07-11 21:10:06 -0700
+Started GET "/budgets/css/main.css" for 127.0.0.1 at 2017-07-11 21:10:06 -0700
+  
+Started GET "/budgets/css/sl-slide.css" for 127.0.0.1 at 2017-07-11 21:10:06 -0700
+  
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/css/bootstrap-responsive.min.css"):
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/css/font-awesome.min.css"):
+ActionController::RoutingError (No route matches [GET] "/budgets/css/main.css"):
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/css/sl-slide.css"):
+  
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" for 127.0.0.1 at 2017-07-11 21:10:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/vendor/jquery-1.9.1.min.js" for 127.0.0.1 at 2017-07-11 21:10:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/vendor/jquery-1.9.1.min.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/vendor/bootstrap.min.js" for 127.0.0.1 at 2017-07-11 21:10:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/vendor/bootstrap.min.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/main.js" for 127.0.0.1 at 2017-07-11 21:10:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/main.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/jquery.slitslider.js" for 127.0.0.1 at 2017-07-11 21:10:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/jquery.slitslider.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/jquery.ba-cond.min.js" for 127.0.0.1 at 2017-07-11 21:10:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/jquery.ba-cond.min.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/main.js" for 127.0.0.1 at 2017-07-11 21:10:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/main.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/jquery.ba-cond.min.js" for 127.0.0.1 at 2017-07-11 21:10:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/jquery.ba-cond.min.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/js/jquery.slitslider.js" for 127.0.0.1 at 2017-07-11 21:10:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/js/jquery.slitslider.js"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/images/ico/favicon.ico" for 127.0.0.1 at 2017-07-11 21:10:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets/images/ico/favicon.ico"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 21:13:08 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (257.1ms)
+Completed 200 OK in 351ms (Views: 313.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:13:18 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 21:13:22 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kdbux9nZm1BFSTpPNuOk8maozixh6mbPyW7S+8k4SdzRQap1o9l67iVmig4g1fR3rkHeBkxisbEa88Jlxu9ZdA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 219ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 21:13:22 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (283.1ms)
+Completed 200 OK in 384ms (Views: 346.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:13:34 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 200ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/index.html" for 127.0.0.1 at 2017-07-11 21:13:36 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1185.4ms)
+Completed 200 OK in 1401ms (Views: 1237.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:13:43 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 203ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:13:47 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 208ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:13:50 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-11 21:13:55 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-11 21:14:01 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 21:14:39 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 21:14:46 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (122.1ms)
+Completed 200 OK in 206ms (Views: 168.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:14:48 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:14:48 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:14:48 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 79ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:14:48 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 100ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:16:01 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:16:01 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 21:16:05 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iwlDzZwPgWdu1t37PJMjcu9u/G/6VMcLRE4Za7WATD3Lngd/5g9g2Q75bboqpXP3J4fsRdfcEHWX0wn1uldclQ==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 258ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 21:16:05 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (293.0ms)
+Completed 200 OK in 388ms (Views: 339.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:16:08 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 199ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/index.html" for 127.0.0.1 at 2017-07-11 21:16:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1147.8ms)
+Completed 200 OK in 1362ms (Views: 1207.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:17:01 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (311.4ms)
+Completed 200 OK in 540ms (Views: 360.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/index.html" for 127.0.0.1 at 2017-07-11 21:17:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1170.9ms)
+Completed 200 OK in 1382ms (Views: 1223.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/index.html" for 127.0.0.1 at 2017-07-11 21:17:20 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1195.7ms)
+Completed 200 OK in 1415ms (Views: 1252.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/index.html" for 127.0.0.1 at 2017-07-11 21:17:35 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1113.5ms)
+Completed 200 OK in 1354ms (Views: 1189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/portfolio.html" for 127.0.0.1 at 2017-07-11 21:17:42 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"portfolio"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1139.7ms)
+Completed 200 OK in 1355ms (Views: 1192.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/.html" for 127.0.0.1 at 2017-07-11 21:21:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:21:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (146.0ms)
+Completed 200 OK in 197ms (Views: 195.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:21:58 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (288.2ms)
+Completed 200 OK in 373ms (Views: 334.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:22:01 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EY9rAgO7Ccpaj/S7iqLcW2HPnblHCksuPGlNfTNLy19RGC+webvodDqgRPqclIzeqSaNk2qCnFDv9F3jPJzb9w==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (300.6ms)
+Completed 200 OK in 545ms (Views: 353.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-11 21:25:30 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (276.1ms)
+Completed 200 OK in 362ms (Views: 323.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for 127.0.0.1 at 2017-07-11 21:25:32 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (203.9ms)
+Completed 200 OK in 255ms (Views: 253.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for 127.0.0.1 at 2017-07-11 21:25:34 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (136.1ms)
+Completed 200 OK in 187ms (Views: 184.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for 127.0.0.1 at 2017-07-11 21:25:35 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (146.5ms)
+Completed 200 OK in 205ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:25:36 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 187ms (Views: 184.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:25:53 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (143.0ms)
+Completed 200 OK in 192ms (Views: 190.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:25:58 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (135.3ms)
+Completed 200 OK in 196ms (Views: 194.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:26:02 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (142.9ms)
+Completed 200 OK in 191ms (Views: 189.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:26:09 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (146.5ms)
+Completed 200 OK in 194ms (Views: 192.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:26:31 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (143.8ms)
+Completed 200 OK in 193ms (Views: 191.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:28:55 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (145.4ms)
+Completed 200 OK in 207ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:28:57 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (285.0ms)
+Completed 200 OK in 374ms (Views: 334.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:29:00 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PjKL9PwDbwTsUTo/nXZUw/PrdBkY4d3vAdQPB5P+m6V+pc9GhgOOuox+in6LQARGOwJkMzVpCpHSSR+ZnCmLDQ==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (304.6ms)
+Completed 200 OK in 606ms (Views: 353.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:29:49 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (149.3ms)
+Completed 200 OK in 211ms (Views: 208.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:30:03 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (145.5ms)
+Completed 200 OK in 193ms (Views: 191.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-11 21:30:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 350ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 21:30:08 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:30:08 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:30:11 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (125.2ms)
+Completed 200 OK in 213ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:30:16 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:30:16 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:30:16 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 77ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:30:16 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 102ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 21:31:32 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (122.2ms)
+Completed 200 OK in 211ms (Views: 172.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:32:17 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:32:28 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (119.4ms)
+Completed 200 OK in 217ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:32:34 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-11 21:32:36 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:32:39 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:32:42 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 210ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:32:47 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 76ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:32:47 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 96ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:32:55 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 21:32:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahNJ7EhbwawZC5CHH7j5otj/5RYA53zzFyUH91q7VDQqhA1eMlsgEnkkIMYJjqknEBb1PC1vq43EuBdpVWxEnA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 212ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:32:59 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (258.5ms)
+Completed 200 OK in 354ms (Views: 308.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:33:01 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b772+l7EFiaZXrhR6gp+rECEyJGVFg6nrGTTLlXUslkvKbJIJMT3mPlxCBD8PC4piG3Yu7ie2dl/+cOwWgOi8Q==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (313.8ms)
+Completed 200 OK in 543ms (Views: 363.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:33:16 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 21:33:20 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wYTctbRjTurMeC+jeD92WGdtUf6o/9wULldAzFZGkUyBE5gHzmOvVKxXn+JuCSbdr4RB1IV3C2r9ylBSWZGB5A==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 216ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:33:21 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (271.7ms)
+Completed 200 OK in 365ms (Views: 324.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:33:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (312.5ms)
+Completed 200 OK in 544ms (Views: 363.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 21:33:28 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 301ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 21:33:45 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"36r66dqpncPqaARNMiXXYNSksjv9ZO6MhG0K5bHTMWGfPb5boKl8fYpHtAwkE4flHE2iEdDsOfJX8Bp7vgQhyQ==", "name"=>"default_this", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "gaga"], "category_percent"=>["30", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"], "commit"=>"Update", "id"=>"1"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 436ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:33:45 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (277.2ms)
+Completed 200 OK in 520ms (Views: 328.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 21:33:52 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 285ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 21:34:00 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 198ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:35:06 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (144.5ms)
+Completed 200 OK in 195ms (Views: 193.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-11 21:35:24 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 348ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-11 21:35:25 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 213ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:49:08 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (147.3ms)
+Completed 200 OK in 199ms (Views: 197.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:49:36 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (194.6ms)
+Completed 200 OK in 244ms (Views: 242.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:49:38 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (261.6ms)
+Completed 200 OK in 377ms (Views: 321.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:49:40 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AsID/+/rzVP9zq4L+zgwB81+s9ST53g+0B+EW0GgGHFCVUdNless7Z3hHkrtDmCCBZej/r5vr0ADgpTFTncI2Q==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (300.6ms)
+Completed 200 OK in 534ms (Views: 351.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:49:47 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (145.8ms)
+Completed 200 OK in 194ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:54:22 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (146.4ms)
+Completed 200 OK in 206ms (Views: 203.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2017-07-11 21:54:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:54:39 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (143.5ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2017-07-11 21:54:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:55:21 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (147.9ms)
+Completed 200 OK in 204ms (Views: 202.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:55:23 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (260.1ms)
+Completed 200 OK in 345ms (Views: 304.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:55:28 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0BOF1I89y72lY8muuU8EYwbfkQIyLAt+ToBWuFVRT/z1wqlKDwWkJa6P2es02yURPJubiVAZ1MqpxHE7oJVlw==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (326.2ms)
+Completed 200 OK in 566ms (Views: 384.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-11 21:55:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 348ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 21:55:42 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:55:42 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:55:43 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (151.6ms)
+Completed 200 OK in 257ms (Views: 206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:55:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 73ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 21:56:58 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:57:00 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (131.5ms)
+Completed 200 OK in 233ms (Views: 185.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 21:57:02 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 72ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-11 21:57:05 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjieTXwps+Cd8T/nl8wfd5n2RLprO/9RyYL8a7ZZh5QCGNYV0lNIUb0wRwgGnTaRDaUphU4QgIR+H5+GKFVkVQ==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 220ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 21:57:05 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (283.7ms)
+Completed 200 OK in 369ms (Views: 331.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-11 21:57:07 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUuqPKRIThGTanTHTefKnbe/gJr9IN2pFR+XoSz1/UVB3O6O3kivr/NFxIZb0ZoYf1aQsNCoCtfGgoc/IyLt7Q==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (314.8ms)
+Completed 200 OK in 568ms (Views: 375.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets1" for 127.0.0.1 at 2017-07-11 21:57:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/budgets1"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 21:57:54 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (266.8ms)
+Completed 200 OK in 356ms (Views: 314.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:57:56 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (343.4ms)
+Completed 200 OK in 587ms (Views: 401.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:58:56 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (306.8ms)
+Completed 200 OK in 567ms (Views: 361.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-11 21:59:00 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (267.7ms)
+Completed 200 OK in 357ms (Views: 317.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:59:27 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (318.2ms)
+Completed 200 OK in 560ms (Views: 376.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:59:31 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (318.0ms)
+Completed 200 OK in 553ms (Views: 363.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 21:59:47 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (317.0ms)
+Completed 200 OK in 565ms (Views: 377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1/edit" for 127.0.0.1 at 2017-07-11 21:59:49 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 354ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/budgets/1" for 127.0.0.1 at 2017-07-11 22:00:04 -0700
+Processing by BudgetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KaNdM7mwIWCvh1asmYZQ7ong10xbcIYGNg0DshTK60tpNBmBw7DA3s+o5u2PsABrQQnHZnb4UXjlkBMsGx374w==", "name"=>"default_this", "category_names"=>["Housing", "Medical", "Savings", "Transportation", "Taxes", "Other", "Something"], "category_percent"=>["30.0", "5.1", "7.0", "12.4", "29.5", "6.7", "9.12"], "commit"=>"Update", "id"=>"1"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 386ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 22:00:04 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (310.1ms)
+Completed 200 OK in 535ms (Views: 357.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-11 22:09:29 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (315.0ms)
+Completed 200 OK in 546ms (Views: 374.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:09:37 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (135.6ms)
+Completed 200 OK in 186ms (Views: 184.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-11 22:09:39 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:09:39 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 22:09:40 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-11 22:09:43 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (124.1ms)
+Completed 200 OK in 213ms (Views: 174.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 22:09:45 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-11 22:09:45 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 22:09:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 79ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-11 22:09:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 85ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:11:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2017-07-11 22:11:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:11:46 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:11:53 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:11:56 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:12:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:13:06 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:13:11 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:13:17 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:14:00 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:14:02 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:14:03 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:14:07 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:14:13 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:14:43 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:15:57 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:16:11 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 22:16:15 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (116.7ms)
+Completed 200 OK in 220ms (Views: 173.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-11 22:16:48 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (127.6ms)
+Completed 200 OK in 214ms (Views: 175.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-11 22:16:50 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?theme=red" for 127.0.0.1 at 2017-07-11 22:20:50 -0700
+Processing by BudgetsController#landing as HTML
+  Parameters: {"theme"=>"red"}
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?theme=blue" for 127.0.0.1 at 2017-07-11 22:20:53 -0700
+Processing by BudgetsController#landing as HTML
+  Parameters: {"theme"=>"blue"}
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-12 17:11:15 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-12 17:11:17 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-12 17:11:21 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"peim9IITqwe9blWuX3+3n0ler8i33G9tL/LmkKbHYcrlf+JG+BNKud1B5e9JSecagbe/4ppUuBP8b/YOqRBxYg==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 349ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-12 17:11:21 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (277.8ms)
+Completed 200 OK in 378ms (Views: 330.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:11:25 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bbivFwwnjWMnRlmIH1kuvL2D8brGtfItsV4x39kWH7AtL+uldids3Udp6ckJb345dWrhkOs9JVNiwyFB1sEPGA==", "location"=>"", "income"=>"", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (302.7ms)
+Completed 200 OK in 546ms (Views: 358.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-12 17:11:34 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (336.1ms)
+Completed 200 OK in 607ms (Views: 395.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-12 17:11:41 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (148.3ms)
+Completed 200 OK in 365ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-12 17:11:49 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1152.2ms)
+Completed 200 OK in 1346ms (Views: 1207.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:11:54 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VXik+xsbpWpzD3CkqRRrGH2cBLRZIaLZ7pjc+bIhQ0AV7+BJYRtE1BMgwOW/IjudtXUUnnSpdac9BcxnvfZT6A==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 447ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/4" for 127.0.0.1 at 2017-07-12 17:12:06 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1198.8ms)
+Completed 200 OK in 1400ms (Views: 1247.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/5" for 127.0.0.1 at 2017-07-12 17:12:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (147.8ms)
+Completed 200 OK in 388ms (Views: 209.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:12:21 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7dmUErTxHRZyfIkz3LyIQWToRblKVodnbFWziKB6gJetTtCgzvH8qBJTOXLKitjErAFVk2feUBm/yKMWr62QPw==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 447ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/6" for 127.0.0.1 at 2017-07-12 17:12:41 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (146.7ms)
+Completed 200 OK in 401ms (Views: 243.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/4" for 127.0.0.1 at 2017-07-12 17:12:51 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1148.0ms)
+Completed 200 OK in 1365ms (Views: 1228.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/5" for 127.0.0.1 at 2017-07-12 17:13:01 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 348ms (Views: 191.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:13:07 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Oq7TpHwTqJHvr23fgHCsyRGUB+HAp71k/efVfCfMvKsff/86/CvHCeRDfZoN5I27K9ANaqKSYtAao/L/0giWg==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 431ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:15:33 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (134.6ms)
+Completed 200 OK in 195ms (Views: 191.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-12 17:15:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 317ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-12 17:15:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 293ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:15:49 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (262.6ms)
+Completed 200 OK in 356ms (Views: 310.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:15:52 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s8gUr9wfyVDrwhXqoPQN+MDtfc2Y2IZep3PfKOhGbr3zX1Adph8o7ovtpau2wl19CARt57VQUSB07s+255F+FQ==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (297.6ms)
+Completed 200 OK in 514ms (Views: 353.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/6" for 127.0.0.1 at 2017-07-12 17:15:56 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1084.5ms)
+Completed 200 OK in 1265ms (Views: 1133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-12 17:16:01 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (149.2ms)
+Completed 200 OK in 355ms (Views: 195.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-12 17:17:03 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (153.2ms)
+Completed 200 OK in 387ms (Views: 201.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-12 17:17:28 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (151.9ms)
+Completed 200 OK in 371ms (Views: 198.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:18:04 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgpiRZ8blUGIx/5Mbrl2cta2NPEg3tfRy47C+Vt45CY+nSb35Rt0/+joTg14jyb3Hl8k2w1WAK8YE9JnVK/0jg==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 430ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-12 17:18:12 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (148.2ms)
+Completed 200 OK in 372ms (Views: 207.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-12 17:18:16 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1140.5ms)
+Completed 200 OK in 1322ms (Views: 1188.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/4" for 127.0.0.1 at 2017-07-12 17:18:19 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1146.4ms)
+Completed 200 OK in 1336ms (Views: 1204.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-12 17:18:22 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (157.7ms)
+Completed 200 OK in 357ms (Views: 204.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:18:29 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hR+1A3iswUi+CzXzAh4ESl8Lw700J1zcENPt/dlLbATFiPGxAqwg9t4khbIUKFTPl+LTlxmvi6LDTv1j1px8rA==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 452ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/8" for 127.0.0.1 at 2017-07-12 17:19:07 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (152.4ms)
+Completed 200 OK in 370ms (Views: 199.3ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:19:09 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SNGKjGQ0uZ1J772Ym8UOf6hO7Tbsl2F67hqVnB8/OkcIRs4+HjRYIynADdmN8176YKf9HMEftgQ9h4UCEOgq7w==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 195ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/7" for 127.0.0.1 at 2017-07-12 17:19:53 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1173.9ms)
+Completed 200 OK in 1360ms (Views: 1223.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets/8" for 127.0.0.1 at 2017-07-12 17:19:56 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1136.3ms)
+Completed 200 OK in 1312ms (Views: 1183.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:20:00 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lAfyWt8BlZ4Mi5NOCbtNa8JQEggrW4ui+3E4DnC7/1rUkLbopQF0IGykIw8fjR3uCrkCIgbTXNwo7CiQf2zv8g==", "id"=>"@budget"}
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Integer into String):
+  
+app/controllers/budgets_controller.rb:53:in `+'
+app/controllers/budgets_controller.rb:53:in `destroy'
+Started DELETE "/budgets/@budget.id" for 127.0.0.1 at 2017-07-12 17:20:43 -0700
+Processing by BudgetsController#destroy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lAfyWt8BlZ4Mi5NOCbtNa8JQEggrW4ui+3E4DnC7/1rUkLbopQF0IGykIw8fjR3uCrkCIgbTXNwo7CiQf2zv8g==", "id"=>"@budget"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 453ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets/9" for 127.0.0.1 at 2017-07-12 17:21:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (156.1ms)
+Completed 200 OK in 365ms (Views: 210.6ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/budgets/9" for 127.0.0.1 at 2017-07-12 17:21:04 -0700
+Processing by BudgetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tkd0XWhA6xNUdwit+r5Zu5lJ8Mh6NM6i0kHkwSXOzwYO0DDvEkAKrTRYuOzsiAk+UaDg4le8GdwB3PRfKhnfrg==", "id"=>"9"}
+No template found for BudgetsController#destroy, rendering head :no_content
+Completed 204 No Content in 182ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-12 17:21:17 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (241.1ms)
+Completed 200 OK in 336ms (Views: 298.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:21:51 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TKN9FbF15KL0UiNp0lMAtOHO94U+u3rpjwLgbfFi6a4MNDmny3UFHJR9kyjEZVAxKSfnrxMzrZdcn/Dz/rX5Bg==", "location"=>"", "income"=>"", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (298.0ms)
+Completed 200 OK in 515ms (Views: 346.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets/5" for 127.0.0.1 at 2017-07-12 17:21:55 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1148.0ms)
+Completed 200 OK in 1333ms (Views: 1205.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/11" for 127.0.0.1 at 2017-07-12 17:22:00 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (143.2ms)
+Completed 200 OK in 349ms (Views: 190.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/11" for 127.0.0.1 at 2017-07-12 17:22:05 -0700
+Processing by BudgetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYC9LP/Ih2yb/vLH/22XV+McwNkfa9RwKRkqobF4vycxF/mehchm0vvRQobpW8fSK/XQ8zLjAw76hDo/vq+vjw==", "id"=>"11"}
+Redirected to http://localhost:3000budgets
+Completed 302 Found in 127ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/12" for 127.0.0.1 at 2017-07-12 17:22:15 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (152.9ms)
+Completed 200 OK in 355ms (Views: 202.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/12" for 127.0.0.1 at 2017-07-12 17:22:20 -0700
+Processing by BudgetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GYQNUeSV9eGWyd4yqf8XntvjeN0PcSgF5eQFIMFNtLVZE0njnpUUX/bmbnO/yUcbEwpo9yL5/3s2eRW+zpqkHQ==", "id"=>"12"}
+Redirected to http://localhost:3000budgets
+Completed 302 Found in 125ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/13" for 127.0.0.1 at 2017-07-12 17:22:32 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (149.5ms)
+Completed 200 OK in 366ms (Views: 200.3ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/budgets/13" for 127.0.0.1 at 2017-07-12 17:22:34 -0700
+Processing by BudgetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HBaz3ZUu+o7zWohcyJ2xVogT26rCfLcB8P2Tyw2r0ZFcgfdv7y4bMJN1OB3eq+HTQPrLgO/0YH8jYINVAnzBOQ==", "id"=>"13"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-12 17:22:35 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (242.4ms)
+Completed 200 OK in 328ms (Views: 290.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:23:10 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (123.1ms)
+Completed 200 OK in 184ms (Views: 181.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:24:43 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (252.7ms)
+Completed 200 OK in 345ms (Views: 300.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:24:46 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/budgets/default"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:25:36 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/budgets/default"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:25:42 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 159ms (Views: 156.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:25:43 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (235.4ms)
+Completed 200 OK in 342ms (Views: 297.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:25:44 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2zuIJ1JUrBHm/e0lrJfZPPWJBlRqUFdLCndXV0sXO8ubrMyVKFRNr4bSXWS6oYm5PWAWfkfYgDXZ6kfJRMArYw==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  
+app/models/budget.rb:33:in `create'
+app/controllers/budgets_controller.rb:21:in `create'
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:27:14 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 182ms (Views: 178.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:27:15 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (250.5ms)
+Completed 200 OK in 346ms (Views: 302.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:27:17 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4cje48wLdOHLp815eY8s8SYgQFkeNKHJa/7EHqRQQiOhX5pRtguVX6uIfThvuXx07slQczO8dre4Y9SAq4dSiw==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (312.1ms)
+Completed 200 OK in 522ms (Views: 372.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/1" for 127.0.0.1 at 2017-07-12 17:27:24 -0700
+Processing by BudgetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OFU+Iu/xL2XcJk7RZNZQoFB6N5mTxssCPRBxgo76EKx4wnqQlfHO27wJ/pBy4AAlmJMns75OHHzujWEcgS0ABA==", "id"=>"1"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 124ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-12 17:27:24 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (560.6ms)
+Completed 200 OK in 620ms (Views: 607.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:28:25 -0700
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (454.4ms)
+Completed 200 OK in 776ms (Views: 766.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:28:30 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (176.8ms)
+Completed 200 OK in 287ms (Views: 217.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:29:45 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (170.0ms)
+Completed 200 OK in 249ms (Views: 211.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:29:51 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (165.5ms)
+Completed 200 OK in 264ms (Views: 223.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-12 17:30:22 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:30:22 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:30:28 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (117.9ms)
+Completed 200 OK in 199ms (Views: 161.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-12 17:30:30 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 78ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:31:20 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (117.4ms)
+Completed 200 OK in 211ms (Views: 170.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:31:21 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-12 17:31:21 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-12 17:31:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AB+vFqQy0upIuzBpa/sgybJHfRuNFRZCnVXxVu4rfW4QP+dOCkgpW2h6SIb6qgkvJhQQJKg+aZcqyJK7cCeerw==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose
+Completed 302 Found in 110ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:31:27 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (159.3ms)
+Completed 200 OK in 239ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:31:28 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 89ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:31:40 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sX8vJ3zO/Xzyw4C0NwDSH2yfTN35L0e8/DxexPBZ0C2UrgO5/PaS5PkvkPG6lPNtVttGVpsamAgbeHlHBZ36A==", "name"=>"new_name", "category_name"=>"something", "category_percent"=>"12"}
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  
+app/models/budget.rb:33:in `create'
+app/controllers/budgets_controller.rb:21:in `create'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:33:30 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 97ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:33:36 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kvkRVWFqBbCwQXqY+LZ+BmhyxnzB7XyU0zWKJoLp/nPSblXnG2rkDtBuytnugC6DoJvWVuxlq+oAqJq4jT7u2w==", "name"=>"new", "category_name"=>["new"], "category_percent"=>["12"]}
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  
+app/models/budget.rb:33:in `create'
+app/controllers/budgets_controller.rb:21:in `create'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:34:14 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 96ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:34:18 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xF/JUKqHU3tSha3HpAKVMyMaqAFTNTxeQdiMm+DeTiaEyI3i0IeyxTKqHYayNMW26/O4K3696yCSRZwF7wlejg==", "name"=>"new", "cat_names"=>["sth"], "cat_percent"=>["12"]}
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `id' for #<Class:0x007fb3adb2c5d8>
+Did you mean?  ids):
+  
+app/models/budget.rb:35:in `block in create'
+app/models/budget.rb:33:in `each'
+app/models/budget.rb:33:in `each_with_index'
+app/models/budget.rb:33:in `create'
+app/controllers/budgets_controller.rb:21:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:35:19 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xF/JUKqHU3tSha3HpAKVMyMaqAFTNTxeQdiMm+DeTiaEyI3i0IeyxTKqHYayNMW26/O4K3696yCSRZwF7wlejg==", "name"=>"hallo", "cat_names"=>["sth"], "cat_percent"=>["12"]}
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `user_id' for ["sth"]:Array):
+  
+app/controllers/budgets_controller.rb:23:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:36:39 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xF/JUKqHU3tSha3HpAKVMyMaqAFTNTxeQdiMm+DeTiaEyI3i0IeyxTKqHYayNMW26/O4K3696yCSRZwF7wlejg==", "name"=>"sth here", "cat_names"=>["sth"], "cat_percent"=>["12"]}
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_id' for ["sth"]:Array):
+  
+app/controllers/budgets_controller.rb:23:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:37:02 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xF/JUKqHU3tSha3HpAKVMyMaqAFTNTxeQdiMm+DeTiaEyI3i0IeyxTKqHYayNMW26/O4K3696yCSRZwF7wlejg==", "name"=>"omg", "cat_names"=>["sth"], "cat_percent"=>["12"]}
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_id' for ["sth"]:Array):
+  
+app/controllers/budgets_controller.rb:23:in `create'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:37:07 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 100ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:37:13 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANPUDkI23DPQyaPoK++PdXLAMhDzE5pcQuaX7Bm8yjJARJC8ODY9jbDmE6k92d/wuikiOt6bTSKRe4dyFmvamg==", "name"=>"omg", "cat_names"=>["sh"], "cat_percent"=>["12"]}
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_id' for ["sh"]:Array):
+  
+app/controllers/budgets_controller.rb:23:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:37:40 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANPUDkI23DPQyaPoK++PdXLAMhDzE5pcQuaX7Bm8yjJARJC8ODY9jbDmE6k92d/wuikiOt6bTSKRe4dyFmvamg==", "name"=>"omg", "cat_names"=>["hahah"], "cat_percent"=>["12"]}
+Redirected to http://localhost:3000/budgets/9
+Completed 302 Found in 365ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/9" for 127.0.0.1 at 2017-07-12 17:37:40 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (128.1ms)
+Completed 200 OK in 266ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:38:51 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANPUDkI23DPQyaPoK++PdXLAMhDzE5pcQuaX7Bm8yjJARJC8ODY9jbDmE6k92d/wuikiOt6bTSKRe4dyFmvamg==", "name"=>"NEw", "cat_names"=>["sport"], "cat_percent"=>["12"]}
+Redirected to http://localhost:3000/budgets/10
+Completed 302 Found in 116ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/10" for 127.0.0.1 at 2017-07-12 17:38:51 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (145.6ms)
+Completed 200 OK in 267ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:40:17 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 109ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:40:24 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vU2M1BEY9upmabWlBxUOdth4RsDgxPSLda7b1UXhe9/92shmaxgXVAZGBeQRI17zEJFW6s1MI/WmM8tLSjZrdw==", "name"=>"new_1", "cat_names"=>["sport"], "cat_percent"=>["9"]}
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 1.1ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/controllers/budgets_controller.rb:22:in `+'
+app/controllers/budgets_controller.rb:22:in `create'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:40:52 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 109ms (Views: 45.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:41:02 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bY1yFvVYd7eJbxyF5vZybrB01Xy1C3fwed0DDsmeSlktGjakj1iWCelArMTwwCLreJ3FVpiDoI6qQBOQxkla8Q==", "name"=>"new_2", "cat_names"=>["sport"], "cat_percent"=>["2"]}
+Redirected to http://localhost:3000/budgets/12
+Completed 302 Found in 105ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/12" for 127.0.0.1 at 2017-07-12 17:41:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (157.7ms)
+Completed 200 OK in 294ms (Views: 208.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:44:40 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+Started GET "/budgets/12" for 127.0.0.1 at 2017-07-12 17:44:47 -0700
+  Rendered budgets/landing.html.erb within layouts/application (10266.2ms)
+Completed 200 OK in 10542ms (Views: 10532.5ms | ActiveRecord: 1.5ms)
+
+
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1140.9ms)
+Completed 200 OK in 1289ms (Views: 1227.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:45:04 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 102ms (Views: 100.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:45:06 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (173.0ms)
+Completed 200 OK in 263ms (Views: 216.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:45:11 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4xomQchxzLiqlKctEbcj0L0Wyr+hgixXsbJNA6Ccrd7GywrfSEmjIKF4t2icIwKih1LANMO38+NW9mqAVViHw==", "location"=>"San Jose", "income"=>"80000", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (312.8ms)
+Completed 200 OK in 441ms (Views: 362.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:45:15 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 97ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:45:35 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwXTNftFhu9mWeFybAJOfwZEgBYA7DweVd78Bzd+B4XbkpeHgUVnUQZ2UTN6NB76zq2QPC1k62CGQ+yZOKkXLQ==", "name"=>"default_1", "cat_names"=>["sport"], "cat_percent"=>["12"]}
+Redirected to http://localhost:3000/budgets/2
+Completed 302 Found in 112ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-12 17:45:36 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (149.2ms)
+Completed 200 OK in 268ms (Views: 195.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:45:55 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwXTNftFhu9mWeFybAJOfwZEgBYA7DweVd78Bzd+B4XbkpeHgUVnUQZ2UTN6NB76zq2QPC1k62CGQ+yZOKkXLQ==", "name"=>"default_1", "cat_names"=>["Food"], "cat_percent"=>["12"]}
+Redirected to http://localhost:3000/budgets/3
+Completed 302 Found in 93ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-12 17:45:55 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (158.0ms)
+Completed 200 OK in 293ms (Views: 216.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-12 17:46:29 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (183.2ms)
+Completed 200 OK in 275ms (Views: 229.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 17:46:34 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 95ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose" for 127.0.0.1 at 2017-07-12 17:46:37 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (180.5ms)
+Completed 200 OK in 278ms (Views: 230.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-12 17:46:38 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 97ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-12 17:46:57 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K7WQ7g3QVc9c3iHHv2RBGaM2PLY0gMjOqabj2BbgX0JrItRcd9C0cTzxkYapUhGca98snBkIH7B6O/NGGTdP6g==", "name"=>"default_3", "cat_names"=>["Transportation"], "cat_percent"=>["12.5"]}
+Redirected to http://localhost:3000/budgets/4
+Completed 302 Found in 107ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/4" for 127.0.0.1 at 2017-07-12 17:46:58 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (153.5ms)
+Completed 200 OK in 281ms (Views: 200.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/4/edit" for 127.0.0.1 at 2017-07-12 17:48:39 -0700
+Processing by BudgetsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Rendering budgets/edit.html.erb within layouts/application
+  Rendered budgets/edit.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 165ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-12 17:49:25 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (173.6ms)
+Completed 200 OK in 260ms (Views: 220.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/default" for 127.0.0.1 at 2017-07-12 17:49:27 -0700
+Processing by BudgetsController#create_default as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvpbLFaBugqr8ORSDEeZFD/H41D3jist79Tsdau1q75ibR+eLIFbtMvfVBMaccmR9y7zetoG/FM8SfzrpGK7Fg==", "location"=>"", "income"=>"", "user_id"=>"1", "name"=>"name"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (301.4ms)
+Completed 200 OK in 434ms (Views: 348.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 18:09:57 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-12 18:10:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 145ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-12 18:10:11 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 105ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+

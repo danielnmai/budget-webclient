@@ -13,10 +13,7 @@
     </div>
   </div>
 
-  <p id='first'>Something </p>
-
-  <button onclick="loadChart()">Change Color</button>
-
+ <a href="/budgets/<%=@budget.id%>/edit">Edit</a>
   <div class="container">
     <h2>Pie Chart</h2>
     <div>
@@ -34,7 +31,14 @@
   <h3 > Name: <%= category['name'] %> </h3>
   <h3> Percentages: <%= category['percent'] %> </h3>
   <% end %>
-  
+
+  Current User ID: <%= current_user.id %>
+  Budget ID: <%= @budget.id %>
+
+  <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
+  <input type="submit" value="Delete this Budget">  
+  <% end %>
+    
 </body>
 </html>
 

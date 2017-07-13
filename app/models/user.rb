@@ -44,7 +44,6 @@ class User < ApplicationRecord
   end
 
   def destroy
-    Unirest.delete("http://localhost:3001/api/v1/users/#{id}", headers:{'Accept' => 'Application/json'} )
-    
+    Unirest.delete("http://localhost:3001/api/v1/users/#{id}", headers:{'Accept' => 'Application/json'} )   
   end
 end

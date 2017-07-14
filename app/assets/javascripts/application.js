@@ -17,10 +17,13 @@
 //= require bootstrap-sprockets
 //= require angular
 //= require app
+//= require geocomplete
 //= require Chart.min
 //= require_tree .
 
-
+$(function() {
+  $("#input").geocomplete();
+});  
 function loadBarChart(category_names, category_percent) {
   var ctx = document.getElementById('barChart').getContext('2d');
   var myChart = new Chart(ctx, {

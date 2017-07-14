@@ -7,6 +7,7 @@
 <body onload="loadBarChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)"> 
 
   <div class="container" style="width:500px; height:500px;">
+  <div>Name: <%= @budget.name%></div>
     <h2>Bar Chart</h2>
     <div>
       <canvas id="barChart"></canvas>

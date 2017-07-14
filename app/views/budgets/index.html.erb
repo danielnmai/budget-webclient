@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 <body>
   Location: <%= @location %>
   Income: <%= @income %>
-  <table>
+  <table class="table table-striped" style="width:500px; height:500px">
     <tr>
       <th>  Categories  </th>
       <th>   Amount </th>
@@ -17,10 +17,9 @@
     <% @budget.categories.each do |category| %>
     <tr>
       <% percent =  category['percent'] %>
-      <%= hidden_field_tag "cat_percent[]", percent %>
       <% amount  =  percent * @monthly_income * 0.01 %>
       <td> <label> <%= category['name'] %> </label> </td>
-      <td> <label> <%= number_to_currency(amount.round, precision: 0) %> </label> </td>
+      <td> <label> <%=number_to_currency(amount.round, precision: 0) %> </label> </td>
       <% sum += amount.round %>
       <td> <label> <%= percent %>% </label> </td>  
       <% end %>
@@ -36,12 +35,16 @@
 <a data-toggle="modal" href="/login" data-target="#myModal"> Choose this Budget</a>
 <a data-toggle="modal" href="/budgets/new" data-target="#myModal"> Create your own Budget</a>
 <% else %>
-<%= form_tag '/budgets/default', method: :post do %>
+<%= form_tag '/budgets', method: :post do %>
 <%= hidden_field_tag :location, @location %>
 <%= hidden_field_tag :income, @income %>
 <%= hidden_field_tag :user_id, current_user.id %>
-<%= hidden_field_tag :name, :name %>
-<input type="submit" value="Choose this budget">
+<label>Name Your Budget: </label>
+<%= text_field_tag :name, nil,placeholder: :default_name %>
+<%= hidden_field_tag :default_chosen, true %>
+<div>
+  <input type="submit" value="Create this budget!">
+</div>
 <% end %>
 <a href="/budgets/new"> Create your own budget</a>
 <% end %>

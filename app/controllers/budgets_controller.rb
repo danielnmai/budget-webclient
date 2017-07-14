@@ -7,15 +7,9 @@ class BudgetsController < ApplicationController
     @income = params[:income]
     session[:location] = params[:location]
     session[:income] = params[:income]
-    puts ENV['API_ROOT_URL']
     @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
     @monthly_income = @income.to_i / 12
     render 'index'
-  end
-
-  def create_default
-    @budget = Budget.find(1, 1)
-    render 'show'
   end
 
   def access
@@ -45,9 +39,12 @@ class BudgetsController < ApplicationController
   end
 
   def create
-    @budget = Budget.create(current_user.id, params[:name], params[:cat_names], params[:cat_percent])
-    p params[:cat_names]
-    p params[:cat_percent]
+    if params[:default_chosen]
+      default_budget = Budget.find(1, 1)
+      @budget = Budget.create(current_user.id, params[:name],default_budget.category_names, default_budget.category_percent)
+    else
+      @budget = Budget.create(current_user.id, params[:name],params[:cat_names], params[:cat_percent])
+    end
 
     if @budget.user_id == current_user.id
       flash[:success] = 'Successfully created budget!'

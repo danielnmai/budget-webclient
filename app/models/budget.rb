@@ -30,14 +30,15 @@ class Budget < ApplicationRecord
         user_id: user_id}
         ).body
     budget = Budget.new(api_budget)
+
     cat_names.each_with_index do |name, index|
-     percent = cat_percent[index]
+    percent = cat_percent[index]
      Unirest.post("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{budget.id}/categories",
        headers:{ 'Accept' => 'application/json' },
-       parameters: {category_name: name, category_percent: percent}
-         ).body 
-     return budget
-   end
+       parameters: { category_name: name, category_percent: percent }
+      ).body
+    end
+    budget
   end
 
   def category_names

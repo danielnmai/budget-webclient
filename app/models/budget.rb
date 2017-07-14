@@ -69,16 +69,20 @@ class Budget < ApplicationRecord
   end
 
   def update(budget_name, cat_names, cat_percent)
-    Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/",
+    hash_budget = Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/",
       headers:{ 'Accept' => 'application/json' },
-      parameters: {name: budget_name}  
+      parameters: {name: budget_name} 
         ).body
+    budget = Budget.new(hash_budget)
+    cat_index = budget.categories.first['id']
+
     cat_names.each_with_index do |name, index|
       percent = cat_percent[index]
-      Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/categories/#{index + 1}",
+      Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/categories/#{cat_index}",
         headers:{ 'Accept' => 'application/json' },
         parameters: {name: name, percent: percent}
           ).body
+      cat_index += 1
     end
-  end 
+  end
 end

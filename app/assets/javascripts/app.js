@@ -5,6 +5,3 @@
 
 }());
 
-function loadChart() {
-  document.getElementById('first').style.color = 'red';
-}

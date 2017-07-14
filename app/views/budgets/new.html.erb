@@ -1,19 +1,21 @@
 <h3>Create your budget</h3>
 <%= form_tag '/budgets', method: :post do %>
-  <!-- first name  -->
+
   <div>
   <label>Budget Name</label>
   <input type="text" name="name">
   </div>
-<!-- last name -->
+
   <div>
   <label>Category Name: </label>
   <input type="text" name="cat_names[]">
-  </div> 
-  <!-- email --> 
-  <div>
-   <label>Category Percent</label> <input type="text" name="cat_percent[]">
   </div>  
   <div>
-  <input type="submit" value="Create Budget">  
+   <label>Category Percent</label> <input type="text" name="cat_percent[]">
+  </div> 
+
+  <div id='form'></div>
+
+  <input type="submit" value="Create Budget">
 <% end %>
+<button onclick="addCategory()"> Add Category </button>

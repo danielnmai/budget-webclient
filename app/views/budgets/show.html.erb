@@ -6,15 +6,13 @@
 </head>
 <body onload="loadBarChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)"> 
 
-  <div class="container">
+  <div class="container" style="width:500px; height:500px;">
     <h2>Bar Chart</h2>
     <div>
       <canvas id="barChart"></canvas>
     </div>
   </div>
-
- <a href="/budgets/<%=@budget.id%>/edit">Edit</a>
-  <div class="container">
+  <div class="container" style="width:500px; height:500px;">
     <h2>Pie Chart</h2>
     <div>
       <canvas id="pieChart"></canvas>
@@ -22,23 +20,20 @@
   </div>
 
   <button onclick="loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %> )"> Load Pie Chart</button>
-
-  Budget belongs to:
-  First Name: <%= @current_user.first_name %>
-  Last Name: <%= @current_user.id%>
-
+  <div>
+    Budget belongs to:
+    First Name: <%= @current_user.first_name %>
+    Last Name: <%= @current_user.id%>
+    <a href="/budgets/<%=@budget.id%>/edit">Edit This Budget </a>
+  </div>
   <% @budget.categories.each do |category| %>
   <h3 > Name: <%= category['name'] %> </h3>
   <h3> Percentages: <%= category['percent'] %> </h3>
   <% end %>
-
-  Current User ID: <%= current_user.id %>
-  Budget ID: <%= @budget.id %>
-
   <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
   <input type="submit" value="Delete this Budget">  
-  <% end %>
-    
+  <% end %>  
+
 </body>
 </html>
 

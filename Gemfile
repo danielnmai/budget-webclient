@@ -42,6 +42,12 @@ gem 'rename'
 gem 'unirest', '~> 1.1.2'
 # User Chart.js to render charts
 gem 'chart-js-rails'
+#Location search auto-complete function
+gem 'geocomplete_rails'
+#Plaid API gem to display user's bank transactions
+gem 'plaid'
+#Store API keys and variables
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

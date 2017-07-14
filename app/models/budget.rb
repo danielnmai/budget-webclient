@@ -10,20 +10,20 @@ class Budget < ApplicationRecord
 
   def self.find(id, user_id)
 
-    budget_hash = Unirest.get("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}").body
+    budget_hash = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}").body
     Budget.new(budget_hash)
   end
 
   def self.all(user_id)
     budgets = []
-    api_budgets = Unirest.get("http://localhost:3001/api/v1/users/#{current_user.id}/budgets").body
+    api_budgets = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{current_user.id}/budgets").body
     api_budgets.each do |api_budget|
       budgets << Budget.new(api_budget)
     end
   end
 
   def self.create(user_id, budget_name, cat_names, cat_percent)
-    api_budget = Unirest.post("http://localhost:3001/api/v1/users/#{user_id}/budgets",
+    api_budget = Unirest.post("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets",
       headers:{ 'Accept' => 'application/json' },
       parameters: {
         name: budget_name,
@@ -32,7 +32,7 @@ class Budget < ApplicationRecord
     budget = Budget.new(api_budget)
     cat_names.each_with_index do |name, index|
      percent = cat_percent[index]
-     Unirest.post("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{budget.id}/categories",
+     Unirest.post("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{budget.id}/categories",
        headers:{ 'Accept' => 'application/json' },
        parameters: {category_name: name, category_percent: percent}
          ).body 
@@ -42,7 +42,7 @@ class Budget < ApplicationRecord
 
   def category_names
     names = []
-    api_categories = Unirest.get("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories").body
+    api_categories = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/categories").body
     api_categories.each do |api_category|
       names << api_category['name']
     end
@@ -51,7 +51,7 @@ class Budget < ApplicationRecord
 
   def category_percent
     percent = []
-    api_categories = Unirest.get("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories").body
+    api_categories = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/categories").body
     api_categories.each do |api_category|
       percent << api_category['percent']
     end
@@ -60,7 +60,7 @@ class Budget < ApplicationRecord
 
   def categories
     categories = []
-    api_categories = Unirest.get("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories").body
+    api_categories = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/categories").body
     api_categories.each do |api_category|
       categories << api_category
     end
@@ -68,13 +68,13 @@ class Budget < ApplicationRecord
   end
 
   def update(budget_name, cat_names, cat_percent)
-    Unirest.patch("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/",
+    Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/",
       headers:{ 'Accept' => 'application/json' },
       parameters: {name: budget_name}  
         ).body
     cat_names.each_with_index do |name, index|
       percent = cat_percent[index]
-      Unirest.patch("http://localhost:3001/api/v1/users/#{user_id}/budgets/#{id}/categories/#{index + 1}",
+      Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}/categories/#{index + 1}",
         headers:{ 'Accept' => 'application/json' },
         parameters: {name: name, percent: percent}
           ).body

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    new_user = Unirest.post("http://localhost:3001/api/v1/users",
+    new_user = Unirest.post("#{ENV['API_ROOT_URL']}/users",
       headers:{ 'Accept' => 'application/json' },
       parameters: {
       first_name: params[:first_name],
@@ -38,13 +38,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    api_user = Unirest.get("http://localhost:3001/api/v1/users/#{params[:id]}").body
+    api_user = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{params[:id]}").body
     @user = User.new(api_user)
 
   end
 
   def update
-    user = Unirest.patch("http://localhost:3001/api/v1/users/#{params[:id]}",
+    user = Unirest.patch("#{ENV['API_ROOT_URL']}/users/#{params[:id]}",
       headers:{ 'Accept' => 'application/json' },
       parameters: { first_name: params[:first_name], last_name: params[:last_name],
         email: params[:email]})

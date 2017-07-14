@@ -7,7 +7,8 @@ class BudgetsController < ApplicationController
     @income = params[:income]
     session[:location] = params[:location]
     session[:income] = params[:income]
-    @budget = Budget.new(Unirest.get('http://localhost:3001/api/v1/users/1/budgets/1').body)
+    puts ENV['API_ROOT_URL']
+    @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
     @monthly_income = @income.to_i / 12
     render 'index'
   end
@@ -15,6 +16,32 @@ class BudgetsController < ApplicationController
   def create_default
     @budget = Budget.find(1, 1)
     render 'show'
+  end
+
+  def access
+    public_token = params['public_token']
+    redirect_to "/banks/#{public_token}"
+  end
+
+  def link_bank
+    public_token = params['public_token']
+    puts "PUBLIC TOKEN: " + public_token
+    client = Plaid::Client.new(env: :sandbox,
+                              client_id: ENV['PLAID_CLIENT_ID'],
+                              secret: ENV['PLAID_SECRET'],
+                              public_key: ENV['PLAID_PUBLIC_KEY'])
+    response = client.item.public_token.exchange(public_token)
+    access_token = response['access_token']
+
+    @auth_response = client.auth.get(access_token)
+    # @trans_response = client.transactions.get(access_token, '2010-01-01', '2017-07-15', account_ids: ['mexMMwz6y8Svw3zQZye9Um5pDEdzeDSmNy9Ao', '90VjjwBRL8Ia5vn3JgNLca56AeDKPAUPyKwLv'])
+    # @total_transactions = @trans_response['total_transactions']
+
+    item_id = response['item_id']
+    puts "ACCESS TOKEN: #{access_token}"
+    puts "ITEM ID: #{item_id}"
+    puts "auth_response: #{@auth_response.to_json}"
+    render 'show.json.jbuilder'
   end
 
   def create
@@ -32,7 +59,7 @@ class BudgetsController < ApplicationController
   end
 
   def edit
-    api_budget = Unirest.get("http://localhost:3001/api/v1/users/#{current_user.id}/budgets/#{params[:id]}").body
+    api_budget = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{current_user.id}/budgets/#{params[:id]}").body
     @budget = Budget.new(api_budget)
   end
 
@@ -51,7 +78,7 @@ class BudgetsController < ApplicationController
   end
 
   def destroy
-    Unirest.delete("http://localhost:3001/api/v1/users/#{current_user.id}/budgets/#{params[:id]}", headers:{'Accept' => 'Application/json'} )
+    Unirest.delete("#{ENV['API_ROOT_URL']}/users/#{current_user.id}/budgets/#{params[:id]}", headers:{'Accept' => 'Application/json'} )
     flash[:warning] = 'Budget successfully deleted'
     redirect_to '/budgets'
   end

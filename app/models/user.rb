@@ -16,12 +16,12 @@ class User < ApplicationRecord
   end
 
   def self.find(id)
-    user_hash = Unirest.get("http://localhost:3001/api/v1/users/#{id}").body
+    user_hash = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{id}").body
     User.new(user_hash)
   end
 
   def self.find_by(email)
-    api_users = Unirest.get('http://localhost:3001/api/v1/users').body
+    api_users = Unirest.get("#{ENV['API_ROOT_URL']}/users").body
     api_users.each do |api_user|
       if api_user['email'] == email
         user = User.new(api_user)
@@ -32,7 +32,7 @@ class User < ApplicationRecord
 
   def self.all
     users = []
-    api_users = Unirest.get('http://localhost:3001/api/v1/users').body
+    api_users = Unirest.get("#{ENV['API_ROOT_URL']}/users").body
     api_users.each do |api_user|
       users << User.new(api_user)
     end
@@ -44,6 +44,6 @@ class User < ApplicationRecord
   end
 
   def destroy
-    Unirest.delete("http://localhost:3001/api/v1/users/#{id}", headers:{'Accept' => 'Application/json'} )   
+    Unirest.delete("#{ENV['API_ROOT_URL']}/users/#{id}", headers:{'Accept' => 'Application/json'} )   
   end
 end

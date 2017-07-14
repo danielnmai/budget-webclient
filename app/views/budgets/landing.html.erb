@@ -1,3 +1,4 @@
+<%= ENV['API_ROOT_URL'] %>
 <h3>Having a budget has never been easier. Let's started. </h3>
 <%= form_tag '/budgets', method: :get do %>
 <div>
@@ -6,7 +7,7 @@
 </div>
 <div>
   <h4>Where do you live? </h4>
-  <input type="text" name="location" value="San Jose">
+  <%= text_field_tag :location, "San Jose, CA", :id => 'input' %>
 </div>
 
 <input type="submit" value="Find Your Budget">

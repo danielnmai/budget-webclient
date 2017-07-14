@@ -53,17 +53,59 @@
    <div class="modal-content">
      <div class="modal-header">
        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+       <h4 class="modal-title" id="myModalLabel">Login </h4>
      </div>
      <div class="modal-body">
        
      </div>
      <div class="modal-footer">
        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       <button type="button" class="btn btn-primary">Save changes</button>
      </div>
    </div>
  </div>
+</div>
+<div><button id="link-button">Link Account</button>
+
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript">
+var handler = Plaid.create({
+  clientName: 'Plaid Walkthrough Demo',
+  env: 'sandbox',
+  key: '7d13eb84ca8559b6020bc3a71639c6', // Replace with your public_key to test with live credentials
+  product: ['auth', 'transactions'],
+  
+  onLoad: function() {
+    // Optional, called when Link loads
+  },
+  onSuccess: function(public_token, metadata) {
+    // Send the public_token to your app server.
+    // The metadata object contains info about the institution the
+    // user selected and the account ID, if `selectAccount` is enabled.
+    $.post('/get_access_token', {
+      public_token: public_token,
+    });
+  },
+  onExit: function(err, metadata) {
+    // The user exited the Link flow.
+    if (err != null) {
+      // The user encountered a Plaid API error prior to exiting.
+    }
+    // metadata contains information about the institution
+    // that the user selected and the most recent API request IDs.
+    // Storing this information can be helpful for support.
+  }
+});
+
+$('#link-button').on('click', function(e) {
+  handler.open();
+  // Alternatively, you can have a specific institution
+  // prompt for authentication. Example:
+  //
+  // handler.open('ins_100000');
+  //
+  // This will open Link with Union Bank as the institution.
+});
+</script>
 </div>
 
 </body>

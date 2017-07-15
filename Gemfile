@@ -46,6 +46,8 @@ gem 'chart-js-rails'
 gem 'geocomplete_rails'
 #Plaid API gem to display user's bank transactions
 gem 'plaid'
+#Currency form input format
+gem 'autonumeric-rails'
 #Store API keys and variables
 gem 'dotenv-rails', groups: [:development, :test]
 

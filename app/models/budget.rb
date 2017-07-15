@@ -1,11 +1,12 @@
 class Budget < ApplicationRecord
-  attr_accessor :id, :user_id, :name, :category_name, :category_percentages, :category_percentages, :categories, :category_percent
+  attr_accessor :id, :user_id, :name, :category_name, :category_percentages, :categories, :monthly_income
   def initialize(input_hash)
     @id = input_hash['id']
     @user_id = input_hash['user_id']
     @name = input_hash['name']
     @categories = input_hash['categories']
     @category_percentages = input_hash['category_percentages']
+    @monthly_income = input_hash['monthly_income']
   end
 
   def self.find(id, user_id)

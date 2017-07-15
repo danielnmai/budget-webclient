@@ -6,7 +6,8 @@
   </head>
   <body>
     Location: <%= @location %>
-    Income: <%= @income %>
+    Monthly Income: <%= number_to_currency(@monthly_income, precision: 0) %>
+    <script type="text/javascript"></script>
     <table class="table table-striped" style="width:500px; height:500px">
       <tr>
         <th>  Categories  </th>
@@ -32,8 +33,8 @@
 
   <!-- If there's no current user, ask user to log in or sign up -->
   <% if !current_user %>
-  <a data-toggle="modal" href="/login" data-target="#myModal"> Choose this Budget</a>
-  <a data-toggle="modal" href="/budgets/new" data-target="#myModal"> Create your own Budget</a>
+  <a data-toggle="modal" data-target="#myModal"> Choose this Budget</a>
+  <a data-toggle="modal" data-target="#myModal"> Create your own Budget</a>
   <% else %>
   <%= form_tag '/budgets', method: :post do %>
   <%= hidden_field_tag :location, @location %>
@@ -56,10 +57,21 @@
      <div class="modal-content">
        <div class="modal-header">
          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-         <h4 class="modal-title" id="myModalLabel">Login </h4>
+         <h4 class="modal-title" id="myModalLabel">Log in or Sign up to Continue </h4>
        </div>
        <div class="modal-body">
-         
+         <%= form_tag "/login", method: :post do %>
+           <div>
+             <label>Email:</label> 
+             <input type="email" name="email">
+           </div>
+           <div>
+           <label>Password:</label> 
+            <input type="password" name="password">
+           </div>
+           <input type="submit" value="Log In">
+         <% end %>
+          Don't have an account? <a class="btn btn-link" href="/users/new">Join Us!</a>
        </div>
        <div class="modal-footer">
          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -67,49 +79,7 @@
      </div>
    </div>
  </div>
- <div><button id="link-button">Link Account</button>
 
-  <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-  <script type="text/javascript">
-    var handler = Plaid.create({
-      clientName: 'mBudget by Daniel Mai',
-      env: 'sandbox',
-  key: '7d13eb84ca8559b6020bc3a71639c6', // Replace with your public_key to test with live credentials
-  product: ['auth', 'transactions'],
-  
-  onLoad: function() {
-    // Optional, called when Link loads
-  },
-  onSuccess: function(public_token, metadata) {
-    // Send the public_token to your app server.
-    // The metadata object contains info about the institution the
-    // user selected and the account ID, if `selectAccount` is enabled.
-    $.post('/get_access_token', {
-      public_token: public_token,
-    });
-  },
-  onExit: function(err, metadata) {
-    // The user exited the Link flow.
-    if (err != null) {
-      // The user encountered a Plaid API error prior to exiting.
-    }
-    // metadata contains information about the institution
-    // that the user selected and the most recent API request IDs.
-    // Storing this information can be helpful for support.
-  }
-});
-
-    $('#link-button').on('click', function(e) {
-      handler.open();
-  // Alternatively, you can have a specific institution
-  // prompt for authentication. Example:
-  //
-  // handler.open('ins_100000');
-  //
-  // This will open Link with Union Bank as the institution.
-});
-</script>
-</div>
 
 </body>
 </html>

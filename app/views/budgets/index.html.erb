@@ -1,34 +1,39 @@
 <% @budgets.each do |budget| %>
-<body onload="loadBarChart(<%= budget.category_names %>, <%= budget.category_percent %>), loadPieChart(<%= budget.category_names %>, <%= budget.category_percent %> )"> 
-
-  <div class="container" style="width:400px; height:400px;">
-  <div>Name: <%= budget.name%></div>
-    <h2>Bar Chart</h2>
-    <div>
-      <canvas id="barChart"></canvas>
-    </div>
-  </div>
-  <div class="container" style="width:300px; height:300px;">
-    <h2>Pie Chart</h2>
-    <div>
-      <canvas id="pieChart"></canvas>
-    </div>
-  </div>
-
-  <button onclick="loadPieChart(<%= budget.category_names %>, <%= budget.category_percent %> )"> Load Pie Chart</button>
+<div>
   <div>
-    Budget belongs to:
-    First Name: <%= current_user.first_name %>
-    Last Name: <%= current_user.id%>
-    <a href="/budgets/<%=budget.id%>/edit">Edit This Budget </a>
+    <div> Budget belongs to: <%= current_user.full_name %> </div>
+    <%= form_tag "/budgets/#{budget.id}", method: :get do %>
+    <input  class="btn btn-primary" type="submit" value="View">
+    <% end %>
   </div>
-  <% budget.categories.each do |category| %>
-  <h3 > Name: <%= category['name'] %> </h3>
-  <h3> Percentages: <%= category['percent'] %> </h3>
-  <% end %>
-  <%= form_tag "/budgets/#{budget.id}", method: :delete do %>
-  <input type="submit" value="Delete this Budget">  
-  <% end %>  
+  <div>
+    <a class="btn btn-primary" href="/budgets/<%=budget.id%>/edit">Edit</a>
+  </div>
 
-</body>
+  <table class="table table-striped" style="width:500px; height:500px">
+    <tr>
+      <th>  Categories  </th>
+      <th>   Amount </th>
+      <th>  Percentage  </th>
+    </tr>
+    <% sum = 0 %>
+    <% budget.categories.each do |category| %>
+    <tr>
+      <% percent =  category['percent'] %>
+      <% amount  =  percent * @monthly_income * 0.01 %>
+      <td> <label> <%= category['name'] %> </label> </td>
+      <td> <label> <%=number_to_currency(amount.round, precision: 0) %> </label> </td>
+      <% sum += amount.round %>
+      <td> <label> <%= percent %>% </label> </td>  
+      <% end %>
+    </tr>   
+    <td> Total </td>
+    <td> <%= number_to_currency(sum, precision: 0) %> </td>
+    <td>  <%= number_to_currency(budget.category_percent.sum.round, precision: 0) %>%</td>
+  </tr>
+</table>
+<%= form_tag "/budgets/#{budget.id}", method: :delete do %>
+<input  class="btn btn-danger" type="submit" value="Delete this Budget">  
+<% end %>
+</div>
 <% end %>

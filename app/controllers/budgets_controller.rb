@@ -1,10 +1,13 @@
 class BudgetsController < ApplicationController
   before_action :authenticate_user!, except: [:default, :landing]
-  def landing; end
+  def landing
+    render :layout => 'landing.html.erb'
+  end
   def new; end
   def default
     @location = params[:location]
-    @income = params[:income]
+    @income = params[:income].delete(',')
+    puts "INCOME: " + @income
     session[:location] = params[:location]
     session[:income] = params[:income]
     @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
@@ -14,6 +17,7 @@ class BudgetsController < ApplicationController
 
   def index
     @budgets = Budget.all(current_user.id)
+    @monthly_income = 6500
   end
 
   def access
@@ -66,7 +70,6 @@ class BudgetsController < ApplicationController
 
   def show
     @budget = Budget.find(params[:id], current_user.id)
-    @current_user = current_user
   end
 
   def update

@@ -2,39 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title><%= @budget.name %></title>
 </head>
-<body onload="loadBarChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)"> 
+<body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)"> 
 
-  <div class="container" style="width:500px; height:500px;">
-  <div>Name: <%= @budget.name%></div>
+  <div class="container" style="width:400px; height:400px;">
+    <div>Name: <%= @budget.name%></div>
     <h2>Bar Chart</h2>
     <div>
       <canvas id="barChart"></canvas>
     </div>
   </div>
-  <div class="container" style="width:500px; height:500px;">
+  <div class="container" style="width:300px; height:300px;">
     <h2>Pie Chart</h2>
     <div>
       <canvas id="pieChart"></canvas>
     </div>
   </div>
-
-  <button onclick="loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %> )"> Load Pie Chart</button>
   <div>
-    Budget belongs to:
-    First Name: <%= @current_user.first_name %>
-    Last Name: <%= @current_user.id%>
-    <a href="/budgets/<%=@budget.id%>/edit">Edit This Budget </a>
-  </div>
-  <% @budget.categories.each do |category| %>
-  <h3 > Name: <%= category['name'] %> </h3>
-  <h3> Percentages: <%= category['percent'] %> </h3>
-  <% end %>
-  <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
-  <input type="submit" value="Delete this Budget">  
-  <% end %>  
+    <div>Budget belongs to  :
+     <%= current_user.first_name %> <%= current_user.last_name %>
+   </div> 
+   <a href="/budgets/<%=@budget.id%>/edit">Edit This Budget </a>
+ </div>
+ <% @budget.categories.each do |category| %>
+ <h3 > Name: <%= category['name'] %> </h3>
+ <h3> Percentages: <%= category['percent'] %> </h3>
+ <% end %>
+ <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
+ <input type="submit" value="Delete this Budget">  
+ <% end %>
 
+
+  <div><button id="link-button">Link Bank Account</button>
+
+   <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+   <script type="text/javascript">
+     var handler = Plaid.create({
+       clientName: 'mBudget by Daniel Mai',
+       env: 'sandbox',
+   key: '7d13eb84ca8559b6020bc3a71639c6', // Replace with your public_key to test with live credentials
+   product: ['auth', 'transactions'],
+   
+   onLoad: function() {
+     // Optional, called when Link loads
+   },
+   onSuccess: function(public_token, metadata) {
+     // Send the public_token to your app server.
+     // The metadata object contains info about the institution the
+     // user selected and the account ID, if `selectAccount` is enabled.
+     $.post('/get_access_token', {
+       public_token: public_token,
+     });
+   },
+   onExit: function(err, metadata) {
+     // The user exited the Link flow.
+     if (err != null) {
+       // The user encountered a Plaid API error prior to exiting.
+     }
+     // metadata contains information about the institution
+     // that the user selected and the most recent API request IDs.
+     // Storing this information can be helpful for support.
+   }
+ });
+
+     $('#link-button').on('click', function(e) {
+       handler.open();
+   // Alternatively, you can have a specific institution
+   // prompt for authentication. Example:
+   //
+   // handler.open('ins_100000');
+   //
+   // This will open Link with Union Bank as the institution.
+ });
+ </script>
+ </div>
 </body>
 </html>
 

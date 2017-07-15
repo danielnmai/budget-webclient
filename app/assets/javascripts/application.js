@@ -19,11 +19,18 @@
 //= require app
 //= require geocomplete
 //= require Chart.min
+//= require autonumeric
 //= require_tree .
 
 $(function() {
-  $("#input").geocomplete();
-});  
+  $("#location_input").geocomplete();
+
+  var $form = $( "#landing_form" );
+  var $input = $form.find( "#income_input" );
+  // Initialization
+  $input.autoNumeric('init', { currencySymbol : '$', mDec: '0' });
+});
+
 function loadBarChart(category_names, category_percent) {
   var ctx = document.getElementById('barChart').getContext('2d');
   var myChart = new Chart(ctx, {
@@ -47,13 +54,13 @@ function loadPieChart(category_names, category_percent) {
       labels: category_names,
       datasets: [{
         backgroundColor: [
-          "#2ecc71",
-          "#3498db",
-          "#95a5a6",
-          "#9b59b6",
-          "#f1c40f",
-          "#e74c3c",
-          "#34495e"
+        "#2ecc71",
+        "#3498db",
+        "#95a5a6",
+        "#9b59b6",
+        "#f1c40f",
+        "#e74c3c",
+        "#34495e"
         ],
         data: category_percent
       }]

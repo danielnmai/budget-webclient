@@ -1,16 +1,17 @@
-
-
 <h3>Having a budget has never been easier. Let's started. </h3>
-<%= form_tag '/budgets/default', method: :get do %>
-<div>
-  <h4> What is your yearly income? </h4>
-  <input type="text" name="income" value="80000">
-</div>
-<div>
-  <h4>Where do you live? </h4>
-  <%= text_field_tag :location, "San Jose, CA", :id => 'input' %>
-</div>
+<%= form_tag '/budgets/default', :id => 'landing_form', method: :get do %>
+<div style="width:300px">
+  <label> What is your yearly income? </label>
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input class="form-control" type="text" name="income" value="80000" id="income_input" aria-label="Amount (to the nearest dollar)">
+  </div>  
 
+  <div class="input-group" >
+    <label>Where do you live? </label>
+   <input class="form-control" type="text" name="location" value="San Jose, CA" id="location_input" aria-label="location">
+  </div>
+</div>
 <input type="submit" value="Find Your Budget">
 <% end %>
 
@@ -21,4 +22,6 @@
   <a href="/users/new">Sign Up</a>
   <a href="/login"> Log In </a>
 <% end %>
+<script src="http://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY']%>&libraries=places">  
+</script>
 

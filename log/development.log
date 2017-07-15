@@ -36340,3 +36340,766 @@ Processing by BudgetsController#edit as HTML
 Completed 200 OK in 415ms (Views: 121.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/budgets/34" for 127.0.0.1 at 2017-07-13 22:52:44 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"34"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (308.4ms)
+Completed 200 OK in 592ms (Views: 365.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 22:52:50 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (179.5ms)
+Completed 200 OK in 231ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-13 22:52:56 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 22:52:56 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-14 20:33:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 209ms (Views: 198.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 20:33:40 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (194.2ms)
+Completed 200 OK in 585ms (Views: 314.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-14 20:33:45 -0700
+Processing by BudgetsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-14 20:33:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 94ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-14 20:33:49 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8SJuhsFlbtnMCv23OlMHvlwGEuGKdduXd2TUDIMdBOrhAibebx+VaOzLhVirAi5YyFV/3q9epELA+bfhHRHnKw==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose%2C+CA
+Completed 302 Found in 441ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 20:33:49 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (316.4ms)
+Completed 200 OK in 418ms (Views: 376.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-14 20:33:53 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 243ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-14 20:34:25 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MoML5u9OvV46duv/2Iu+Tmc4vRqfjc8RTS18YuBEbmHenR4BlceLQfuEAltPdvwUKL+dYKsAu8wYT8x38lrW4g==", "name"=>"uetest", "cat_names"=>["Happy", "Join_2"], "cat_percent"=>["12", "30"]}
+Redirected to http://localhost:3000/budgets/35
+Completed 302 Found in 444ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/35" for 127.0.0.1 at 2017-07-14 20:34:26 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"35"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (160.9ms)
+Completed 200 OK in 433ms (Views: 218.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-14 20:34:45 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5uoRUku1w9PMN2W0EgECeIjos/llfqXpGqOnE0fOWy7DOz3My42sS8fbdfGflSMKsqy5cgdLel3954CQsgpxA==", "name"=>"uetest", "cat_names"=>["Happy", "hallo?"], "cat_percent"=>["12", ""]}
+Redirected to http://localhost:3000/budgets/36
+Completed 302 Found in 261ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/36" for 127.0.0.1 at 2017-07-14 20:34:46 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"36"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (183.4ms)
+Completed 200 OK in 454ms (Views: 234.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-14 20:42:11 -0700
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 681ms (Views: 670.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-14 20:50:57 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 20:50:59 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (141.8ms)
+Completed 200 OK in 269ms (Views: 185.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-14 20:51:02 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sbNtKnlrkK0VTML1liuqR5pJ9nPi4Ajj+qvmbWUubELxJCmYA2txE3VjcrSAHfrCUqDmWc9o350pNvbzavl86g==", "location"=>"San Jose, CA", "income"=>"80000", "user_id"=>"1", "name"=>"", "default_chosen"=>"true"}
+Redirected to http://localhost:3000/budgets/2
+Completed 302 Found in 510ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-14 20:51:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (304.6ms)
+Completed 200 OK in 448ms (Views: 357.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-14 20:52:46 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-14 20:52:46 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 20:52:47 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (119.3ms)
+Completed 200 OK in 210ms (Views: 164.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-14 20:52:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 73ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-14 20:52:53 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQOMpDxzQXnGNn5Q3+VGNUUvjHgEtkamrjwpOxbM/UlhI8T8kgm6yOb3Br9OtG/T0XzhRyGdOXMZoUrWiMAeiA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80000&location=San+Jose%2C+CA
+Completed 302 Found in 134ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets?income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 20:52:53 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose, CA"}
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Class:0x007fa9ac43f898>
+Did you mean?  current_scope):
+  
+app/models/budget.rb:18:in `all'
+app/controllers/budgets_controller.rb:16:in `index'
+Started GET "/budgets?income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 20:53:43 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 167ms (Views: 47.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 20:53:56 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 148ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 20:57:07 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `category_names' for #<Hash:0x007fa9a65810e0>):
+    1: <% @budgets.each do |budget| %>
+    2: <div onload="loadBarChart(<%= budget.category_names %>, <%= budget.category_percent %>)"> 
+    3: 
+    4:   <div class="container" style="width:500px; height:500px;">
+    5:   <div>Name: <%= budget.name%></div>
+  
+app/views/budgets/index.html.erb:2:in `block in _app_views_budgets_index_html_erb__3368323067353263331_70183308398100'
+app/views/budgets/index.html.erb:1:in `each'
+app/views/budgets/index.html.erb:1:in `_app_views_budgets_index_html_erb__3368323067353263331_70183308398100'
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 20:58:15 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `category_names' for #<Hash:0x007fa9acf6cef0>):
+    1: <% @budgets.each do |budget| %>
+    2:   <%= budget.category_names %>
+    3: <% end %>
+  
+app/views/budgets/index.html.erb:2:in `block in _app_views_budgets_index_html_erb__3368323067353263331_70183363983460'
+app/views/budgets/index.html.erb:1:in `each'
+app/views/budgets/index.html.erb:1:in `_app_views_budgets_index_html_erb__3368323067353263331_70183363983460'
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 20:58:58 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 155ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 20:59:40 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (565.9ms)
+Completed 200 OK in 725ms (Views: 613.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:01:51 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (606.2ms)
+Completed 200 OK in 768ms (Views: 653.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:02:37 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (637.5ms)
+Completed 200 OK in 792ms (Views: 685.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-14 21:02:50 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 21:02:52 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (160.8ms)
+Completed 200 OK in 244ms (Views: 205.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/" for 127.0.0.1 at 2017-07-14 21:02:57 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (609.0ms)
+Completed 200 OK in 764ms (Views: 663.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-14 21:03:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.7ms)
+Completed 200 OK in 418ms (Views: 324.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-14 21:03:05 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (306.5ms)
+Completed 200 OK in 448ms (Views: 358.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:03:22 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (604.3ms)
+Completed 200 OK in 776ms (Views: 652.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:03:38 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (634.6ms)
+Completed 200 OK in 783ms (Views: 681.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/budgets/2" for 127.0.0.1 at 2017-07-14 21:03:53 -0700
+Processing by BudgetsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8vPQTefwq5bwH3zvF0OUW6ZAb72Wn+oIbT3aN3achrKyZJT/nfBKKJAwzK4BdcTebql/l7sXPXa+oMqpeUuWGg==", "id"=>"2"}
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 59ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:03:53 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (309.4ms)
+Completed 200 OK in 429ms (Views: 355.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:08:29 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (169.7ms)
+Completed 200 OK in 528ms (Views: 445.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:08:34 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (171.3ms)
+Completed 200 OK in 299ms (Views: 225.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:08:43 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (162.6ms)
+Completed 200 OK in 310ms (Views: 230.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:15:53 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (449.0ms)
+Completed 200 OK in 827ms (Views: 754.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:15:58 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (399.1ms)
+Completed 200 OK in 538ms (Views: 448.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:16:00 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (393.8ms)
+Completed 200 OK in 516ms (Views: 438.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:17:32 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (428.5ms)
+Completed 200 OK in 551ms (Views: 477.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:17:36 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (429.1ms)
+Completed 200 OK in 594ms (Views: 486.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:18:10 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (413.1ms)
+Completed 200 OK in 534ms (Views: 459.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:18:12 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (430.0ms)
+Completed 200 OK in 567ms (Views: 477.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:18:58 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (425.4ms)
+Completed 200 OK in 788ms (Views: 712.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:19:01 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (396.1ms)
+Completed 200 OK in 528ms (Views: 441.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:19:14 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (422.8ms)
+Completed 200 OK in 545ms (Views: 471.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:23:12 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (395.0ms)
+Completed 200 OK in 522ms (Views: 446.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:24:21 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (426.3ms)
+Completed 200 OK in 786ms (Views: 707.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:27:16 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (294.4ms)
+Completed 200 OK in 426ms (Views: 339.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:27:33 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:4: syntax error, unexpected '>'
+tput_buffer.safe_append=')" %>
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+  <div class="container" style="width:400px; height:400px;">
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:7: syntax error, unexpected '<'
+  <div>Name: '.freeze;@output_buf
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+  <div>Name: '.freeze;@output_buffer.appen
+            ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:8: unknown regexp option - h
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:8: syntax error, unexpected tINTEGER, expecting ')'
+    <h2>Bar Chart</h2>
+                     ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:10: syntax error, unexpected '<'
+      <canvas id="barChart"></canvas>
+                             ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:11: unknown regexp options - dv
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:12: syntax error, unexpected '<'
+  </div>
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:14: unknown regexp option - h
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:14: syntax error, unexpected tINTEGER, expecting ')'
+    <h2>Pie Chart</h2>
+                     ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:16: syntax error, unexpected '<'
+      <canvas id="pieChart"></canvas>
+                             ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:17: unknown regexp options - dv
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:18: syntax error, unexpected '<'
+  </div>
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:20: unknown regexp options - btt
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:20: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+    Budget belongs to:
+                  ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:24: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+    First Name: '.freeze;@output_buffer.appen
+               ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:26: syntax error, unexpected '<', expecting ')'
+    <a href="/budgets/'.freeze;@out
+     ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+.safe_append='/edit">Edit This Budget </a>
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:27: unknown regexp options - dv
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:29: syntax error, unexpected ':', expecting ')'
+fer.safe_append='  <h3 > Name: '.freeze;@output_buffer.appen
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+buffer.append=( category['name'] );@output_buffer.safe_appen
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:30: unknown regexp option - h
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:30: syntax error, unexpected tINTEGER, expecting ')'
+tput_buffer.safe_append=' </h3>
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:33: syntax error, unexpected '<', expecting ')'
+  <input type="submit" value="Del
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+  <input type="submit" value="Delete this Budget">  
+                            ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:36: syntax error, unexpected '<', expecting ')'
+</div>
+ ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:36: unterminated regexp meets end of file):
+  
+app/views/budgets/index.html.erb:4: syntax error, unexpected '>'
+app/views/budgets/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/budgets/index.html.erb:7: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+app/views/budgets/index.html.erb:8: unknown regexp option - h
+app/views/budgets/index.html.erb:8: syntax error, unexpected tINTEGER, expecting ')'
+app/views/budgets/index.html.erb:10: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:11: unknown regexp options - dv
+app/views/budgets/index.html.erb:12: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:14: unknown regexp option - h
+app/views/budgets/index.html.erb:14: syntax error, unexpected tINTEGER, expecting ')'
+app/views/budgets/index.html.erb:16: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:17: unknown regexp options - dv
+app/views/budgets/index.html.erb:18: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:20: unknown regexp options - btt
+app/views/budgets/index.html.erb:20: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+app/views/budgets/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/budgets/index.html.erb:24: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+app/views/budgets/index.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/budgets/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/budgets/index.html.erb:27: unknown regexp options - dv
+app/views/budgets/index.html.erb:29: syntax error, unexpected ':', expecting ')'
+app/views/budgets/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/budgets/index.html.erb:30: unknown regexp option - h
+app/views/budgets/index.html.erb:30: syntax error, unexpected tINTEGER, expecting ')'
+app/views/budgets/index.html.erb:33: syntax error, unexpected '<', expecting ')'
+app/views/budgets/index.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/budgets/index.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/budgets/index.html.erb:36: unterminated regexp meets end of file
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:27:50 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:4: syntax error, unexpected '>'
+tput_buffer.safe_append=')" %>
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  <div class="container" style="width:400px; height:400px;">
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:7: syntax error, unexpected '<'
+  <div>Name: '.freeze;@output_buf
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:7: syntax error, unexpected ':', expecting keyword_end
+  <div>Name: '.freeze;@output_buffer.appen
+            ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:8: unknown regexp option - h
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:8: syntax error, unexpected tINTEGER, expecting keyword_end
+    <h2>Bar Chart</h2>
+                     ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:10: syntax error, unexpected '<'
+      <canvas id="barChart"></canvas>
+                             ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:11: unknown regexp options - dv
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:12: syntax error, unexpected '<'
+  </div>
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:14: unknown regexp option - h
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:14: syntax error, unexpected tINTEGER, expecting keyword_end
+    <h2>Pie Chart</h2>
+                     ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:16: syntax error, unexpected '<'
+      <canvas id="pieChart"></canvas>
+                             ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:17: unknown regexp options - dv
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:18: syntax error, unexpected '<'
+  </div>
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:20: unknown regexp options - btt
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:20: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+    Budget belongs to:
+                  ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:24: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+    First Name: '.freeze;@output_buffer.appen
+               ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:26: syntax error, unexpected '<', expecting keyword_end
+    <a href="/budgets/'.freeze;@out
+     ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+.safe_append='/edit">Edit This Budget </a>
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:27: unknown regexp options - dv
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:29: syntax error, unexpected ':', expecting keyword_end
+fer.safe_append='  <h3 > Name: '.freeze;@output_buffer.appen
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+buffer.append=( category['name'] );@output_buffer.safe_appen
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:30: unknown regexp option - h
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:30: syntax error, unexpected tINTEGER, expecting keyword_end
+tput_buffer.safe_append=' </h3>
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:33: syntax error, unexpected '<', expecting keyword_end
+  <input type="submit" value="Del
+   ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  <input type="submit" value="Delete this Budget">  
+                            ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:36: syntax error, unexpected '<', expecting keyword_end
+</div>
+ ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/index.html.erb:36: unterminated regexp meets end of file):
+  
+app/views/budgets/index.html.erb:4: syntax error, unexpected '>'
+app/views/budgets/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/budgets/index.html.erb:7: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:7: syntax error, unexpected ':', expecting keyword_end
+app/views/budgets/index.html.erb:8: unknown regexp option - h
+app/views/budgets/index.html.erb:8: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/budgets/index.html.erb:10: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:11: unknown regexp options - dv
+app/views/budgets/index.html.erb:12: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:14: unknown regexp option - h
+app/views/budgets/index.html.erb:14: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/budgets/index.html.erb:16: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:17: unknown regexp options - dv
+app/views/budgets/index.html.erb:18: syntax error, unexpected '<'
+app/views/budgets/index.html.erb:20: unknown regexp options - btt
+app/views/budgets/index.html.erb:20: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+app/views/budgets/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/budgets/index.html.erb:24: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+app/views/budgets/index.html.erb:26: syntax error, unexpected '<', expecting keyword_end
+app/views/budgets/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/budgets/index.html.erb:27: unknown regexp options - dv
+app/views/budgets/index.html.erb:29: syntax error, unexpected ':', expecting keyword_end
+app/views/budgets/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/budgets/index.html.erb:30: unknown regexp option - h
+app/views/budgets/index.html.erb:30: syntax error, unexpected tINTEGER, expecting keyword_end
+app/views/budgets/index.html.erb:33: syntax error, unexpected '<', expecting keyword_end
+app/views/budgets/index.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/budgets/index.html.erb:36: syntax error, unexpected '<', expecting keyword_end
+app/views/budgets/index.html.erb:36: unterminated regexp meets end of file
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:30:44 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (187.5ms)
+Completed 200 OK in 317ms (Views: 237.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:31:03 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (187.5ms)
+Completed 200 OK in 326ms (Views: 242.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:32:18 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (179.1ms)
+Completed 200 OK in 303ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:32:51 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (181.8ms)
+Completed 200 OK in 308ms (Views: 228.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:33:21 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (185.6ms)
+Completed 200 OK in 321ms (Views: 238.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:33:59 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (178.4ms)
+Completed 200 OK in 313ms (Views: 236.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:36:20 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (308.4ms)
+Completed 200 OK in 430ms (Views: 352.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:36:32 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (305.4ms)
+Completed 200 OK in 438ms (Views: 354.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:42:14 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (389.1ms)
+Completed 200 OK in 513ms (Views: 435.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-07-14 21:42:38 -0700
+Processing by BudgetsController#index as HTML
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (387.7ms)
+Completed 200 OK in 513ms (Views: 433.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-14 21:42:50 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/application
+  Rendered budgets/landing.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-14 21:42:51 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (159.3ms)
+Completed 200 OK in 249ms (Views: 207.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-14 21:42:59 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"14knfHMwBaOEYUNSKdCzFGvdqMqm4LuyaQJNAlPAD5mXHmPOCTDkHeRO8xM/5uORozS44ItobMy6n12cXBcfMQ==", "location"=>"San Jose, CA", "income"=>"80000", "user_id"=>"1", "name"=>"MyBudget", "default_chosen"=>"true"}
+Redirected to http://localhost:3000/budgets/3
+Completed 302 Found in 425ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-14 21:42:59 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.0ms)
+Completed 200 OK in 426ms (Views: 340.9ms | ActiveRecord: 0.0ms)
+
+

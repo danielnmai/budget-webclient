@@ -1,15 +1,19 @@
 class BudgetsController < ApplicationController
-  before_action :authenticate_user!, except: [:landing, :index]
+  before_action :authenticate_user!, except: [:default, :landing]
   def landing; end
   def new; end
-  def index
+  def default
     @location = params[:location]
     @income = params[:income]
     session[:location] = params[:location]
     session[:income] = params[:income]
     @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
     @monthly_income = @income.to_i / 12
-    render 'index'
+    render 'default'
+  end
+
+  def index
+    @budgets = Budget.all(current_user.id)
   end
 
   def access

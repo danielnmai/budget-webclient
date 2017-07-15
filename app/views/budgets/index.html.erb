@@ -1,115 +1,34 @@
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  Location: <%= @location %>
-  Income: <%= @income %>
-  <table class="table table-striped" style="width:500px; height:500px">
-    <tr>
-      <th>  Categories  </th>
-      <th>   Amount </th>
-      <th>  Percentage  </th>
-    </tr>
-    <% sum = 0 %>
-    <% @budget.categories.each do |category| %>
-    <tr>
-      <% percent =  category['percent'] %>
-      <% amount  =  percent * @monthly_income * 0.01 %>
-      <td> <label> <%= category['name'] %> </label> </td>
-      <td> <label> <%=number_to_currency(amount.round, precision: 0) %> </label> </td>
-      <% sum += amount.round %>
-      <td> <label> <%= percent %>% </label> </td>  
-      <% end %>
-    </tr>   
-    <td> Total </td>
-    <td> <%= number_to_currency(sum, precision: 0) %> </td>
-    <td>  <%= number_to_currency(@budget.category_percent.sum.round, precision: 0) %>%</td>
-  </tr>
-</table>
+<% @budgets.each do |budget| %>
+<body onload="loadBarChart(<%= budget.category_names %>, <%= budget.category_percent %>), loadPieChart(<%= budget.category_names %>, <%= budget.category_percent %> )"> 
 
-<!-- If there's no current user, ask user to log in or sign up -->
-<% if !current_user %>
-<a data-toggle="modal" href="/login" data-target="#myModal"> Choose this Budget</a>
-<a data-toggle="modal" href="/budgets/new" data-target="#myModal"> Create your own Budget</a>
-<% else %>
-<%= form_tag '/budgets', method: :post do %>
-<%= hidden_field_tag :location, @location %>
-<%= hidden_field_tag :income, @income %>
-<%= hidden_field_tag :user_id, current_user.id %>
-<label>Name Your Budget: </label>
-<%= text_field_tag :name, nil,placeholder: :default_name %>
-<%= hidden_field_tag :default_chosen, true %>
-<div>
-  <input type="submit" value="Create this budget!">
-</div>
-<% end %>
-<a href="/budgets/new"> Create your own budget</a>
-<% end %>
+  <div class="container" style="width:400px; height:400px;">
+  <div>Name: <%= budget.name%></div>
+    <h2>Bar Chart</h2>
+    <div>
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+  <div class="container" style="width:300px; height:300px;">
+    <h2>Pie Chart</h2>
+    <div>
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
- <div class="modal-dialog" role="document">
-   <div class="modal-content">
-     <div class="modal-header">
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <h4 class="modal-title" id="myModalLabel">Login </h4>
-     </div>
-     <div class="modal-body">
-       
-     </div>
-     <div class="modal-footer">
-       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-     </div>
-   </div>
- </div>
-</div>
-<div><button id="link-button">Link Account</button>
-
-<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-<script type="text/javascript">
-var handler = Plaid.create({
-  clientName: 'Plaid Walkthrough Demo',
-  env: 'sandbox',
-  key: '7d13eb84ca8559b6020bc3a71639c6', // Replace with your public_key to test with live credentials
-  product: ['auth', 'transactions'],
-  
-  onLoad: function() {
-    // Optional, called when Link loads
-  },
-  onSuccess: function(public_token, metadata) {
-    // Send the public_token to your app server.
-    // The metadata object contains info about the institution the
-    // user selected and the account ID, if `selectAccount` is enabled.
-    $.post('/get_access_token', {
-      public_token: public_token,
-    });
-  },
-  onExit: function(err, metadata) {
-    // The user exited the Link flow.
-    if (err != null) {
-      // The user encountered a Plaid API error prior to exiting.
-    }
-    // metadata contains information about the institution
-    // that the user selected and the most recent API request IDs.
-    // Storing this information can be helpful for support.
-  }
-});
-
-$('#link-button').on('click', function(e) {
-  handler.open();
-  // Alternatively, you can have a specific institution
-  // prompt for authentication. Example:
-  //
-  // handler.open('ins_100000');
-  //
-  // This will open Link with Union Bank as the institution.
-});
-</script>
-</div>
+  <button onclick="loadPieChart(<%= budget.category_names %>, <%= budget.category_percent %> )"> Load Pie Chart</button>
+  <div>
+    Budget belongs to:
+    First Name: <%= current_user.first_name %>
+    Last Name: <%= current_user.id%>
+    <a href="/budgets/<%=budget.id%>/edit">Edit This Budget </a>
+  </div>
+  <% budget.categories.each do |category| %>
+  <h3 > Name: <%= category['name'] %> </h3>
+  <h3> Percentages: <%= category['percent'] %> </h3>
+  <% end %>
+  <%= form_tag "/budgets/#{budget.id}", method: :delete do %>
+  <input type="submit" value="Delete this Budget">  
+  <% end %>  
 
 </body>
-</html>
+<% end %>

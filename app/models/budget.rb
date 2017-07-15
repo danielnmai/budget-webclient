@@ -9,17 +9,17 @@ class Budget < ApplicationRecord
   end
 
   def self.find(id, user_id)
-
     budget_hash = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets/#{id}").body
     Budget.new(budget_hash)
   end
 
   def self.all(user_id)
     budgets = []
-    api_budgets = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{current_user.id}/budgets").body
+    api_budgets = Unirest.get("#{ENV['API_ROOT_URL']}/users/#{user_id}/budgets").body
     api_budgets.each do |api_budget|
       budgets << Budget.new(api_budget)
     end
+    budgets
   end
 
   def self.create(user_id, budget_name, cat_names, cat_percent)

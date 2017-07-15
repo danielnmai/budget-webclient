@@ -1,0 +1,345 @@
+[
+{
+"date": "2017-07-14",
+"description": "Auth : Macys Newpark",
+"category": [
+"Shops",
+"Department Stores"
+],
+"amount": 67.05
+},
+{
+"date": "2017-07-11",
+"description": "Atm Deposit Us Bank Fremont Fremont Caus1",
+"category": [
+"Transfer",
+"Deposit",
+"ATM"
+],
+"amount": -60
+},
+{
+"date": "2017-07-11",
+"description": "Atm Transfer Credit 6629071117sus4s688us Bank Fremont Fremont Caus1",
+"category": [
+"Transfer",
+"Credit"
+],
+"amount": -200
+},
+{
+"date": "2017-07-11",
+"description": "Atm Transfer Debit Us Bank Fremont Fremont Caus1",
+"category": [
+"Transfer",
+"Debit"
+],
+"amount": 200
+},
+{
+"date": "2017-07-11",
+"description": "Electronic Withdrawal Prosper Marketpl",
+"category": [
+"Transfer",
+"Withdrawal"
+],
+"amount": 443.89
+},
+{
+"date": "2017-07-11",
+"description": "Starbucks",
+"category": [
+"Food and Drink",
+"Restaurants",
+"Coffee Shop"
+],
+"amount": 5.95
+},
+{
+"date": "2017-07-10",
+"description": "Costco",
+"category": [
+"Shops",
+"Warehouses and Wholesale Stores"
+],
+"amount": 5.45
+},
+{
+"date": "2017-07-10",
+"description": "Costco",
+"category": [
+"Shops",
+"Warehouses and Wholesale Stores"
+],
+"amount": 153.54
+},
+{
+"date": "2017-07-10",
+"description": "Customer Withdrawal",
+"category": [
+"Transfer",
+"Withdrawal"
+],
+"amount": 1000
+},
+{
+"date": "2017-07-10",
+"description": "Huong Lan Sandwiches #",
+"category": [
+"Food and Drink",
+"Restaurants"
+],
+"amount": 3.54
+},
+{
+"date": "2017-07-10",
+"description": "Interest Charge On Purchases",
+"category": [
+"Interest",
+"Interest Charged"
+],
+"amount": 20.55
+},
+{
+"date": "2017-07-10",
+"description": "Ohana Hawaiian BBQ",
+"category": [
+"Food and Drink",
+"Restaurants",
+"Fast Food"
+],
+"amount": 15.39
+},
+{
+"date": "2017-07-07",
+"description": "Electronic Deposit Mitxpc, Inc",
+"category": [
+"Transfer",
+"Deposit"
+],
+"amount": -1226.57
+},
+{
+"date": "2017-07-06",
+"description": "Marina Food",
+"category": [
+"Shops",
+"Supermarkets and Groceries"
+],
+"amount": 6
+},
+{
+"date": "2017-07-05",
+"description": "Atm Withdrawal Us Bank Milpitasmilpitas Caus1",
+"category": [
+"Transfer",
+"Withdrawal",
+"ATM"
+],
+"amount": 60
+},
+{
+"date": "2017-07-05",
+"description": "Chevron",
+"category": [
+"Travel",
+"Gas Stations"
+],
+"amount": 21.2
+},
+{
+"date": "2017-07-05",
+"description": "GEICO",
+"category": [
+"Service",
+"Insurance"
+],
+"amount": 130.28
+},
+{
+"date": "2017-07-05",
+"description": "Marina Food",
+"category": [
+"Shops",
+"Supermarkets and Groceries"
+],
+"amount": 6
+},
+{
+"date": "2017-07-05",
+"description": "Od Protection Transfer From Line End In 9634",
+"category": [
+"Transfer",
+"Credit"
+],
+"amount": -100
+},
+{
+"date": "2017-07-05",
+"description": "Overdraft Protection Fee",
+"category": [
+"Bank Fees",
+"Overdraft"
+],
+"amount": 7.5
+},
+{
+"date": "2017-06-30",
+"description": "Web Authorized Pmt Amex Epayment",
+"category": [
+"Payment",
+"Credit Card"
+],
+"amount": 35
+},
+{
+"date": "2017-06-28",
+"description": "Marina Food",
+"category": [
+"Shops",
+"Supermarkets and Groceries"
+],
+"amount": 6
+},
+{
+"date": "2017-06-28",
+"description": "Shell",
+"category": [
+"Travel",
+"Gas Stations"
+],
+"amount": 42.29
+},
+{
+"date": "2017-06-28",
+"description": "The Aldo Group inc.",
+"category": [
+"Shops",
+"Clothing and Accessories"
+],
+"amount": 45.31
+},
+{
+"date": "2017-06-27",
+"description": "Internet Banking Payment To Credit Card 9915",
+"category": [
+"Payment",
+"Credit Card"
+],
+"amount": 1000
+},
+{
+"date": "2017-06-27",
+"description": "Internet Payment Thank You",
+"category": [
+"Payment",
+"Credit Card"
+],
+"amount": -1000
+},
+{
+"date": "2017-06-22",
+"description": "Web Authorized Pmt Chase Credit Crd",
+"category": [
+"Payment",
+"Credit Card"
+],
+"amount": 103.05
+},
+{
+"date": "2017-06-21",
+"description": "Fhda Foothill Campus C Los Altos Hil",
+"category": [
+"Community",
+"Education",
+"Colleges and Universities"
+],
+"amount": 59.9
+},
+{
+"date": "2017-06-21",
+"description": "Internet Banking Transfer Deposit 9634",
+"category": [
+"Transfer",
+"Deposit"
+],
+"amount": -200
+},
+{
+"date": "2017-06-21",
+"description": "Internet Banking Transfer Withdrawal 6629",
+"category": [
+"Transfer",
+"Debit"
+],
+"amount": 200
+},
+{
+"date": "2017-06-21",
+"description": "Monthly Maintenance Fee",
+"category": [
+"Bank Fees"
+],
+"amount": 10.95
+},
+{
+"date": "2017-06-21",
+"description": "Monthly Maintenance Fee Waived",
+"category": [
+"Bank Fees"
+],
+"amount": -10.95
+},
+{
+"date": "2017-06-20",
+"description": "Electronic Deposit Mitxpc, Inc",
+"category": [
+"Transfer",
+"Deposit"
+],
+"amount": -1173.26
+},
+{
+"date": "2017-06-16",
+"description": "Ultra Mobile",
+"category": [
+"Service",
+"Telecommunication Services"
+],
+"amount": 48.65
+},
+{
+"date": "2017-06-16",
+"description": "Web Authorized Pmt Paypal",
+"category": null,
+"amount": 583.99
+},
+{
+"date": "2017-06-15",
+"description": "Atm Deposit Us Bank Fremont Fremont Caus1",
+"category": [
+"Transfer",
+"Deposit",
+"ATM"
+],
+"amount": -650
+},
+{
+"date": "2017-06-15",
+"description": "Electronic Withdrawal Fitness 19 Abc",
+"category": [
+"Transfer",
+"Withdrawal"
+],
+"amount": 46.9
+},
+{
+"date": "2017-06-15",
+"description": "Web Authorized Pmt Discover",
+"category": [
+"Payment",
+"Credit Card"
+],
+"amount": 29.57
+}
+]

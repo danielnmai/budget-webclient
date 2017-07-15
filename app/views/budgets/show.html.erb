@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title><%= @budget.name %></title>
 </head>
-<body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)"> 
+<body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+
+
 
   <div class="container" style="width:400px; height:400px;">
     <div>Name: <%= @budget.name%></div>
@@ -26,57 +28,46 @@
    <a href="/budgets/<%=@budget.id%>/edit">Edit This Budget </a>
  </div>
  <% @budget.categories.each do |category| %>
- <h3 > Name: <%= category['name'] %> </h3>
- <h3> Percentages: <%= category['percent'] %> </h3>
+ <p > Name: <%= category['name'] %> </p>
+ <p> Percentages: <%= category['percent'] %> </p>
  <% end %>
  <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
- <input type="submit" value="Delete this Budget">  
- <% end %>
-
-
-  <div><button id="link-button">Link Bank Account</button>
-
-   <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-   <script type="text/javascript">
-     var handler = Plaid.create({
-       clientName: 'mBudget by Daniel Mai',
-       env: 'sandbox',
-   key: '7d13eb84ca8559b6020bc3a71639c6', // Replace with your public_key to test with live credentials
-   product: ['auth', 'transactions'],
-   
-   onLoad: function() {
-     // Optional, called when Link loads
-   },
-   onSuccess: function(public_token, metadata) {
-     // Send the public_token to your app server.
-     // The metadata object contains info about the institution the
-     // user selected and the account ID, if `selectAccount` is enabled.
-     $.post('/get_access_token', {
-       public_token: public_token,
-     });
-   },
-   onExit: function(err, metadata) {
-     // The user exited the Link flow.
-     if (err != null) {
-       // The user encountered a Plaid API error prior to exiting.
-     }
-     // metadata contains information about the institution
-     // that the user selected and the most recent API request IDs.
-     // Storing this information can be helpful for support.
-   }
- });
-
-     $('#link-button').on('click', function(e) {
-       handler.open();
-   // Alternatively, you can have a specific institution
-   // prompt for authentication. Example:
-   //
-   // handler.open('ins_100000');
-   //
-   // This will open Link with Union Bank as the institution.
- });
- </script>
- </div>
+ <input class="btn btn-danger" type="submit" value="Delete this Budget">  
+ <% end %>  
+ <% if @total_transactions %>
+ <p>  <%= @total_transactions %> </p>
+ <p><%=@trans_response %></p>
+ <table class="table table-striped" style="width:500px">
+   <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5/17</td>
+      <td>Costco</td>
+      <td>Foods</td>
+      <td>$25</td>
+    </tr>
+    <tr>
+      <td>7/17</td>
+      <td>H2O</td>
+      <td>Phone</td>
+      <td>$35</td>
+    </tr>
+    <tr>
+      <td>7/15</td>
+      <td>In n Out</td>
+      <td>Fast Foods</td>
+      <td>$11</td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
 </body>
 </html>
 

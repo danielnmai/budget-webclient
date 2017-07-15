@@ -22,13 +22,13 @@ class BudgetsController < ApplicationController
 
   def access
     public_token = params['public_token']
-    redirect_to "/banks/#{public_token}"
+    redirect_to "/users/#{current_user.id}/#{public_token}"
   end
 
   def link_bank
+    @budget = Budget.find(params[:id], current_user.id)
     public_token = params['public_token']
-    puts "PUBLIC TOKEN: " + public_token
-    client = Plaid::Client.new(env: :sandbox,
+    client = Plaid::Client.new(env: :development,
                               client_id: ENV['PLAID_CLIENT_ID'],
                               secret: ENV['PLAID_SECRET'],
                               public_key: ENV['PLAID_PUBLIC_KEY'])
@@ -36,8 +36,10 @@ class BudgetsController < ApplicationController
     access_token = response['access_token']
 
     @auth_response = client.auth.get(access_token)
-    # @trans_response = client.transactions.get(access_token, '2010-01-01', '2017-07-15', account_ids: ['mexMMwz6y8Svw3zQZye9Um5pDEdzeDSmNy9Ao', '90VjjwBRL8Ia5vn3JgNLca56AeDKPAUPyKwLv'])
-    # @total_transactions = @trans_response['total_transactions']
+    now = Date.today
+    thirty_days_ago = (now - 30)
+    @trans_response = client.transactions.get(access_token, thirty_days_ago, now)
+    @transactions = @trans_response['transactions']
 
     item_id = response['item_id']
     puts "ACCESS TOKEN: #{access_token}"

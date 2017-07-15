@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/' => 'budgets#landing'
   get '/budgets/default' => 'budgets#default'
   post '/get_access_token' => 'budgets#access'
-  get '/banks/:public_token' => 'budgets#link_bank'
+  get '/users/:id/:public_token' => 'budgets#link_bank'
 
   resources :budgets
   #      Prefix Verb   URI Pattern                 Controller#Action

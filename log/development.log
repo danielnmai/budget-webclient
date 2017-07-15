@@ -40335,3 +40335,1397 @@ app/models/user.rb:19:in `find'
 app/controllers/application_controller.rb:5:in `current_user'
 app/views/budgets/landing.html.erb:18:in `_app_views_budgets_landing_html_erb___3832392252432867559_70129487808660'
 app/controllers/budgets_controller.rb:4:in `landing'
+Started GET "/" for 127.0.0.1 at 2017-07-15 14:46:49 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (362.2ms)
+Completed 200 OK in 418ms (Views: 416.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 14:46:52 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (162.7ms)
+Completed 200 OK in 334ms (Views: 269.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:47:01 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (305.5ms)
+Completed 200 OK in 495ms (Views: 407.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:47:24 -0700
+Processing by BudgetsController#link_bank as */*
+  Parameters: {"public_token"=>"public-sandbox-2cea4e7f-2950-4a3a-82d8-1c881f7c4d82"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 916ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:48:30 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-0a107f75-086b-4389-914e-9c889a68d0ab"}
+Redirected to http://localhost:3000/banks/public-sandbox-0a107f75-086b-4389-914e-9c889a68d0ab
+Completed 200 OK in 57ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/banks/public-sandbox-0a107f75-086b-4389-914e-9c889a68d0ab" for 127.0.0.1 at 2017-07-15 14:48:30 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-0a107f75-086b-4389-914e-9c889a68d0ab"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.2ms)
+Completed 200 OK in 813ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-0a107f75-086b-4389-914e-9c889a68d0ab" for 127.0.0.1 at 2017-07-15 14:48:31 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-0a107f75-086b-4389-914e-9c889a68d0ab"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 771ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:49:38 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (287.7ms)
+Completed 200 OK in 474ms (Views: 385.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:49:49 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.6ms)
+Completed 200 OK in 482ms (Views: 395.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:50:12 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-a70239f6-7ff9-40e9-8e55-be93ea750ea1"}
+Redirected to http://localhost:3000/banks/public-sandbox-a70239f6-7ff9-40e9-8e55-be93ea750ea1
+Completed 200 OK in 41ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-a70239f6-7ff9-40e9-8e55-be93ea750ea1" for 127.0.0.1 at 2017-07-15 14:50:12 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-a70239f6-7ff9-40e9-8e55-be93ea750ea1"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 826ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:50:13 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (295.3ms)
+Completed 200 OK in 460ms (Views: 384.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:50:48 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (325.6ms)
+Completed 200 OK in 511ms (Views: 427.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:51:15 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (307.8ms)
+Completed 200 OK in 490ms (Views: 412.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-15 14:51:25 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 147ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:51:33 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (295.7ms)
+Completed 200 OK in 465ms (Views: 387.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:52:36 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (314.4ms)
+Completed 200 OK in 490ms (Views: 414.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:53:01 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-3f248dec-d073-40cb-b7a7-320a1bd1e030"}
+Redirected to http://localhost:3000/banks/public-sandbox-3f248dec-d073-40cb-b7a7-320a1bd1e030
+Completed 200 OK in 41ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-3f248dec-d073-40cb-b7a7-320a1bd1e030" for 127.0.0.1 at 2017-07-15 14:53:01 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-3f248dec-d073-40cb-b7a7-320a1bd1e030"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 848ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:53:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (300.5ms)
+Completed 200 OK in 473ms (Views: 397.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:53:07 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (303.8ms)
+Completed 200 OK in 478ms (Views: 397.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:53:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (290.5ms)
+Completed 200 OK in 467ms (Views: 386.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:53:58 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-e1a01d1a-4d81-4e1a-b9c4-014624d3373e"}
+Redirected to http://localhost:3000/banks/public-sandbox-e1a01d1a-4d81-4e1a-b9c4-014624d3373e
+Completed 200 OK in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-e1a01d1a-4d81-4e1a-b9c4-014624d3373e" for 127.0.0.1 at 2017-07-15 14:53:58 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-e1a01d1a-4d81-4e1a-b9c4-014624d3373e"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 801ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:53:59 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (319.6ms)
+Completed 200 OK in 496ms (Views: 421.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:54:30 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (315.5ms)
+Completed 200 OK in 501ms (Views: 421.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:54:55 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-64096f37-3a92-4b75-af63-cfe1eb24ea89"}
+Redirected to http://localhost:3000/banks/public-sandbox-64096f37-3a92-4b75-af63-cfe1eb24ea89
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-64096f37-3a92-4b75-af63-cfe1eb24ea89" for 127.0.0.1 at 2017-07-15 14:54:56 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-64096f37-3a92-4b75-af63-cfe1eb24ea89"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 849ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:54:56 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (297.5ms)
+Completed 200 OK in 465ms (Views: 389.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:55:49 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (306.3ms)
+Completed 200 OK in 491ms (Views: 403.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 14:56:24 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-8bf2f86d-a4f9-49ad-aebc-88c0591f923c"}
+Redirected to http://localhost:3000/banks/public-sandbox-8bf2f86d-a4f9-49ad-aebc-88c0591f923c
+Completed 200 OK in 43ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-8bf2f86d-a4f9-49ad-aebc-88c0591f923c" for 127.0.0.1 at 2017-07-15 14:56:24 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-8bf2f86d-a4f9-49ad-aebc-88c0591f923c"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 835ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:56:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (302.6ms)
+Completed 200 OK in 479ms (Views: 399.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:57:18 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (375.1ms)
+Completed 200 OK in 560ms (Views: 475.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:57:32 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (318.6ms)
+Completed 200 OK in 493ms (Views: 416.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 14:58:15 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (206.8ms)
+Completed 200 OK in 360ms (Views: 311.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 14:59:37 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (171.8ms)
+Completed 200 OK in 335ms (Views: 286.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 14:59:41 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (242.5ms)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6: </head>
+     7: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+     8: 
+     9:   <h2> <% @auth_response.each do |response| %> </h2>
+    10:     <%= response %>
+    11:   <% end %>
+    12:  
+  
+app/views/budgets/show.html.erb:9:in `_app_views_budgets_show_html_erb___4382764429682067176_70129487008640'
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:00:26 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (305.9ms)
+Completed 200 OK in 479ms (Views: 397.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:00:50 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-9461450a-38fb-4698-94da-d79f08ea5738"}
+Redirected to http://localhost:3000/banks/public-sandbox-9461450a-38fb-4698-94da-d79f08ea5738
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-9461450a-38fb-4698-94da-d79f08ea5738" for 127.0.0.1 at 2017-07-15 15:00:50 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-9461450a-38fb-4698-94da-d79f08ea5738"}
+Redirected to http://localhost:3000/budgets/1
+Completed 302 Found in 808ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:00:51 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.4ms)
+Completed 200 OK in 470ms (Views: 391.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:04:04 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (307.2ms)
+Completed 200 OK in 496ms (Views: 402.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:04:28 -0700
+Processing by BudgetsController#link_bank as */*
+  Parameters: {"public_token"=>"public-sandbox-07dbdccd-cc7d-4af4-9b37-a431f5f4309a"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 827ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:05:04 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (310.1ms)
+Completed 200 OK in 509ms (Views: 414.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:05:27 -0700
+Processing by BudgetsController#link_bank as */*
+  Parameters: {"public_token"=>"public-sandbox-0a93cc45-b747-40d2-bd5b-f09a7c156858"}
+Redirected to http://localhost:3000budgets/1/public-sandbox-0a93cc45-b747-40d2-bd5b-f09a7c156858
+Completed 200 OK in 812ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:05:54 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (154.9ms)
+Completed 200 OK in 298ms (Views: 247.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:05:58 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (158.8ms)
+Completed 200 OK in 295ms (Views: 257.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:05:59 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (287.7ms)
+Completed 200 OK in 461ms (Views: 381.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:06:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (299.3ms)
+Completed 200 OK in 489ms (Views: 391.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:06:32 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-b3333567-a5f0-490b-8b7f-cfe13ea1e263"}
+Redirected to http://localhost:3000/banks/public-sandbox-b3333567-a5f0-490b-8b7f-cfe13ea1e263
+Completed 200 OK in 40ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-b3333567-a5f0-490b-8b7f-cfe13ea1e263" for 127.0.0.1 at 2017-07-15 15:06:32 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-b3333567-a5f0-490b-8b7f-cfe13ea1e263"}
+Redirected to http://localhost:3000budgets/1/public-sandbox-b3333567-a5f0-490b-8b7f-cfe13ea1e263
+Completed 302 Found in 827ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:07:08 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (180.7ms)
+Completed 200 OK in 329ms (Views: 280.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:07:09 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (166.0ms)
+Completed 200 OK in 316ms (Views: 278.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:07:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (309.0ms)
+Completed 200 OK in 486ms (Views: 405.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:07:12 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (291.5ms)
+Completed 200 OK in 466ms (Views: 387.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:07:34 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-469836bc-617b-4776-9032-f88504d9585d"}
+Redirected to http://localhost:3000/banks/public-sandbox-469836bc-617b-4776-9032-f88504d9585d
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-469836bc-617b-4776-9032-f88504d9585d" for 127.0.0.1 at 2017-07-15 15:07:34 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-469836bc-617b-4776-9032-f88504d9585d"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.2ms)
+Completed 200 OK in 838ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-469836bc-617b-4776-9032-f88504d9585d" for 127.0.0.1 at 2017-07-15 15:07:35 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-469836bc-617b-4776-9032-f88504d9585d"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.2ms)
+Completed 200 OK in 790ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:07:59 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (163.5ms)
+Completed 200 OK in 315ms (Views: 271.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:08:00 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (307.2ms)
+Completed 200 OK in 481ms (Views: 400.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:08:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (285.7ms)
+Completed 200 OK in 455ms (Views: 379.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:08:25 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-b8daf714-ee16-43f0-a810-7876f5329303"}
+Redirected to http://localhost:3000/banks/public-sandbox-b8daf714-ee16-43f0-a810-7876f5329303
+Completed 200 OK in 40ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/banks/public-sandbox-b8daf714-ee16-43f0-a810-7876f5329303" for 127.0.0.1 at 2017-07-15 15:08:25 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"public_token"=>"public-sandbox-b8daf714-ee16-43f0-a810-7876f5329303"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 861ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <html lang="en">
+    3: <head>
+    4:   <meta charset="UTF-8">
+    5:   <title><%= @budget.name %></title>
+    6: </head>
+    7: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+    8:   <% if @auth_response %>
+  
+app/views/budgets/show.html.erb:5:in `_app_views_budgets_show_html_erb___4382764429682067176_70129485893160'
+app/controllers/budgets_controller.rb:45:in `link_bank'
+Started GET "/banks/public-sandbox-b8daf714-ee16-43f0-a810-7876f5329303" for 127.0.0.1 at 2017-07-15 15:13:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/banks/public-sandbox-b8daf714-ee16-43f0-a810-7876f5329303"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:13:07 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (166.3ms)
+Completed 200 OK in 310ms (Views: 262.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:13:09 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (292.3ms)
+Completed 200 OK in 463ms (Views: 385.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:13:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (282.4ms)
+Completed 200 OK in 468ms (Views: 393.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:13:31 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (275.8ms)
+Completed 200 OK in 445ms (Views: 368.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:13:46 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (306.2ms)
+Completed 200 OK in 477ms (Views: 400.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:13:57 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.0ms)
+Completed 200 OK in 463ms (Views: 389.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:14:08 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (286.3ms)
+Completed 200 OK in 458ms (Views: 378.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:14:45 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (268.7ms)
+Completed 200 OK in 434ms (Views: 359.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:16:15 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (316.9ms)
+Completed 200 OK in 526ms (Views: 426.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:16:56 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-952565c8-4778-434d-aff2-a0c90f1fb4e2"}
+Redirected to http://localhost:3000/budgets//public-sandbox-952565c8-4778-434d-aff2-a0c90f1fb4e2
+Completed 200 OK in 37ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets//public-sandbox-952565c8-4778-434d-aff2-a0c90f1fb4e2" for 127.0.0.1 at 2017-07-15 15:16:56 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"public-sandbox-952565c8-4778-434d-aff2-a0c90f1fb4e2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1029.7ms)
+Completed 200 OK in 1174ms (Views: 1123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets//public-sandbox-952565c8-4778-434d-aff2-a0c90f1fb4e2" for 127.0.0.1 at 2017-07-15 15:18:31 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"public-sandbox-952565c8-4778-434d-aff2-a0c90f1fb4e2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1155.8ms)
+Completed 200 OK in 1311ms (Views: 1249.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:18:38 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (306.0ms)
+Completed 200 OK in 495ms (Views: 414.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:18:39 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (310.2ms)
+Completed 200 OK in 478ms (Views: 402.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets/1/get_access_token" for 127.0.0.1 at 2017-07-15 15:19:03 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/budgets/1/get_access_token"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/1" for 127.0.0.1 at 2017-07-15 15:24:18 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (275.3ms)
+Completed 200 OK in 468ms (Views: 380.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:24:22 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 170ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:24:25 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 173ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:24:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 180ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:25:05 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+Redirected to http://localhost:3000/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:25:05 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (285.0ms)
+Completed 200 OK in 1202ms (Views: 382.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:25:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (278.6ms)
+Completed 200 OK in 1185ms (Views: 370.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:25:48 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (291.1ms)
+Completed 200 OK in 1226ms (Views: 397.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:26:07 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (311.0ms)
+Completed 200 OK in 1261ms (Views: 411.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:26:25 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (278.3ms)
+Completed 200 OK in 1270ms (Views: 372.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:28:53 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (292.7ms)
+Completed 200 OK in 1833ms (Views: 403.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:29:12 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (283.1ms)
+Completed 200 OK in 1909ms (Views: 376.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2017-07-15 15:29:19 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 188ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2017-07-15 15:29:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 184ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:29:45 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (300.2ms)
+Completed 200 OK in 1845ms (Views: 392.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:30:10 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 1488ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/show.html.erb:50: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/budgets/show.html.erb:50: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/budgets_controller.rb:46:in `link_bank'
+Started GET "/users/1/public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1" for 127.0.0.1 at 2017-07-15 15:30:24 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f6dde2cd-4a96-48ac-8622-4cb5ee88dec1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (300.5ms)
+Completed 200 OK in 1836ms (Views: 393.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-15 15:30:32 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 15:30:32 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-15 15:30:34 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-15 15:30:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q6wYLrIsyqFWu+USorRwB2aoKy26J192g5IPvHuybmW7jFB2HFYxEHZ6nf0z5Vnh8vtGEp8MIKM0D2xR5b6NpA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80%2C000&location=San+Jose%2C+CA
+Completed 302 Found in 115ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:30:37 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (127.0ms)
+Completed 200 OK in 297ms (Views: 216.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:30:42 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 182ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:30:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 173ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:31:14 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6"}
+Redirected to http://localhost:3000/users/1/public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6" for 127.0.0.1 at 2017-07-15 15:31:14 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6"}
+Completed 500 Internal Server Error in 1299ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : pADEo
+):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/users/1/public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6" for 127.0.0.1 at 2017-07-15 15:31:39 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.9ms)
+Completed 200 OK in 1628ms (Views: 388.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6" for 127.0.0.1 at 2017-07-15 15:32:03 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-fa476160-82f6-4f43-9546-098aeb5cfde6"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (302.2ms)
+Completed 200 OK in 1793ms (Views: 398.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:32:09 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (138.1ms)
+Completed 200 OK in 332ms (Views: 245.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:32:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 167ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:32:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 168ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:32:37 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+Redirected to http://localhost:3000/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:32:37 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+Completed 500 Internal Server Error in 1186ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : Bl67Q
+):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:33:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (298.3ms)
+Completed 200 OK in 1671ms (Views: 391.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:33:41 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.3ms)
+Completed 200 OK in 1601ms (Views: 384.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:33:55 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.7ms)
+Completed 200 OK in 1603ms (Views: 374.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:34:27 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (5.2ms)
+Completed 200 OK in 1321ms (Views: 11.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:35:56 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+Completed 500 Internal Server Error in 1033ms (ActiveRecord: 2.1ms)
+
+
+  
+NameError (undefined local variable or method `thirty_days_ago' for #<BudgetsController:0x007f90931204c8>):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:36:30 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (10.4ms)
+Completed 200 OK in 1271ms (Views: 16.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:37:12 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (9.4ms)
+Completed 200 OK in 1249ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:42:57 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.3ms)
+Completed 200 OK in 1657ms (Views: 383.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 15:43:08 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (123.8ms)
+Completed 200 OK in 322ms (Views: 226.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-15 15:43:13 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 167ms (Views: 163.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:43:14 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (5.2ms)
+Completed 200 OK in 1248ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:43:15 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (5.1ms)
+Completed 200 OK in 1201ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 15:43:24 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (42.9ms)
+Completed 200 OK in 108ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:43:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 183ms (Views: 99.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 15:43:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 169ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 15:44:04 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+Redirected to http://localhost:3000/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca
+Completed 200 OK in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:44:04 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+Completed 500 Internal Server Error in 1208ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : TbAxi
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:44:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+Completed 500 Internal Server Error in 1243ms (ActiveRecord: 2.2ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : iZpSB
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:47:30 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (286.0ms)
+Completed 200 OK in 1602ms (Views: 385.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:48:45 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.2ms)
+Completed 200 OK in 1657ms (Views: 373.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:49:08 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.9ms)
+Completed 200 OK in 1607ms (Views: 390.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:49:12 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (312.1ms)
+Completed 200 OK in 1687ms (Views: 406.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:49:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (301.1ms)
+Completed 200 OK in 1653ms (Views: 410.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:49:26 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (316.7ms)
+Completed 200 OK in 1677ms (Views: 413.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:49:37 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.0ms)
+Completed 200 OK in 1606ms (Views: 391.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 15:49:51 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (291.7ms)
+Completed 200 OK in 1658ms (Views: 388.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:56:53 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (4.0ms)
+Completed 200 OK in 1301ms (Views: 10.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:58:18 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (3.6ms)
+Completed 200 OK in 1279ms (Views: 10.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 15:59:43 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (4.2ms)
+Completed 200 OK in 1254ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 16:00:06 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (0.8ms)
+Completed 200 OK in 1235ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 16:00:25 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (118.2ms)
+Completed 200 OK in 292ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 16:00:27 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (4.0ms)
+Completed 200 OK in 1258ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 16:00:29 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (3.9ms)
+Completed 200 OK in 1204ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 16:02:54 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+Completed 500 Internal Server Error in 476ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::InvalidInputError (
+Error Type      : INVALID_INPUT
+Error Code      : INVALID_PUBLIC_TOKEN
+Error Message   : provided public token is expired. Public tokens expire 30 minutes after creation at which point they can no longer be exchanged
+Display Message : 
+Request ID      : sLXat
+):
+  
+app/controllers/budgets_controller.rb:35:in `link_bank'
+Started GET "/users/1/public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8" for 127.0.0.1 at 2017-07-15 16:03:01 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-464598b3-9f6a-4ff3-8b75-74e5810266d8"}
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::InvalidInputError (
+Error Type      : INVALID_INPUT
+Error Code      : INVALID_PUBLIC_TOKEN
+Error Message   : provided public token is expired. Public tokens expire 30 minutes after creation at which point they can no longer be exchanged
+Display Message : 
+Request ID      : ammvb
+):
+  
+app/controllers/budgets_controller.rb:35:in `link_bank'
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 16:03:17 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (124.5ms)
+Completed 200 OK in 308ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:03:24 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 178ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:03:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 174ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:03:47 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981"}
+Redirected to http://localhost:3000/users/1/public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981
+Completed 200 OK in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981" for 127.0.0.1 at 2017-07-15 16:03:47 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981"}
+Completed 500 Internal Server Error in 1224ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : xtXM2
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981" for 127.0.0.1 at 2017-07-15 16:03:59 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981"}
+Completed 500 Internal Server Error in 1269ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : 8llVh
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981" for 127.0.0.1 at 2017-07-15 16:04:21 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-908d7576-e9c7-4237-ae67-e33e2db23981"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.5ms)
+Completed 200 OK in 1295ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 16:05:25 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (48.4ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:05:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 183ms (Views: 100.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:05:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 178ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:05:58 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-development-f888d947-b3a8-4fc7-a437-105d56821f2c"}
+Redirected to http://localhost:3000/users/1/public-development-f888d947-b3a8-4fc7-a437-105d56821f2c
+Completed 200 OK in 52ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-development-f888d947-b3a8-4fc7-a437-105d56821f2c" for 127.0.0.1 at 2017-07-15 16:05:58 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-f888d947-b3a8-4fc7-a437-105d56821f2c"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (2.9ms)
+Completed 200 OK in 1426ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-development-f888d947-b3a8-4fc7-a437-105d56821f2c" for 127.0.0.1 at 2017-07-15 16:06:00 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-f888d947-b3a8-4fc7-a437-105d56821f2c"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (2.7ms)
+Completed 200 OK in 1362ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+

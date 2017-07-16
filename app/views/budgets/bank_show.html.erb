@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @budget.name %></title>
+</head>
+<body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+  <div class="container">
+    <div>Name: <%= @budget.name%></div>
+    <h2>Bar Chart</h2>
+    <div>
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+  <div id="pie_chart" class="container">
+    <h2>Pie Chart</h2>
+    <div>
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+  <div>
+    <div>Budget belongs to  :
+     <%= current_user.first_name %> <%= current_user.last_name %>
+   </div> 
+   <a href="/budgets/<%=@budget.id%>/edit">Edit This Budget </a>
+ </div>
+ <% @budget.categories.each do |category| %>
+ <p > Name: <%= category['name'] %> </p>
+ <p> Percentages: <%= category['percent'] %> </p>
+ <% end %>
+ <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
+ <input class="btn btn-danger" type="submit" value="Delete this Budget">  
+ <% end %>
+ <% if @transactions %>
+ <table class="table table-striped" style="width:800px">
+   <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @transactions.each do |transaction|%>
+    <tr>
+      <td><%= transaction['date'] %></td>
+      <td><%= transaction['name'] %> </td>
+      <td><%= transaction['category'].to_s.delete "[" "]" "\"" %></td>
+      <td>$<%= transaction['amount'] %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<% end %>
+</body>
+</html>
+
+
+
+
+

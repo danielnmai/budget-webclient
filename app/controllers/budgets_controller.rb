@@ -22,30 +22,27 @@ class BudgetsController < ApplicationController
 
   def access
     public_token = params['public_token']
-    redirect_to "/users/#{current_user.id}/#{public_token}"
+    redirect_to "/users/#{current_user.id}/bank/#{public_token}"
   end
 
   def link_bank
-    @budget = Budget.find(params[:id], current_user.id)
+    @budget = Budget.find(1, current_user.id)
     public_token = params['public_token']
-    client = Plaid::Client.new(env: :development,
+    client = Plaid::Client.new(
+      # env: :sandbox,
+      env: :development,
                               client_id: ENV['PLAID_CLIENT_ID'],
                               secret: ENV['PLAID_SECRET'],
                               public_key: ENV['PLAID_PUBLIC_KEY'])
     response = client.item.public_token.exchange(public_token)
     access_token = response['access_token']
 
-    @auth_response = client.auth.get(access_token)
     now = Date.today
     thirty_days_ago = (now - 30)
-    @trans_response = client.transactions.get(access_token, thirty_days_ago, now)
-    @transactions = @trans_response['transactions']
+    trans_response = client.transactions.get(access_token, thirty_days_ago, now)
 
-    item_id = response['item_id']
-    puts "ACCESS TOKEN: #{access_token}"
-    puts "ITEM ID: #{item_id}"
-    puts "auth_response: #{@auth_response.to_json}"
-    render 'show.json.jbuilder'
+    @transactions = trans_response['transactions']
+    render 'transaction_show.html.erb'
   end
 
   def create

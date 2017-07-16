@@ -41729,3 +41729,3466 @@ Processing by BudgetsController#link_bank as HTML
 Completed 200 OK in 1362ms (Views: 8.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-15 16:23:50 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (51.1ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:23:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 182ms (Views: 103.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:23:53 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 184ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:24:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 185ms (Views: 98.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 16:24:42 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (47.5ms)
+Completed 200 OK in 114ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:24:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 208ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:25:06 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc"}
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:25:06 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc"}
+Redirected to http://localhost:3000/users/1/public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc
+Completed 200 OK in 72ms (ActiveRecord: 0.0ms)
+
+
+Redirected to http://localhost:3000/users/1/public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc
+Completed 200 OK in 72ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc" for 127.0.0.1 at 2017-07-15 16:25:06 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc"}
+Completed 500 Internal Server Error in 1225ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : MkDT0
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc" for 127.0.0.1 at 2017-07-15 16:25:22 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (270.5ms)
+Completed 200 OK in 1595ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3480298937709101445);[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20170715232714)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170715232714"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3480298937709101445)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/1/public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc" for 127.0.0.1 at 2017-07-15 16:27:48 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-6baf69cf-bf07-4099-a8b7-002a85ce7ebc"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (296.4ms)
+Completed 200 OK in 1714ms (Views: 406.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 16:27:53 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (49.3ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:27:55 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 179ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:27:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 185ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:28:17 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+Redirected to http://localhost:3000/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a
+Completed 200 OK in 44ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:28:17 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+Completed 500 Internal Server Error in 1195ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : C8xE1
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:28:33 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.3ms)
+Completed 200 OK in 1620ms (Views: 376.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:33:57 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (292.6ms)
+Completed 200 OK in 1684ms (Views: 402.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:35:33 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 1257ms (ActiveRecord: 2.1ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/show.html.erb:38: syntax error, unexpected tSTRING_DEND
+actions.each do |transaction|} 
+                              ^):
+  
+app/views/budgets/show.html.erb:38: syntax error, unexpected tSTRING_DEND
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:35:49 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (285.8ms)
+Completed 200 OK in 1611ms (Views: 380.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:36:55 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (283.6ms)
+Completed 200 OK in 1618ms (Views: 382.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:39:27 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.1ms)
+Completed 200 OK in 1634ms (Views: 375.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:39:44 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (327.2ms)
+Completed 200 OK in 1615ms (Views: 430.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:40:59 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (277.0ms)
+Completed 500 Internal Server Error in 1559ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1)):
+    50:     <tr>
+    51:       <td><%= transaction['date'] %></td>
+    52:       <td><%= transaction['name'] %> </td>
+    53:       <td><%= transaction['category'].delete(",","[","]") %></td>
+    54:       <td>$<%= transaction['amount'] %></td>
+    55:     </tr>
+    56:   <% end %>
+  
+app/views/budgets/show.html.erb:53:in `delete'
+app/views/budgets/show.html.erb:53:in `block in _app_views_budgets_show_html_erb___4382764429682067176_70129467610380'
+app/views/budgets/show.html.erb:49:in `each'
+app/views/budgets/show.html.erb:49:in `_app_views_budgets_show_html_erb___4382764429682067176_70129467610380'
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:41:25 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.1ms)
+Completed 500 Internal Server Error in 1505ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for nil:NilClass):
+    50:     <tr>
+    51:       <td><%= transaction['date'] %></td>
+    52:       <td><%= transaction['name'] %> </td>
+    53:       <td><%= transaction['category'].delete(", [ ]") %></td>
+    54:       <td>$<%= transaction['amount'] %></td>
+    55:     </tr>
+    56:   <% end %>
+  
+app/views/budgets/show.html.erb:53:in `block in _app_views_budgets_show_html_erb___4382764429682067176_70129469811340'
+app/views/budgets/show.html.erb:49:in `each'
+app/views/budgets/show.html.erb:49:in `_app_views_budgets_show_html_erb___4382764429682067176_70129469811340'
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:41:38 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (283.2ms)
+Completed 200 OK in 1623ms (Views: 387.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a" for 127.0.0.1 at 2017-07-15 16:42:36 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-3561ba53-148e-424c-8bf8-41a01d0e022a"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (283.2ms)
+Completed 500 Internal Server Error in 1530ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for nil:NilClass):
+    50:     <tr>
+    51:       <td><%= transaction['date'] %></td>
+    52:       <td><%= transaction['name'] %> </td>
+    53:       <td><%= transaction['category'].delete '[]' %></td>
+    54:       <td>$<%= transaction['amount'] %></td>
+    55:     </tr>
+    56:   <% end %>
+  
+app/views/budgets/show.html.erb:53:in `block in _app_views_budgets_show_html_erb___4382764429682067176_70129462923180'
+app/views/budgets/show.html.erb:49:in `each'
+app/views/budgets/show.html.erb:49:in `_app_views_budgets_show_html_erb___4382764429682067176_70129462923180'
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 16:43:45 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (128.9ms)
+Completed 200 OK in 329ms (Views: 249.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:43:48 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 211ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:43:55 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 180ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:44:16 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+Redirected to http://localhost:3000/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:44:16 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+Completed 500 Internal Server Error in 1230ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : D8kv7
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:44:20 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+Completed 500 Internal Server Error in 1152ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : lcujA
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:44:23 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+Completed 500 Internal Server Error in 1194ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : Dnc6c
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:44:28 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+Completed 500 Internal Server Error in 1223ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : IlN3x
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:45:23 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.1ms)
+Completed 200 OK in 1608ms (Views: 396.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:45:45 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (290.2ms)
+Completed 200 OK in 1582ms (Views: 385.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:46:55 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (280.6ms)
+Completed 200 OK in 1587ms (Views: 388.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:47:00 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (299.6ms)
+Completed 200 OK in 1616ms (Views: 397.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:47:16 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (299.1ms)
+Completed 200 OK in 1859ms (Views: 390.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993" for 127.0.0.1 at 2017-07-15 16:49:10 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-9ac818ee-4b24-4d2e-b3f0-cdbd9587f993"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (305.8ms)
+Completed 500 Internal Server Error in 1820ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `gsub!' for ["Payment", "Credit Card"]:Array):
+    50:     <tr>
+    51:       <td><%= transaction['date'] %></td>
+    52:       <td><%= transaction['name'] %> </td>
+    53:       <td><%= transaction['category'].gsub!('[',']') %></td>
+    54:       <td>$<%= transaction['amount'] %></td>
+    55:     </tr>
+    56:   <% end %>
+  
+app/views/budgets/show.html.erb:53:in `block in _app_views_budgets_show_html_erb___4382764429682067176_70129480752560'
+app/views/budgets/show.html.erb:49:in `each'
+app/views/budgets/show.html.erb:49:in `_app_views_budgets_show_html_erb___4382764429682067176_70129480752560'
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 16:50:39 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (114.8ms)
+Completed 200 OK in 289ms (Views: 212.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:50:46 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 180ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:50:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 170ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 16:51:14 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+Redirected to http://localhost:3000/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c
+Completed 200 OK in 45ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:51:14 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+Completed 500 Internal Server Error in 1198ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : K8zZr
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:51:33 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (271.4ms)
+Completed 200 OK in 1596ms (Views: 372.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:51:44 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (277.7ms)
+Completed 200 OK in 1590ms (Views: 369.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:52:22 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (294.8ms)
+Completed 200 OK in 1795ms (Views: 389.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:53:20 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (292.9ms)
+Completed 200 OK in 1961ms (Views: 400.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:53:37 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.6ms)
+Completed 200 OK in 1807ms (Views: 375.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:54:02 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 1497ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/show.html.erb:53: syntax error, unexpected ')', expecting keyword_end
+'category'].to_s.delete '"') );@output_buffer.safe_append='<
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/show.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/budgets/show.html.erb:53: syntax error, unexpected ')', expecting keyword_end
+app/views/budgets/show.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:54:24 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 1462ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/show.html.erb:53: syntax error, unexpected ')', expecting keyword_end
+'category'].to_s.gsub!('[')) );@output_buffer.safe_append='<
+                              ^
+/Users/danielmai/Dropbox/Code/actualize/budget-webclient/app/views/budgets/show.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/budgets/show.html.erb:53: syntax error, unexpected ')', expecting keyword_end
+app/views/budgets/show.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/budgets_controller.rb:49:in `link_bank'
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:54:37 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.4ms)
+Completed 200 OK in 1769ms (Views: 376.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:54:43 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (310.6ms)
+Completed 200 OK in 1838ms (Views: 407.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:55:08 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (287.2ms)
+Completed 200 OK in 1755ms (Views: 395.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:55:23 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (277.4ms)
+Completed 200 OK in 1773ms (Views: 371.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c" for 127.0.0.1 at 2017-07-15 16:56:39 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eef4de2a-72dd-43fd-ad62-3da69593557c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (276.6ms)
+Completed 200 OK in 1893ms (Views: 383.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 16:57:10 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (43.7ms)
+Completed 200 OK in 96ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 16:57:12 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 184ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-15 16:57:23 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"edit"}
+Completed 500 Internal Server Error in 422ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::InvalidInputError (
+Error Type      : INVALID_INPUT
+Error Code      : INVALID_PUBLIC_TOKEN
+Error Message   : provided public token is in an invalid format. expected format: public-<environment>-<identifier>
+Display Message : 
+Request ID      : 4PRC3
+):
+  
+app/controllers/budgets_controller.rb:35:in `link_bank'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-15 19:53:57 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 189ms (Views: 142.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 19:54:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 183ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 19:54:06 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 166ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 19:54:28 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-c0c834af-e3e2-4ad2-9894-131a4e848202"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-c0c834af-e3e2-4ad2-9894-131a4e848202
+Completed 200 OK in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-c0c834af-e3e2-4ad2-9894-131a4e848202" for 127.0.0.1 at 2017-07-15 19:54:28 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-c0c834af-e3e2-4ad2-9894-131a4e848202"}
+Completed 500 Internal Server Error in 1231ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : hziP0
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-c0c834af-e3e2-4ad2-9894-131a4e848202" for 127.0.0.1 at 2017-07-15 19:56:13 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-c0c834af-e3e2-4ad2-9894-131a4e848202"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (313.3ms)
+Completed 200 OK in 1626ms (Views: 405.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-15 19:56:34 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 192ms (Views: 141.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 19:57:08 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (41.4ms)
+Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 19:58:28 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (40.4ms)
+Completed 200 OK in 96ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 19:58:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (45.2ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 19:59:54 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (41.7ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 19:59:58 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (39.4ms)
+Completed 200 OK in 92ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:00:11 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (38.7ms)
+Completed 200 OK in 104ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:00:37 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (38.8ms)
+Completed 200 OK in 90ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:00:40 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (41.9ms)
+Completed 200 OK in 110ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:01:04 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (42.7ms)
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:01:07 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (42.8ms)
+Completed 200 OK in 96ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:01:11 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (39.9ms)
+Completed 200 OK in 103ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:01:19 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (40.5ms)
+Completed 200 OK in 91ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:03:12 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (52.0ms)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:03:38 -0700
+Processing by BudgetsController#landing as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/budgets_controller.rb:5:in `+'
+app/controllers/budgets_controller.rb:5:in `landing'
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:04:44 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (57.4ms)
+Completed 200 OK in 120ms (Views: 118.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:05:19 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (52.3ms)
+Completed 200 OK in 159ms (Views: 156.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:05:45 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (49.1ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:06:17 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (50.8ms)
+Completed 200 OK in 111ms (Views: 109.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:06:19 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (41.2ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:06:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (49.7ms)
+Completed 200 OK in 107ms (Views: 105.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:11:04 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (57.5ms)
+Completed 200 OK in 648ms (Views: 638.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:11:45 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (48.2ms)
+Completed 200 OK in 98ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:11:56 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (40.1ms)
+Completed 200 OK in 94ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-15 20:12:28 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 209ms (Views: 160.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 20:12:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 168ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-15 20:12:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 173ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 20:13:18 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c
+Completed 200 OK in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:13:18 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+Completed 500 Internal Server Error in 1256ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : TLui3
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:13:23 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+Completed 500 Internal Server Error in 1203ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : 9LZpr
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:13:26 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+Completed 500 Internal Server Error in 1219ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : WRUnX
+):
+  
+app/controllers/budgets_controller.rb:41:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:13:32 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.7ms)
+Completed 200 OK in 1566ms (Views: 382.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:15:03 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (303.4ms)
+Completed 200 OK in 1691ms (Views: 400.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:15:20 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.9ms)
+Completed 200 OK in 1601ms (Views: 388.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:15:56 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (282.3ms)
+Completed 200 OK in 1592ms (Views: 380.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:16:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (308.9ms)
+Completed 200 OK in 1642ms (Views: 413.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:18:11 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (6.7ms)
+Completed 200 OK in 1476ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:18:42 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (286.8ms)
+Completed 200 OK in 1957ms (Views: 383.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:19:07 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (302.3ms)
+Completed 200 OK in 1887ms (Views: 398.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c" for 127.0.0.1 at 2017-07-15 20:19:25 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e20d969b-94a9-4b1b-8abc-aced559c078c"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (286.9ms)
+Completed 200 OK in 1819ms (Views: 390.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:19:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (42.2ms)
+Completed 200 OK in 96ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-15 20:19:40 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:19:40 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=50000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 20:20:06 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"50000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (119.8ms)
+Completed 200 OK in 212ms (Views: 172.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-15 20:20:49 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-15 20:21:20 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3LwksSlRYXJqKGVrXKfOzf9E1Kr6XtnvaKAEEkdi5LYSr+atbrdHZ6foSCW2HABQN/qmNWFi8rQZtu4yoRM2jg==", "first_name"=>"GIANG", "last_name"=>"TRAN", "email"=>"Giangtran0804@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:21:21 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (27.3ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=35%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 20:21:42 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"35,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (146.8ms)
+Completed 200 OK in 266ms (Views: 221.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-15 20:22:00 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q1q7+p1mrGq5rl5jZiKauAkCQuUlidB1LNDVCLxRdSgDzf9I52ZN1NmB7iJwFMo9wetSzwgBBwv/TcWWs4ZlgA==", "location"=>"San Jose, CA", "income"=>"35000", "user_id"=>"3", "name"=>"gt", "default_chosen"=>"true"}
+Redirected to http://localhost:3000/budgets/2
+Completed 302 Found in 408ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-15 20:22:01 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (296.9ms)
+Completed 200 OK in 486ms (Views: 403.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-07-15 20:22:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 173ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-07-15 20:24:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 190ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 20:24:50 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b"}
+Redirected to http://localhost:3000/users/3/bank/public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b
+Completed 200 OK in 40ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b" for 127.0.0.1 at 2017-07-15 20:24:50 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b"}
+Completed 500 Internal Server Error in 1258ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : lkAi9
+):
+  
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/3/bank/public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b" for 127.0.0.1 at 2017-07-15 20:25:07 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b"}
+Started GET "/users/3/bank/public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b" for 127.0.0.1 at 2017-07-15 20:25:08 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1088.2ms)
+Completed 200 OK in 2536ms (Views: 1199.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (1031.6ms)
+Completed 200 OK in 2586ms (Views: 1162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b" for 127.0.0.1 at 2017-07-15 20:27:43 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-development-cc69b3f7-2c86-41c6-accc-fb12ae62554b"}
+Completed 500 Internal Server Error in 455ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::InvalidInputError (
+Error Type      : INVALID_INPUT
+Error Code      : INVALID_PUBLIC_TOKEN
+Error Message   : provided public token is for the wrong Plaid environment. expected "sandbox", got "development"
+Display Message : 
+Request ID      : T1Phj
+):
+  
+app/controllers/budgets_controller.rb:37:in `link_bank'
+Started GET "/budgets/2" for 127.0.0.1 at 2017-07-15 20:27:55 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (292.3ms)
+Completed 200 OK in 472ms (Views: 398.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-07-15 20:28:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 167ms (Views: 89.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-07-15 20:28:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 174ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-15 20:28:26 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+Redirected to http://localhost:3000/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae
+Completed 200 OK in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:28:26 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+Completed 500 Internal Server Error in 1154ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : f1rAM
+):
+  
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:28:42 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (992.4ms)
+Completed 200 OK in 2306ms (Views: 1093.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:37:36 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (1027.1ms)
+Completed 200 OK in 2372ms (Views: 1124.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:39:56 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (460.4ms)
+Completed 500 Internal Server Error in 1679ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `category' for #<#<Class:0x007fee2942de38>:0x007fee2942c128>):
+    54: </table>
+    55: <% end %>
+    56: <script type="text/javascript">
+    57:   loadBarChart(<%= @transactions.first[category] %>,[2,3,4]);
+    58:   loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)
+    59: </script>
+    60: </body>
+  
+app/views/budgets/bank_show.html.erb:57:in `_app_views_budgets_bank_show_html_erb__1772609492033751141_70330435560840'
+app/controllers/budgets_controller.rb:44:in `link_bank'
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:40:11 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (633.3ms)
+Completed 200 OK in 1965ms (Views: 773.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:40:16 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:40:17 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (645.7ms)
+Completed 200 OK in 1970ms (Views: 739.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (630.2ms)
+Completed 200 OK in 2037ms (Views: 733.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:40:58 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (626.1ms)
+Completed 200 OK in 1962ms (Views: 728.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:41:39 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (1027.8ms)
+Completed 200 OK in 2359ms (Views: 1131.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:41:54 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (1017.1ms)
+Completed 200 OK in 2352ms (Views: 1111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:43:24 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+Completed 500 Internal Server Error in 1306ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/controllers/budgets_controller.rb:45:in `+'
+app/controllers/budgets_controller.rb:45:in `link_bank'
+Started GET "/users/3/bank/public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae" for 127.0.0.1 at 2017-07-15 20:43:39 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"3", "public_token"=>"public-sandbox-4a526107-b2c6-4ae3-a178-12458ae3a6ae"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (1096.9ms)
+Completed 200 OK in 2421ms (Views: 1202.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (188.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_development"[0m
+  [1m[35m (194.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_test"[0m
+  [1m[35m (389.0ms)[0m  [1m[35mCREATE DATABASE "budget-app_development" ENCODING = 'unicode'[0m
+  [1m[35m (394.4ms)[0m  [1m[35mCREATE DATABASE "budget-app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "budget_categories" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_percentages" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "percentages" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170715232714)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170625234915),
+(20170625235127),
+(20170625235153),
+(20170625235827),
+(20170702203807),
+(20170702203937);
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:48:29.619995"], ["updated_at", "2017-07-16 03:48:29.619995"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budget_categories" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets" CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_percentages" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "percentages" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170715232714)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170625234915),
+(20170625235127),
+(20170625235153),
+(20170625235827),
+(20170702203807),
+(20170702203937);
+
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:48:29.684229"], ["updated_at", "2017-07-16 03:48:29.684229"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (193.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_development"[0m
+  [1m[35m (181.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_test"[0m
+  [1m[35m (389.1ms)[0m  [1m[35mCREATE DATABASE "budget-app_development" ENCODING = 'unicode'[0m
+  [1m[35m (390.1ms)[0m  [1m[35mCREATE DATABASE "budget-app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "budget_categories" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets" CASCADE[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_percentages" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "percentages" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170715232714)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170625234915),
+(20170625235127),
+(20170625235153),
+(20170625235827),
+(20170702203807),
+(20170702203937);
+
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:49:31.563118"], ["updated_at", "2017-07-16 03:49:31.563118"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budget_categories" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_percentages" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "percentages" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170715232714)[0m
+  [1m[35m (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170625234915),
+(20170625235127),
+(20170625235153),
+(20170625235827),
+(20170702203807),
+(20170702203937);
+
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:49:31.635652"], ["updated_at", "2017-07-16 03:49:31.635652"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (187.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_development"[0m
+  [1m[35m (196.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_test"[0m
+  [1m[35m (371.8ms)[0m  [1m[35mCREATE DATABASE "budget-app_development" ENCODING = 'unicode'[0m
+  [1m[35m (386.2ms)[0m  [1m[35mCREATE DATABASE "budget-app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budget_categories" CASCADE[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_percentages" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "percentages" CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170715232714)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170625234915),
+(20170625235127),
+(20170625235153),
+(20170625235827),
+(20170702203807),
+(20170702203937);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:51:07.257972"], ["updated_at", "2017-07-16 03:51:07.257972"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budget_categories" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "category_percentages" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "percentages" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170715232714)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170625234915),
+(20170625235127),
+(20170625235153),
+(20170625235827),
+(20170702203807),
+(20170702203937);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:51:07.321060"], ["updated_at", "2017-07-16 03:51:07.321060"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (175.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_development"[0m
+  [1m[35m (186.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_test"[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:52:29 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "budget-app_development" does not exist
+):
+  
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:705:in `rescue in connect'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `connect'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:52:44 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "budget-app_development" does not exist
+):
+  
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:705:in `rescue in connect'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `connect'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:53:09 -0700
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.2) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3480298937709101445);[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-16 03:53:39.561036"], ["updated_at", "2017-07-16 03:53:39.561036"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3480298937709101445)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:53:48 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (93.6ms)
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    15: <input type="submit" value="Find Your Budget">
+    16: <% end %>
+    17: 
+    18: <% if current_user %>
+    19:   <a href="/logout"> Log Out </a>
+    20:   <a href="/users/<%=  current_user.id%>"> Profile </a>
+    21: <% else %>
+  
+app/models/user.rb:20:in `find'
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/budgets/landing.html.erb:18:in `_app_views_budgets_landing_html_erb__2987195863875887784_70302441949320'
+app/controllers/budgets_controller.rb:4:in `landing'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3480298937709101445);[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170625234915)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170625234915"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBudgets (20170625235127)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" bigserial primary key, "name" character varying, "amount" float, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170625235127"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20170625235153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170625235153"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBudgetCategories (20170625235827)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "budget_categories" ("id" bigserial primary key, "budget_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170625235827"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePercentages (20170702203807)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "percentages" ("id" bigserial primary key, "percentage" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170702203807"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategoryPercentages (20170702203937)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "category_percentages" ("id" bigserial primary key, "category_id" integer, "percentage_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170702203937"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactions (20170715232714)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170715232714"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3480298937709101445)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:56:18 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (55.8ms)
+Completed 200 OK in 350ms (Views: 341.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-07-15 20:56:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 238ms (Views: 149.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-15 20:56:24 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-15 20:56:24 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-07-15 20:56:25 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-15 20:56:30 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v26LEwZqnr18vG1uKMTIthXjZOUktTi7eQntceEwygWvTsNLqBBlDFx9FYG5leFQgbAJ2gGeR27OlI6cfzwpxA==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=35%2C000&location=San+Jose%2C+CA
+Completed 302 Found in 136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=35%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-15 20:56:30 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"35,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (140.0ms)
+Completed 200 OK in 328ms (Views: 246.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-15 20:56:34 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (312.2ms)
+Completed 200 OK in 490ms (Views: 404.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-15 20:57:26 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (293.6ms)
+Completed 200 OK in 478ms (Views: 395.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-15 20:58:27 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (299.9ms)
+Completed 200 OK in 466ms (Views: 392.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-15 20:58:32 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (309.5ms)
+Completed 200 OK in 498ms (Views: 412.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-15 21:03:45 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (313.3ms)
+Completed 200 OK in 489ms (Views: 416.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca" for 127.0.0.1 at 2017-07-15 21:56:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/public-sandbox-dd7680ff-b905-422d-963c-e64e98165fca"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8296.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_development"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8293.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget-app_development"[0m
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:07:24 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (342.6ms)
+Completed 200 OK in 691ms (Views: 485.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:10:34 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (352.5ms)
+Completed 200 OK in 549ms (Views: 463.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:11:05 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (292.1ms)
+Completed 200 OK in 463ms (Views: 389.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:11:29 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (305.9ms)
+Completed 200 OK in 476ms (Views: 401.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:11:39 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (291.8ms)
+Completed 200 OK in 463ms (Views: 389.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:12:34 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (286.7ms)
+Completed 200 OK in 457ms (Views: 375.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:12:55 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (281.1ms)
+Completed 200 OK in 447ms (Views: 374.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:13:13 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (284.3ms)
+Completed 200 OK in 458ms (Views: 376.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:15:30 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (313.3ms)
+Completed 200 OK in 490ms (Views: 417.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:19:16 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (298.5ms)
+Completed 200 OK in 467ms (Views: 392.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:19:31 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (305.3ms)
+Completed 200 OK in 483ms (Views: 407.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:21:02 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (273.2ms)
+Completed 200 OK in 498ms (Views: 426.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=35%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 09:21:05 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"35,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (137.5ms)
+Completed 200 OK in 339ms (Views: 248.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:22:13 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (278.4ms)
+Completed 200 OK in 487ms (Views: 414.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:22:20 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.5ms)
+Completed 200 OK in 488ms (Views: 410.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:22:30 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.4ms)
+Completed 200 OK in 489ms (Views: 416.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:22:38 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (279.7ms)
+Completed 200 OK in 495ms (Views: 407.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:22:40 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (293.6ms)
+Completed 200 OK in 466ms (Views: 387.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:23:12 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (287.0ms)
+Completed 200 OK in 499ms (Views: 424.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:23:22 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (298.0ms)
+Completed 200 OK in 494ms (Views: 419.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:23:29 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (297.7ms)
+Completed 200 OK in 509ms (Views: 433.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:23:35 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (282.6ms)
+Completed 200 OK in 484ms (Views: 410.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:25:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 186ms (Views: 98.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:25:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 188ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 09:25:29 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-f547ecb8-74e1-496d-85e1-729204b6080d"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-f547ecb8-74e1-496d-85e1-729204b6080d
+Completed 200 OK in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-f547ecb8-74e1-496d-85e1-729204b6080d" for 127.0.0.1 at 2017-07-16 09:25:29 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f547ecb8-74e1-496d-85e1-729204b6080d"}
+Completed 500 Internal Server Error in 1220ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : Ruayn
+):
+  
+app/controllers/budgets_controller.rb:42:in `link_bank'
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:32:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (396.7ms)
+Completed 200 OK in 636ms (Views: 498.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:32:11 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (320.1ms)
+Completed 200 OK in 519ms (Views: 432.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:32:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 172ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:32:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 192ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 09:32:38 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-be3a2c56-5165-4191-bc9e-48f0d4460838"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-be3a2c56-5165-4191-bc9e-48f0d4460838
+Completed 200 OK in 43ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-be3a2c56-5165-4191-bc9e-48f0d4460838" for 127.0.0.1 at 2017-07-16 09:32:38 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-be3a2c56-5165-4191-bc9e-48f0d4460838"}
+Completed 500 Internal Server Error in 11162ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : rIWRi
+):
+  
+app/controllers/budgets_controller.rb:44:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-be3a2c56-5165-4191-bc9e-48f0d4460838" for 127.0.0.1 at 2017-07-16 09:33:03 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-be3a2c56-5165-4191-bc9e-48f0d4460838"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (277.3ms)
+Completed 200 OK in 11617ms (Views: 372.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 09:33:25 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (348.6ms)
+Completed 200 OK in 565ms (Views: 466.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:34:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 189ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:34:12 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 165ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 09:34:34 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67
+Completed 200 OK in 46ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67" for 127.0.0.1 at 2017-07-16 09:34:34 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67"}
+Completed 500 Internal Server Error in 1253ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : zs3fY
+):
+  
+app/controllers/budgets_controller.rb:42:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67" for 127.0.0.1 at 2017-07-16 09:34:49 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67"}
+Completed 500 Internal Server Error in 1149ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : H6ocy
+):
+  
+app/controllers/budgets_controller.rb:42:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67" for 127.0.0.1 at 2017-07-16 09:34:55 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (281.5ms)
+Completed 200 OK in 1685ms (Views: 409.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67" for 127.0.0.1 at 2017-07-16 09:54:51 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (276.0ms)
+Completed 200 OK in 1749ms (Views: 403.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67" for 127.0.0.1 at 2017-07-16 09:55:11 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-f5933625-e166-4d2a-bc64-f93c5405bf67"}
+  Rendering budgets/bank_show.html.erb within layouts/application
+  Rendered budgets/bank_show.html.erb within layouts/application (283.8ms)
+Completed 200 OK in 1631ms (Views: 382.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:58:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 173ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 09:58:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 181ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 09:59:19 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46
+Completed 200 OK in 41ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46" for 127.0.0.1 at 2017-07-16 09:59:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46"}
+Completed 500 Internal Server Error in 1334ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : MLu1Y
+):
+  
+app/controllers/budgets_controller.rb:42:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46" for 127.0.0.1 at 2017-07-16 09:59:40 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46"}
+Completed 500 Internal Server Error in 1040ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `trans_response' for #<BudgetsController:0x007fe1bef2f7e0>):
+  
+app/controllers/budgets_controller.rb:44:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46" for 127.0.0.1 at 2017-07-16 09:59:51 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (3.8ms)
+Completed 200 OK in 825ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46" for 127.0.0.1 at 2017-07-16 10:01:40 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-418101bc-a5b4-4982-b4f2-1558eb4e5a46"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 1412ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/1?utf8=%E2%9C%93" for 127.0.0.1 at 2017-07-16 10:01:47 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (287.0ms)
+Completed 200 OK in 467ms (Views: 386.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:01:55 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 164ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:01:58 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 180ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:02:19 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d
+Completed 200 OK in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d" for 127.0.0.1 at 2017-07-16 10:02:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d"}
+Completed 500 Internal Server Error in 1138ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : cjA22
+):
+  
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d" for 127.0.0.1 at 2017-07-16 10:02:35 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 1164ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d" for 127.0.0.1 at 2017-07-16 10:13:37 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-862150fa-3a75-48fd-b0ef-255553ca940d"}
+  Rendering budgets/show.json.jbuilder
+  Rendered budgets/show.json.jbuilder (1.5ms)
+Completed 200 OK in 2377ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 10:14:20 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (37.3ms)
+Completed 200 OK in 88ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:14:22 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (153.9ms)
+Completed 200 OK in 301ms (Views: 256.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-16 10:14:26 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 140ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 10:14:33 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (42.4ms)
+Completed 200 OK in 99ms (Views: 98.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:14:38 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 180ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-07-16 10:14:46 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 187ms (Views: 140.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:14:52 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (151.3ms)
+Completed 200 OK in 284ms (Views: 243.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:15:04 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (167.8ms)
+Completed 200 OK in 306ms (Views: 265.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-07-16 10:15:09 -0700
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iPiDoc3Ye4GpD45kfAuEmNGaHOWQlK8795DMuKllg6Jk5pZGt1FNnmj9Z8Dr9sbCnh08n6QZ2+ai8nytu3s7IQ==", "location"=>"San Jose, CA", "income"=>"80000", "user_id"=>"1", "name"=>"", "default_chosen"=>"true"}
+Redirected to http://localhost:3000/budgets/3
+Completed 302 Found in 533ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-16 10:15:10 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (285.8ms)
+Completed 200 OK in 484ms (Views: 396.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:19:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 221ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:19:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 207ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:20:11 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-84f20dd0-fff2-4819-afc4-87898b5f1ea0"}
+Completed 500 Internal Server Error in 1224ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : YISgz
+):
+  
+app/controllers/budgets_controller.rb:38:in `access'
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:24:25 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db
+Completed 200 OK in 60ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:24:25 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 2.4ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<BudgetsController:0x007fe1c4103440>
+Did you mean?  @client):
+  
+app/controllers/budgets_controller.rb:37:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:24:33 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Completed 500 Internal Server Error in 723ms (ActiveRecord: 2.6ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<BudgetsController:0x007fe1c1c24548>
+Did you mean?  @client):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:24:44 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Completed 500 Internal Server Error in 627ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `access_token' for #<BudgetsController:0x007fe1bd31d458>
+Did you mean?  @access_token):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:24:53 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Completed 500 Internal Server Error in 1031ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `now' for #<BudgetsController:0x007fe1bd433ec8>
+Did you mean?  @now
+               new):
+  
+app/controllers/budgets_controller.rb:42:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:25:05 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (908.4ms)
+Completed 500 Internal Server Error in 1786ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `trans_response' for #<#<Class:0x007fe1c4128e48>:0x007fe1c41186b0>
+Did you mean?  @trans_response):
+     6: </head>
+     7: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+     8:  <% @trans_response = @client.transactions.get(@access_token, @thirty_days_ago, @now) %>
+     9:   <% @transactions = trans_response['transactions'] %>
+    10: 
+    11: <script type="text/javascript">
+    12:   alert('It may take a while to fetch bank transaction data.');
+  
+app/views/budgets/show.html.erb:9:in `_app_views_budgets_show_html_erb___2291410998594690063_70303816913480'
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:25:28 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (719.9ms)
+Completed 200 OK in 1738ms (Views: 829.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:25:38 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 214ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:25:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 223ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:26:01 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd
+Completed 200 OK in 50ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd" for 127.0.0.1 at 2017-07-16 10:26:01 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (644.5ms)
+Completed 500 Internal Server Error in 1558ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : r2BkX
+):
+     5:   <title><%= @budget.name %></title>
+     6: </head>
+     7: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+     8:  <% @trans_response = @client.transactions.get(@access_token, @thirty_days_ago, @now) %>
+     9:   <% @transactions = @trans_response['transactions'] %>
+    10: 
+    11: <script type="text/javascript">
+  
+app/views/budgets/show.html.erb:8:in `_app_views_budgets_show_html_erb___2291410998594690063_70303760587620'
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd" for 127.0.0.1 at 2017-07-16 10:26:16 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (622.0ms)
+Completed 500 Internal Server Error in 1477ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : 8WxyX
+):
+     5:   <title><%= @budget.name %></title>
+     6: </head>
+     7: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+     8:  <% @trans_response = @client.transactions.get(@access_token, @thirty_days_ago, @now) %>
+     9:   <% @transactions = @trans_response['transactions'] %>
+    10: 
+    11: <script type="text/javascript">
+  
+app/views/budgets/show.html.erb:8:in `_app_views_budgets_show_html_erb___2291410998594690063_70303817600580'
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd" for 127.0.0.1 at 2017-07-16 10:26:30 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (696.2ms)
+Completed 200 OK in 1683ms (Views: 805.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:26:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 225ms (Views: 120.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:26:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 211ms (Views: 117.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:27:00 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b
+Completed 200 OK in 47ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b" for 127.0.0.1 at 2017-07-16 10:27:00 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (602.5ms)
+Completed 500 Internal Server Error in 1487ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : tIcxp
+):
+     9: </script>
+    10: 
+    11: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+    12:  <% @trans_response = @client.transactions.get(@access_token, @thirty_days_ago, @now) %>
+    13:   <% @transactions = @trans_response['transactions'] %>
+    14: 
+    15: 
+  
+app/views/budgets/show.html.erb:12:in `_app_views_budgets_show_html_erb___2291410998594690063_70303758646580'
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b" for 127.0.0.1 at 2017-07-16 10:27:28 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (710.5ms)
+Completed 200 OK in 1688ms (Views: 825.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:27:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 206ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:27:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 224ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:28:00 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-d90de33d-a788-4765-9ec9-299e9056ebc1"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-d90de33d-a788-4765-9ec9-299e9056ebc1
+Completed 200 OK in 53ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-d90de33d-a788-4765-9ec9-299e9056ebc1" for 127.0.0.1 at 2017-07-16 10:28:00 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-d90de33d-a788-4765-9ec9-299e9056ebc1"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (704.2ms)
+Completed 500 Internal Server Error in 1599ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : CMfBa
+):
+    10: 
+    11: 
+    12: <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
+    13:  <% @trans_response = @client.transactions.get(@access_token, @thirty_days_ago, @now) %>
+    14:   <% @transactions = @trans_response['transactions'] %>
+    15: 
+    16: 
+  
+app/views/budgets/show.html.erb:13:in `_app_views_budgets_show_html_erb___2291410998594690063_70303759404300'
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b" for 127.0.0.1 at 2017-07-16 10:34:33 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (316.3ms)
+Completed 200 OK in 1799ms (Views: 443.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b" for 127.0.0.1 at 2017-07-16 10:34:35 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-5992875b-711c-4b1f-8d78-5461927b007b"}
+Started GET "/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd" for 127.0.0.1 at 2017-07-16 10:34:35 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (309.4ms)
+Completed 200 OK in 1678ms (Views: 432.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (299.5ms)
+Completed 200 OK in 1643ms (Views: 416.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd" for 127.0.0.1 at 2017-07-16 10:34:37 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (283.4ms)
+Completed 200 OK in 1644ms (Views: 395.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:35:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 216ms (Views: 114.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:35:18 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 211ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:35:55 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd
+Completed 200 OK in 50ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd" for 127.0.0.1 at 2017-07-16 10:35:55 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (288.9ms)
+Completed 200 OK in 1696ms (Views: 409.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:36:58 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 244ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:37:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 262ms (Views: 151.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:37:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 243ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd" for 127.0.0.1 at 2017-07-16 10:37:11 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (309.9ms)
+Completed 200 OK in 1674ms (Views: 437.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:38:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 239ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:38:08 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 214ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:38:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 222ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:39:14 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-a9c805aa-25de-4fdf-be1d-5409de086533"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-a9c805aa-25de-4fdf-be1d-5409de086533
+Completed 200 OK in 54ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-a9c805aa-25de-4fdf-be1d-5409de086533" for 127.0.0.1 at 2017-07-16 10:39:14 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-a9c805aa-25de-4fdf-be1d-5409de086533"}
+Completed 500 Internal Server Error in 1253ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : krYRN
+):
+  
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd" for 127.0.0.1 at 2017-07-16 10:39:30 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (321.0ms)
+Completed 200 OK in 1725ms (Views: 447.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd" for 127.0.0.1 at 2017-07-16 10:39:32 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-8b6fdfb9-667a-42f5-9cf3-6eafa33fe1dd"}
+Started GET "/users/1/bank/public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd" for 127.0.0.1 at 2017-07-16 10:39:32 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-bf313d7a-94fa-424a-8d42-393bbe41eabd"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (536.6ms)
+  Rendered budgets/show.html.erb within layouts/application (584.6ms)
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:39:34 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Completed 200 OK in 2099ms (Views: 836.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2051ms (Views: 845.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (294.4ms)
+Completed 200 OK in 1812ms (Views: 413.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db" for 127.0.0.1 at 2017-07-16 10:39:35 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-90ac3ac3-10f3-48db-9418-1befbbe045db"}
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-16 10:39:36 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (301.3ms)
+Completed 200 OK in 512ms (Views: 413.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/3" for 127.0.0.1 at 2017-07-16 10:39:36 -0700
+Processing by BudgetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (307.3ms)
+Completed 200 OK in 566ms (Views: 468.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (313.6ms)
+Completed 200 OK in 1710ms (Views: 428.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:39:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 235ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:39:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 243ms (Views: 149.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:40:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 228ms (Views: 114.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:41:20 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3
+Completed 200 OK in 55ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3" for 127.0.0.1 at 2017-07-16 10:41:20 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (295.0ms)
+Completed 200 OK in 1746ms (Views: 413.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:42:24 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 260ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:50:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 229ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:51:14 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803
+Completed 200 OK in 55ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:51:16 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803
+Completed 200 OK in 59ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:51:17 -0700
+Processing by BudgetsController#access as */*
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:51:17 -0700
+  Parameters: {"public_token"=>"public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803"}
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803
+Completed 200 OK in 103ms (ActiveRecord: 0.0ms)
+
+
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803
+Completed 200 OK in 103ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803" for 127.0.0.1 at 2017-07-16 10:51:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803"}
+Started GET "/users/1/bank/public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803" for 127.0.0.1 at 2017-07-16 10:51:19 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-eb75129b-1bbc-4d38-a3fe-a3d590335803"}
+Completed 500 Internal Server Error in 1321ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : SZKBs
+):
+  
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Completed 500 Internal Server Error in 1341ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : PRODUCT_NOT_READY
+Error Message   : the requested product is not yet ready. please provide a webhook or try the request again later
+Display Message : 
+Request ID      : ZNiM8
+):
+  
+app/controllers/budgets_controller.rb:43:in `link_bank'
+Started GET "/users/1/bank/public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3" for 127.0.0.1 at 2017-07-16 10:51:29 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (293.8ms)
+Completed 200 OK in 1751ms (Views: 443.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3" for 127.0.0.1 at 2017-07-16 10:51:31 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-e0c9429e-2151-4023-96da-416344e0e3e3"}
+  Rendering budgets/show.html.erb within layouts/application
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:51:32 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (406.0ms)
+  Rendered budgets/show.html.erb within layouts/application (537.7ms)
+Completed 200 OK in 735ms (Views: 638.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1960ms (Views: 749.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:51:33 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (175.7ms)
+Completed 200 OK in 323ms (Views: 286.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-16 10:51:36 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 10:51:36 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 10:51:38 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:51:40 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (114.0ms)
+Completed 200 OK in 201ms (Views: 162.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:51:44 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (126.1ms)
+Completed 200 OK in 224ms (Views: 186.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:51:49 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 199ms (Views: 162.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-07-16 10:51:55 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uzZJtXZVsytO5s3BXOK2y+CU3pSkGqcdwOzZsAAivyn7oQ0HDFVSlS7JfYBK1OZOKH3OvomScGMTcckuD/WvgQ==", "email"=>"daniel@gmail.com", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/budgets?income=80%2C000&location=San+Jose%2C+CA
+Completed 302 Found in 140ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets?income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:51:55 -0700
+Processing by BudgetsController#index as HTML
+  Parameters: {"income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/index.html.erb within layouts/application
+  Rendered budgets/index.html.erb within layouts/application (237.6ms)
+Completed 200 OK in 452ms (Views: 344.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:51:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 202ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:52:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 211ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:52:45 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951"}
+Redirected to http://localhost:3000/users/1/bank/public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951
+Completed 200 OK in 58ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951" for 127.0.0.1 at 2017-07-16 10:53:00 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (293.0ms)
+Completed 200 OK in 1748ms (Views: 408.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951" for 127.0.0.1 at 2017-07-16 10:55:18 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951"}
+  Rendering budgets/show.html.erb within layouts/application
+  Rendered budgets/show.html.erb within layouts/application (278.5ms)
+Completed 200 OK in 1693ms (Views: 385.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951" for 127.0.0.1 at 2017-07-16 10:55:27 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-sandbox-c81dfd76-0bf6-48a3-9706-beaf47e8f951"}
+  Rendering budgets/transaction_show.html.erb within layouts/application
+  Rendered budgets/transaction_show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1406ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:56:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 226ms (Views: 115.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-07-16 10:56:09 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 226ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 10:56:49 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-development-c69ffa37-f351-4697-9cbd-5d4ebfdd91a4"}
+Redirected to http://localhost:3000/users/1/bank/public-development-c69ffa37-f351-4697-9cbd-5d4ebfdd91a4
+Completed 200 OK in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-development-c69ffa37-f351-4697-9cbd-5d4ebfdd91a4" for 127.0.0.1 at 2017-07-16 10:57:11 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-c69ffa37-f351-4697-9cbd-5d4ebfdd91a4"}
+  Rendering budgets/transaction_show.html.erb within layouts/application
+  Rendered budgets/transaction_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1582ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-development-c69ffa37-f351-4697-9cbd-5d4ebfdd91a4" for 127.0.0.1 at 2017-07-16 10:59:23 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-c69ffa37-f351-4697-9cbd-5d4ebfdd91a4"}
+  Rendering budgets/transaction_show.html.erb within layouts/application
+  Rendered budgets/transaction_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1487ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 10:59:25 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (52.7ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:59:27 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (159.6ms)
+Completed 200 OK in 316ms (Views: 279.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 10:59:39 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (180.2ms)
+Completed 200 OK in 345ms (Views: 306.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-07-16 10:59:51 -0700
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 171ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 11:00:31 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-development-73407246-2c46-4bfb-bfbc-69be591bf35b"}
+Redirected to http://localhost:3000/users/1/bank/public-development-73407246-2c46-4bfb-bfbc-69be591bf35b
+Completed 200 OK in 58ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-development-73407246-2c46-4bfb-bfbc-69be591bf35b" for 127.0.0.1 at 2017-07-16 11:00:39 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-73407246-2c46-4bfb-bfbc-69be591bf35b"}
+Completed 500 Internal Server Error in 921ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : NO_AUTH_ACCOUNTS
+Error Message   : There are no valid checking or savings account(s) associated with this Item. See https://support.plaid.com/customer/en/portal/articles/2763097-item_error for more.
+Display Message : 
+Request ID      : XppBc
+):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 11:01:02 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (159.8ms)
+Completed 200 OK in 306ms (Views: 267.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 11:01:02 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (185.3ms)
+Completed 200 OK in 353ms (Views: 309.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 11:02:01 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-development-0a835d4a-a7fc-440b-9861-1e0fddeabd4b"}
+Redirected to http://localhost:3000/users/1/bank/public-development-0a835d4a-a7fc-440b-9861-1e0fddeabd4b
+Completed 200 OK in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-development-0a835d4a-a7fc-440b-9861-1e0fddeabd4b" for 127.0.0.1 at 2017-07-16 11:02:17 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-0a835d4a-a7fc-440b-9861-1e0fddeabd4b"}
+Completed 500 Internal Server Error in 852ms (ActiveRecord: 0.0ms)
+
+
+  
+Plaid::ItemError (
+Error Type      : ITEM_ERROR
+Error Code      : NO_AUTH_ACCOUNTS
+Error Message   : There are no valid checking or savings account(s) associated with this Item. See https://support.plaid.com/customer/en/portal/articles/2763097-item_error for more.
+Display Message : 
+Request ID      : 7ATff
+):
+  
+app/controllers/budgets_controller.rb:39:in `link_bank'
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 11:04:18 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (178.5ms)
+Completed 200 OK in 334ms (Views: 288.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-07-16 11:04:33 -0700
+Processing by BudgetsController#access as */*
+  Parameters: {"public_token"=>"public-development-ed44c86c-a569-40c2-b365-c27a9f8c9797"}
+Redirected to http://localhost:3000/users/1/bank/public-development-ed44c86c-a569-40c2-b365-c27a9f8c9797
+Completed 200 OK in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/bank/public-development-ed44c86c-a569-40c2-b365-c27a9f8c9797" for 127.0.0.1 at 2017-07-16 11:04:50 -0700
+Processing by BudgetsController#link_bank as HTML
+  Parameters: {"id"=>"1", "public_token"=>"public-development-ed44c86c-a569-40c2-b365-c27a9f8c9797"}
+  Rendering budgets/transaction_show.html.erb within layouts/application
+  Rendered budgets/transaction_show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 968ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 11:05:07 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (186.3ms)
+Completed 200 OK in 335ms (Views: 294.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=80%2C000&location=San+Jose%2C+CA" for 127.0.0.1 at 2017-07-16 11:05:10 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"80,000", "location"=>"San Jose, CA"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (169.6ms)
+Completed 200 OK in 341ms (Views: 302.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 11:05:13 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (50.7ms)
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 11:05:58 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (51.6ms)
+Completed 200 OK in 100ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-16 11:07:00 -0700
+Processing by BudgetsController#landing as HTML
+  Rendering budgets/landing.html.erb within layouts/landing.html.erb
+  Rendered budgets/landing.html.erb within layouts/landing.html.erb (46.5ms)
+Completed 200 OK in 99ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=100%2C000&location=Omaha%2C+NE%2C+United+States" for 127.0.0.1 at 2017-07-16 11:07:28 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"100,000", "location"=>"Omaha, NE, United States"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (160.6ms)
+Completed 200 OK in 316ms (Views: 277.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/budgets/default?utf8=%E2%9C%93&income=100%2C000&location=Honolulu%2C+HI%2C+United+States" for 127.0.0.1 at 2017-07-16 11:08:45 -0700
+Processing by BudgetsController#default as HTML
+  Parameters: {"utf8"=>"✓", "income"=>"100,000", "location"=>"Honolulu, HI, United States"}
+  Rendering budgets/default.html.erb within layouts/application
+  Rendered budgets/default.html.erb within layouts/application (160.6ms)
+Completed 200 OK in 302ms (Views: 266.7ms | ActiveRecord: 0.0ms)
+
+

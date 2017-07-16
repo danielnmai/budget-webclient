@@ -7,21 +7,23 @@
 <body onload="loadBarChart(<%=@budget.category_names %>,<%= @budget.category_percent %>), loadPieChart(<%= @budget.category_names %>, <%= @budget.category_percent %>)">
 
 
+  <div class="row">
+    <div  class="col-md-6">
+      <div>Name: <%= @budget.name%></div>
+      <p>Bar Chart</p>
+      <div>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+    <div class="col-md-6" id="pie_Chart">
+      <p>Pie Chart</p>
+      <div>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
 
-  <div class="container" style="width:400px; height:400px;">
-    <div>Name: <%= @budget.name%></div>
-    <h2>Bar Chart</h2>
-    <div>
-      <canvas id="barChart"></canvas>
-    </div>
-  </div>
-  <div class="container" style="width:300px; height:300px;">
-    <h2>Pie Chart</h2>
-    <div>
-      <canvas id="pieChart"></canvas>
-    </div>
-  </div>
-  <div>
+
+
     <div>Budget belongs to  :
      <%= current_user.first_name %> <%= current_user.last_name %>
    </div> 
@@ -33,11 +35,9 @@
  <% end %>
  <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
  <input class="btn btn-danger" type="submit" value="Delete this Budget">  
- <% end %>  
- <% if @total_transactions %>
- <p>  <%= @total_transactions %> </p>
- <p><%=@trans_response %></p>
- <table class="table table-striped" style="width:500px">
+ <% end %>
+ <% if @transactions %>
+ <table class="table table-striped" style="width:800px">
    <thead>
     <tr>
       <th>Date</th>
@@ -47,24 +47,14 @@
     </tr>
   </thead>
   <tbody>
+    <% @transactions.each do |transaction|%>
     <tr>
-      <td>5/17</td>
-      <td>Costco</td>
-      <td>Foods</td>
-      <td>$25</td>
+      <td><%= transaction['date'] %></td>
+      <td><%= transaction['name'] %> </td>
+      <td><%= transaction['category'].to_s.delete "[" "]" "\"" %></td>
+      <td>$<%= transaction['amount'] %></td>
     </tr>
-    <tr>
-      <td>7/17</td>
-      <td>H2O</td>
-      <td>Phone</td>
-      <td>$35</td>
-    </tr>
-    <tr>
-      <td>7/15</td>
-      <td>In n Out</td>
-      <td>Fast Foods</td>
-      <td>$11</td>
-    </tr>
+    <% end %>
   </tbody>
 </table>
 <% end %>

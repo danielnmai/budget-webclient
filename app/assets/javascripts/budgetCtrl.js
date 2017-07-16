@@ -19,7 +19,7 @@ function addCategory() {
 
   var input_percent = document.createElement('input');
   input_percent.type = "text";  
-  input_percent.name = "cat_percent[]";
+  input_percent.name = "cat_amount[]";
   div_2.appendChild(label_percent);
   div_2.appendChild(input_percent);
 

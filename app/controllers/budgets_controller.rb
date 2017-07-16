@@ -7,10 +7,12 @@ class BudgetsController < ApplicationController
   def default
     @location = params[:location]
     @income = params[:income].delete(',')
-    puts "INCOME: " + @income
     session[:location] = params[:location]
     session[:income] = params[:income]
     @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
+    cat_names = @budget.category_names
+    cat_percent = @budget.calculate_budget(@location, @income)
+    @budget.update('default_name', cat_names, cat_percent)
     @monthly_income = @income.to_i / 12
     render 'default'
   end
@@ -50,7 +52,15 @@ class BudgetsController < ApplicationController
       default_budget = Budget.find(1, 1)
       @budget = Budget.create(current_user.id, params[:name],default_budget.category_names, default_budget.category_percent)
     else
-      @budget = Budget.create(current_user.id, params[:name],params[:cat_names], params[:cat_percent])
+      cat_amount = params[:cat_amount]
+      income = params[:monthly_income].to_i
+      cat_percent = []
+      cat_amount.each do |amount|
+        cat_percent << ((amount.to_f / income) * 100).to_i
+      end
+      p params[:cat_amount]
+      p cat_percent
+      @budget = Budget.create(current_user.id, params[:name],params[:cat_names], cat_percent)
     end
 
     if @budget.user_id == current_user.id

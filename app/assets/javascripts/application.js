@@ -31,6 +31,7 @@ $(function() {
   $input.autoNumeric('init', { currencySymbol : '$', mDec: '0' });
 });
 
+
 function loadBarChart(category_names, category_percent) {
   var ctx = document.getElementById('barChart').getContext('2d');
   var myChart = new Chart(ctx, {

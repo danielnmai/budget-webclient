@@ -88,62 +88,192 @@ class Budget < ApplicationRecord
   end
 
   def calculate_budget(location, income)
-
     location = location.split(", ")[1]
-    region_states = Hash[*File.read('states_and_regions.txt').split(/[, \n]+/)]
+    income = income.to_i
+    region_states = Hash[*File.read('app/models/states_and_regions.txt').split(/, |\n/)]
+    ary = []
 
-    # Alaska  AK  West  Pacific
-    # Alabama AL  South East South Central
-    # Arkansas  AR  South West South Central
-    # Arizona AZ  West  Mountain
-    # California  CA  West  Pacific
-    # Colorado  CO  West  Mountain
-    # Connecticut CT  Northeast New England
-    # District of Columbia  DC  South South Atlantic
-    # Delaware  DE  South South Atlantic
-    # Florida FL  South South Atlantic
-    # Georgia GA  South South Atlantic
-    # Hawaii  HI  West  Pacific
-    # Iowa  IA  Midwest West North Central
-    # Idaho ID  West  Mountain
-    # Illinois  IL  Midwest East North Central
-    # Indiana IN  Midwest East North Central
-    # Kansas  KS  Midwest West North Central
-    # Kentucky  KY  South East South Central
-    # Louisiana LA  South West South Central
-    # Massachusetts MA  Northeast New England
-    # Maryland  MD  South South Atlantic
-    # Maine ME  Northeast New England
-    # Michigan  MI  Midwest East North Central
-    # Minnesota MN  Midwest West North Central
-    # Missouri  MO  Midwest West North Central
-    # Mississippi MS  South East South Central
-    # Montana MT  West  Mountain
-    # North Carolina  NC  South South Atlantic
-    # North Dakota  ND  Midwest West North Central
-    # Nebraska  NE  Midwest West North Central
-    # New Hampshire NH  Northeast New England
-    # New Jersey  NJ  Northeast Middle Atlantic
-    # New Mexico  NM  West  Mountain
-    # Nevada  NV  West  Mountain
-    # New York  NY  Northeast Middle Atlantic
-    # Ohio  OH  Midwest East North Central
-    # Oklahoma  OK  South West South Central
-    # Oregon  OR  West  Pacific
-    # Pennsylvania  PA  Northeast Middle Atlantic
-    # Rhode Island  RI  Northeast New England
-    # South Carolina  SC  South South Atlantic
-    # South Dakota  SD  Midwest West North Central
-    # Tennessee TN  South East South Central
-    # Texas TX  South West South Central
-    # Utah  UT  West  Mountain
-    # Virginia  VA  South South Atlantic
-    # Vermont VT  Northeast New England
-    # Washington  WA  West  Pacific
-    # Wisconsin WI  Midwest East North Central
-    # West Virginia WV  South South Atlantic
-    # Wyoming WY  West
+    if region_states[location] == 'Northeast'
+      puts "#{location} belong to region 1"
+      if income > 70000
+        average_spending = 93092.0
+        food_spending = 10187
+        housing_spending = 30225
+        transportation_spending = 14655
+        medical_spending = 6388
+        tax_spending = 28263
+        other_spending = 3308 #Entertainment
 
-    
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+
+      elsif income > 50000 && income < 69999
+        average_spending = 53285.0
+        food_spending = 6152
+        housing_spending = 19464
+        transportation_spending = 9223
+        medical_spending = 4617
+        tax_spending = 5020
+        other_spending = 2606 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+      else
+        average_spending = 43239.0
+        food_spending = 5208
+        housing_spending = 16986
+        transportation_spending = 6997
+        medical_spending = 4102
+        tax_spending = 2187
+        other_spending = 1986 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+      end
+    elsif region_states[location] == 'Midwest'
+      puts "#{location} belong to region 2"
+      if income > 70000
+        average_spending = 87054.0
+        food_spending = 10513
+        housing_spending = 25492
+        transportation_spending = 14376
+        medical_spending = 6584
+        tax_spending = 23404
+        other_spending = 4909 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+      
+      elsif income > 50000 && income < 69999
+        average_spending = 49651.0
+        food_spending = 6668
+        housing_spending = 15798
+        transportation_spending = 9344
+        medical_spending = 4644
+        tax_spending = 5140
+        other_spending = 2544 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      else
+        average_spending = 42370.0
+        food_spending = 5492
+        housing_spending = 13674
+        transportation_spending = 8302
+        medical_spending = 4165
+        tax_spending = 1875
+        other_spending = 2175 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      end
+    elsif region_states[location] == 'South'
+      puts "#{location} belong to region 3"
+      if income > 70000
+        average_spending = 87168.0
+        food_spending = 10102
+        housing_spending = 15707
+        transportation_spending = 14238
+        medical_spending = 6447
+        tax_spending = 21244
+        other_spending = 4654 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      elsif income > 50000 && income < 69999
+        average_spending = 49662.0
+        food_spending = 6400
+        housing_spending = 15708
+        transportation_spending = 10132
+        medical_spending = 4458
+        tax_spending = 4176
+        other_spending = 2264 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      else
+        average_spending = 42791.0
+        food_spending = 5670
+        housing_spending = 14513
+        transportation_spending = 8763
+        medical_spending = 3608
+        tax_spending = 1798
+        other_spending = 2040 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      end
+    elsif region_states[location] == 'West'
+      puts "#{location} belong to region 4"
+
+      if income > 70000
+        average_spending = 91948.0
+        food_spending = 10912
+        housing_spending = 29173
+        transportation_spending = 14238
+        medical_spending = 6159
+        tax_spending = 24063
+        other_spending = 5066
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      elsif income > 50000 && income < 69999
+        average_spending = 53994.0
+        food_spending = 6856
+        housing_spending = 18802
+        transportation_spending = 9613
+        medical_spending = 4650
+        tax_spending = 4074
+        other_spending = 2712 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      else
+        average_spending = 44796.0
+        food_spending = 5797
+        housing_spending = 16481
+        transportation_spending = 8208
+        medical_spending = 3308
+        tax_spending = 1837
+        other_spending = 2259 #Entertainment
+
+        ary = calculate_percent(average_spending, food_spending, housing_spending, medical_spending, transportation_spending, tax_spending, other_spending)
+        p ary
+        p ary.sum.ceil
+        
+      end
+    end
+    ary
+  end
+  def calculate_percent(average_spending, food, housing, medical, transportation, tax, other)
+    saving = average_spending - (food + housing + transportation + medical + tax + other)
+    puts "SAVING: #{saving}"
+    food_percent = (food / average_spending).round(2) * 100
+    housing_percent = (housing / average_spending).round(2) * 100
+    medical_percent = (medical / average_spending).round(2) * 100
+    transportation_percent = (transportation / average_spending).round(2) * 100
+    tax_percent = (tax / average_spending).round(2) * 100
+    other_percent = (other / average_spending).round(2) * 100
+    saving_percent = (saving / average_spending).round(2) * 100
+
+    percent_ary = [food_percent.round, housing_percent.round, medical_percent.round, transportation_percent.round, tax_percent.round, other_percent.round, saving_percent.round]
   end
 end

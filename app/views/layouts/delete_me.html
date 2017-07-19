@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Budget Webclient</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to("mBudget", "/", class: "navbar-brand", method: :get) %>
+        <!-- <a class="navbar-brand" href="/">mBudget</a> -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        <% if current_user %>
+        <li><a href="/budgets/new">+ Add Budget</a></li>
+        <% end %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Budgets <span class="caret"></span></a>
+            <ul class="dropdown-menu">             
+              <!-- <li role="separator" class="divider"></li>
+              <li><a href="#">Link Bank</a></li>
+              <li role="separator" class="divider"></li> -->
+              <% if current_user %>
+                <% Budget.all(current_user.id).each do |budget| %>
+                <li><%= link_to "#{budget.name}", budget, method: :get %></li>
+                <% end %>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      <!--   <form class="navbar-form navbar-left">
+          <div class="form-group">          
+            <input type="text" class="form-control" placeholder="Search" name="search_term">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form> -->
+        <ul class="nav navbar-nav navbar-right">
+
+        <% if !current_user %>
+          <li><a href="/users/new">Sign Up</a></li>
+          <li><a href="/login">Log In</a></li>
+          <% else %>
+          <li><a href="/logout">Log Out</a></li>
+         <% end %>
+
+          <li class="dropdown">
+            <a href="/signup" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <% if current_user %>
+              <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+              <% end %>
+              <li role="separator" class="divider"></li>
+              <li><button id="link-button" class="btn btn-link">Link Bank Account</button></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>  
+  <div class="container"> 
+   <% flash.each do |name, message| %>
+   <div class="alert alert-<%=name%> alert-dismissible" role="alert">
+   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <%= message %>
+   </div> 
+   <% end %>
+   <%= yield %>
+ </div>
+   <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+   <script type="text/javascript">
+     var handler = Plaid.create({
+       clientName: 'mBudget by Daniel Mai',
+       // env: 'development',
+       env: 'sandbox',
+   key: '7d13eb84ca8559b6020bc3a71639c6', // Replace with your public_key to test with live credentials
+   product: ['auth', 'transactions'],
+   
+   onLoad: function() {
+     // Optional, called when Link loads
+     
+   },
+   onSuccess: function(public_token, metadata) {
+     // Send the public_token to your app server.
+     // The metadata object contains info about the institution the
+     // user selected and the account ID, if `selectAccount` is enabled.
+     $.post('/get_access_token', {
+       public_token: public_token,
+     });
+     alert('It may take anywhere from 30 seconds to 4 minutes to complete fetching bank transaction data.');
+     // $('#myModal').modal(options);
+     
+
+   },
+   onExit: function(err, metadata) {
+     // The user exited the Link flow.
+     if (err != null) {
+       // The user encountered a Plaid API error prior to exiting.
+     }
+     // metadata contains information about the institution
+     // that the user selected and the most recent API request IDs.
+     // Storing this information can be helpful for support.
+   }
+ });
+
+     $('#link-button').on('click', function(e) {
+       handler.open();
+   // Alternatively, you can have a specific institution
+   // prompt for authentication. Example:
+   //
+   // handler.open('ins_100000');
+   //
+   // This will open Link with Union Bank as the institution.
+ });
+ </script>
+
+ <div class="modal hide fade" id="myModal">
+   <div class="modal-header">
+     <a class="close" data-dismiss="modal">×</a>
+     <h3>Modal header</h3>
+   </div>
+   <div class="modal-body">
+     <p>One fine body…</p>
+   </div>
+   <div class="modal-footer">
+     <a href="#" class="btn">Close</a>
+     <a href="#" class="btn btn-primary">Save changes</a>
+   </div>
+ </div>
+  </body>
+</html>

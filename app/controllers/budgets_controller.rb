@@ -31,8 +31,8 @@ class BudgetsController < ApplicationController
     @budget = Budget.find(1, current_user.id)
     public_token = params['public_token']
     client = Plaid::Client.new(
-      # env: :sandbox,
-      env: :development,
+      env: :sandbox,
+      # env: :development,
                               client_id: ENV['PLAID_CLIENT_ID'],
                               secret: ENV['PLAID_SECRET'],
                               public_key: ENV['PLAID_PUBLIC_KEY'])

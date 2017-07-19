@@ -1,21 +1,392 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Budget Webclient</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
+<head>
+  <title> Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body> 
-  <div class="container"> 
-   <% flash.each do |name, message| %>
-   <div class="alert alert-<%=name%> alert-dismissible" role="alert">
-   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   <%= message %>
-   </div> 
-   <% end %>
-   <%= yield %>
- </div>
-  </body>
+  <!-- @todo: fill with your company info or remove -->
+  <meta name="description" content="">
+  <meta name="author" content="Themelize.me">
+
+  <!-- Bootstrap 4.0.0-alpha.6 CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+  <!-- Plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->
+
+  <!-- Theme style -->
+  <link href="/assets/css/theme-style.min.css" rel="stylesheet">
+
+  <!--Your custom colour override-->
+  <link href="#" id="colour-scheme" rel="stylesheet">
+
+  <!-- Your custom override -->
+  <link href="/assets/css/custom-style.css" rel="stylesheet">
+
+
+
+  <!-- Optional: ICON SETS -->
+  <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+  <link href="/assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Iconset: ionicons - http://ionicons.com/ -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <!-- Iconset: Linearicons - https://linearicons.com/free -->
+  <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+  <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<!-- ======== @Region: body ======== -->
+<body class="page page-index-static navbar-layout-default" >
+
+  <!-- @plugin: page loading indicator, delete to remove loader -->
+  <!-- <div class="page-loader" data-toggle="page-loader"></div> -->
+
+  <a href="#content" id="top" class="sr-only">Skip to content</a> 
+
+  <!-- ======== @Region: #header ======== -->
+  <div id="header">
+
+    <!--Hidden Header Region-->
+    <div class="header-hidden collapse">
+      <div class="header-hidden-inner container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>
+              About Me
+            </h3>
+            <p>I love web development!</p>
+            <a href="about.htm" class="btn btn-sm btn-primary">Find out more</a> 
+          </div>
+          <div class="col-sm-6">
+            <!--@todo: replace with company contact details-->
+            <h3>
+              Contact Me
+            </h3>
+            <address>
+              <p>
+                <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
+                (408)-221-3940
+              </p>
+              <p>
+                <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
+                danielmai1728@gmail.com
+              </p>
+              <p>
+                <abbr title="Address"><i class="fa fa-home"></i></abbr>
+                Milpitas, CA
+              </p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Header upper region-->
+    <div class="header-upper">
+      <!--Show/hide trigger for #hidden-header -->
+      <div id="header-hidden-link">
+        <a href="#" title="Click me you'll get a surprise" class="show-hide" data-toggle="show-hide" data-target=".header-hidden"><i></i>Open</a>
+      </div>
+      <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .flex-first or/and .flex-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+      <div class="header-inner container">
+        <!--user menu-->
+        <div class="header-block-flex flex-first mr-auto">
+
+          <nav class="nav nav-sm header-block-flex">
+            <a class="nav-link hidden-md-up" href="login.htm"><i class="fa fa-user"></i></a>
+            <% if current_user %>
+              <a  class="nav-link text-xs text-uppercase hidden-sm-down" href="/users/<%= current_user.id %>">Profile</a>
+              <a  class="nav-link text-xs text-uppercase hidden-sm-down" href="/logout">Logout</a>
+            <% else %>
+             <a class="nav-link text-xs text-uppercase hidden-sm-down" href="#signup-modal" data-toggle="modal">Sign Up</a> <a class="nav-link text-xs text-uppercase hidden-sm-down" href="#login-modal" data-toggle="modal">Login</a> 
+            <% end %>      
+          </nav>
+         
+
+        </div>
+        <!--social media icons-->
+        <div class="nav nav-icons header-block flex-last">
+          <!--@todo: replace with company social media details-->
+          <a href="#" class="nav-link"> <i class="fa fa-twitter-square icon-1x"></i> <span class="sr-only">Twitter</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-facebook-square icon-1x"></i> <span class="sr-only">Facebook</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-linkedin-square icon-1x"></i> <span class="sr-only">Linkedin</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-google-plus-square icon-1x"></i> <span class="sr-only">Google plus</span> </a>
+        </div>
+      </div>
+    </div>
+    <div data-toggle="sticky">
+
+      <!--Header search region - hidden by default -->
+      <div class="header-search collapse" id="search">
+        <form class="search-form container">
+          <input type="text" name="search" class="form-control search" value="" placeholder="Search">
+          <button type="button" class="btn btn-link"><span class="sr-only">Search </span><i class="fa fa-search fa-flip-horizontal search-icon"></i></button>
+          <button type="button" class="btn btn-link close-btn" data-toggle="search-form-close"><span class="sr-only">Close </span><i class="fa fa-times search-icon"></i></button>
+        </form>
+      </div>
+
+      <!--Header & Branding region-->
+      <div class="header">
+        <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .flex-first or/and .flex-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+        <div class="header-inner container">
+          <!--branding/logo -->
+          <div class="header-brand flex-first">
+            <a class="header-brand-text" href="/" title="mBudget">
+              <h1>
+                <span>m</span>Budget<span></span>
+              </h1>
+            </a>
+            <div class="header-divider hidden-md-down"></div>
+            <div class="header-slogan hidden-md-down">Personal. Mobile.</div>
+          </div>
+          <!-- other header content -->
+          <div class="header-block flex-last">
+
+            <!--Search trigger -->
+            <a href="#search" class="btn btn-icon btn-link header-btn float-right flex-last" data-toggle="search-form" data-target=".header-search"><i class="fa fa-search fa-flip-horizontal search-icon"></i></a>
+
+            <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+            <a href="#top" class="btn btn-link btn-icon header-btn float-right hidden-lg-up" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+          </div>
+
+          <div class="navbar navbar-toggleable-md navbar-toggleable-collapse">
+            <!--everything within this div is collapsed on mobile-->
+            <div class="navbar-main collapse">
+              <!--main navigation-->
+              <ul class="nav navbar-nav navbar-nav-onepager dropdown-effect-fade">
+                <li class="nav-item">
+                  <a href="#top" data-toggle="scroll-link" class="nav-link"> <i class="fa fa-home nav-link-icon"></i> <span class="hidden-xs-up">Home</span> </a>
+                </li>
+                
+                <li class="nav-item"><a href="#features" data-toggle="scroll-link" class="nav-link"> Budgets</a></li>
+
+                <li class="nav-item"><a href="#contact" data-toggle="scroll-link" class="nav-link">Link Bank</a></li>
+              </ul>
+            </div>
+            <!--/.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #highlighted ======== -->
+  <div id="highlighted">
+    <!-- Image Banner: Use the the data-bg-img functionality to create a simple image banner Use spacer classes to make the banner larger with padding, allows for easy responsive changes too see: elements-ctas.htm To make the banner full height/screen add the attributes: data-toggle="full-height" data-offset="#header" -->
+    <div class="bg-white overlay overlay-primary overlay-op-2 text-center px-3 py-5 py-lg-10 flex-valign" data-bg-video="/assets/videos/people.mp4" data-css='{"background-position": "center bottom","background-attachment": "fixed"}' data-toggle="full-height" data-offset="#header">
+      <h2 class="display-4 text-white" data-animate="fadeIn" data-animate-delay="0.2">
+        Having a budget has never been easier.
+        <!-- <span class="font-weight-bold">mBudget!</span> -->
+      </h2>
+      <h3 class="text-grey font-weight-normal" data-animate="fadeIn" data-animate-delay="0.35">
+        Let's Get Started.
+      </h3>
+      <hr class="hr-inverse hr-lg w-20 mx-auto my-4" data-animate="fadeIn" data-animate-delay="0.45" />
+      <div>
+       <!--  <a href="#about" class="btn btn-inverse btn-rounded btn-lg py-lg-3 px-lg-5" data-toggle="scroll-link" data-animate="fadeIn" data-animate-delay="0.55">Find Out More</a>  -->    
+     </div>
+     <div class="container col-md-4" data-animate="fadeIn" data-animate-delay="0.35">
+      <%= form_tag '/budgets/default', :id => 'landing_form', method: :get do  %>
+      <div class="form-group row">
+        <label> What is your yearly income? </label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input class="form-control" type="text" name="income" value="80000" id="income_input" aria-label="Amount (to the nearest dollar)">
+        </div>  
+      </div>
+      <div>
+        <div class="form-group row">
+          <label>Where do you live? </label>
+          <input class="form-control" type="text" name="location" value="San Jose, CA" id="input_location" aria-label="location">
+        </div>
+      </div>
+      <input class="mb-1 btn btn-lg btn-primary" type="submit" value="Find Your Budget">
+      <% end %>        
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<!-- ======== @Region: #footer ======== -->
+<footer id="footer" class="p-0">
+  <div class="container pt-6 pb-5">
+    <div class="row">
+      <div class="col-md-4">
+        <!--@todo: replace with company contact details-->
+        <h4 class="text-uppercase text-white">
+          Contact Me
+        </h4>
+        <address>
+          <ul class="list-unstyled">
+            <li>
+              <abbr title="Phone"><i class="fa fa-phone fa-fw"></i></abbr>
+              (408)-221-3940
+            </li>
+            <li>
+              <abbr title="Email"><i class="fa fa-envelope fa-fw"></i></abbr>
+              danielmai1728@gmail.com
+            </li>
+            <li>
+              <abbr title="Address"><i class="fa fa-home fa-fw"></i></abbr>
+              Milpitas, CA
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="text-uppercase text-white">
+          About Me
+        </h4>
+        <p>I love web development.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="text-uppercase text-white">
+          Newsletter
+        </h4>
+        <p>Stay up to date with my latest eleases by signing up to my personal newsletter.</p>
+        <!--@todo: replace with mailchimp code-->
+        <form>
+          <div class="input-group">
+            <label class="sr-only" for="email-field">Email</label>
+            <input type="text" class="form-control" id="email-field" placeholder="Email">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button">Go!</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <hr class="my-0 hr-blank op-2" />
+</footer>
+
+<!--Hidden elements - excluded from jPanel Menu on mobile-->
+<div class="hidden-elements">
+  <!--@modal - signup modal-->
+  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Sign Up
+          </h4>
+         
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <%= form_tag '/users', method: :post do %>
+            <hr />
+            <h5>
+              Account Information
+            </h5>
+            <div class="form-group">
+              <label class="sr-only" for="signup-first-name">First Name</label>
+              <input type="text" name="first_name"class="form-control" id="signup-first-name" placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="signup-last-name">Last Name</label>
+              <input type="text" name="last_name" class="form-control" id="signup-last-name" placeholder="Last name">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="signup-email">Email address</label>
+              <input type="email" name="email" class="form-control" id="signup-email" placeholder="Email address">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="signup-password">Password</label>
+              <input type="password" name="password" class="form-control" id="signup-password" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" value="term" class="form-check-input">
+                I agree with the Terms and Conditions. 
+              </label>
+            </div>
+            <hr />
+            <button class="btn btn-primary" type="submit">Sign up</button>
+           <% end %>
+
+        </div>
+        <div class="modal-footer">
+          <small>Already signed up? <a href="login.htm">Login here</a>.</small>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!--@modal - login modal-->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Login
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+      <%= form_tag "/login", method: :post do %>
+        <div class="form-group">
+          <label class="sr-only" for="login-email">Email</label>
+          <input type="email" name="email" class="form-control email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="login-password">Password</label>
+          <input type="password" name="password" class="form-control password" placeholder="Password">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Login">
+      <% end %>
+      </div>
+      <div class="modal-footer">
+        <small>Not a member? <a href="users/new" class="signup">Sign up now!</a></small>
+        <br />
+        <small><a href="#">Forgotten password?</a></small>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+</div>
+
+<!--jQuery 3.2.1 via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Tether 1.1.1 via CDN, needed for Bootstrap Tooltips & Popovers -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
+
+<!-- Bootstrap 4.0.0-alpha.6 JS via CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+
+<!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+
+<!--Custom scripts & AppStrap API integration -->
+<script src="/assets/js/custom-script.js"></script>
+<!--AppStrap scripts mainly used to trigger libraries/plugins -->
+<script src="/assets/js/script.min.js"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&libraries=places">  
+</script>
+
+
+</body>
 </html>

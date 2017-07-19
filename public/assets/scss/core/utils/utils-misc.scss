@@ -1,0 +1,76 @@
+// -------------------------------------------
+// Misc. utilities & helper class
+// -------------------------------------------
+
+.row-hover {
+  &:hover {
+    background-color: rgba($brand-faded, 60%/100.0%);
+  }
+}
+
+.clickable-element {
+  cursor: pointer;
+  
+  &:hover {
+    @include opacity(0.9);
+  }
+}
+
+[data-scroll="scroll-state"] {
+  // Starts hidden, shows on scroll state active
+  &.scroll-state-hidden {
+    display: none;
+    
+    &.scroll-state-active {
+      display: block;
+    }
+  }
+  
+  // Starts shown, hides on scroll state active
+  &.scroll-state-shown {
+    display: block;
+    
+    &.scroll-state-active {
+      display: none;
+    }
+  }  
+}
+
+// Hover styles
+.link-effect-underline {
+  position: relative;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  &.nav-link:after {
+    height: 3px;
+  }
+  
+  &:hover,
+  &.active {
+    text-decoration: none;
+    
+    &:after {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+
+.hover-grow {
+  @include transition(all 0.3s ease-in);
+  &:hover {
+    @include scale(1.2);
+  }
+}

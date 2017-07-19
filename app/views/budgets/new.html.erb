@@ -1,25 +1,52 @@
-<h3>Create your budget</h3>
-<%= form_tag '/budgets', method: :post do %>
+<div class="container">
+  <div class="row">
+    <div class="col">
 
-  <div>
-  <label>Budget Name</label>
-  <input type="text" name="name">
+    </div>
+    <div class="col">
+      <div>
+        <%= form_tag '/budgets', method: :post do %>
+        <hr />
+        <h5>
+          Create Your Budget
+        </h5>
+        <div class="form-group">
+          <label for="budget-name">Budget Name</label>
+          <input type="text" name="name" class="form-control" placeholder="My Budget">
+        </div>
+        <div class="form-group">
+          <label for="monthly-income">Monthly Income</label>
+          <input type="text" name="monthly_income" class="form-control" id="monthly_income" placeholder="$5,000">
+        </div>
+        <div class="form-group">
+          <label for="category-name">Category Name</label>
+          <input type="text" name="cat_names[]" class="form-control" id="cat-name" placeholder="Foods">
+        </div>
+        <div class="form-group">
+          <label for="category-amount">Category Amount</label>
+          <input type="text" name="cat_amount[]" class="form-control" id="cat-amount" placeholder="$500">
+        </div>
+        <div class="form-group" id='form'>
+
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col">
+            <input type="submit"  class="mb-2 btn btn-outline-primary" value="Create Budget">
+            <% end %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button class="mb-2 btn btn-outline-primary" onclick="addCategory()"> Add Category </button> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    </div>
   </div>
-  <div>
-  <label>Monthly Income</label>
-  <input type="text" name="monthly_income">
-  </div>
+</div>
 
-  <div>
-  <label>Category Name: </label>
-  <input type="text" name="cat_names[]">
-  </div>  
-  <div>
-   <label>Category Amount</label> <input type="text" name="cat_amount[]">
-  </div> 
 
-  <div id='form'></div>
-
-  <input type="submit" value="Create Budget">
-<% end %>
-<button onclick="addCategory()"> Add Category </button>

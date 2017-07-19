@@ -22,9 +22,11 @@
 //= require autonumeric
 //= require_tree .
 
-$(function() {
-  $("#location_input").geocomplete();
 
+
+jQuery( document ).ready(function( $ ) {
+
+  $("#input_location").geocomplete();
   var $form = $( "#landing_form" );
   var $input = $form.find( "#income_input" );
   // Initialization

@@ -1,85 +1,108 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-  </head>
-  <body>
-    Location: <%= @location %>
-    Monthly Income: <%= number_to_currency(@monthly_income, precision: 0) %>
-    <script type="text/javascript"></script>
-    <table class="table table-striped" style="width:500px; height:500px">
-      <tr>
-        <th>  Categories  </th>
-        <th>   Amount </th>
-        <th>  Percentage  </th>
-      </tr>
-      <% sum = 0 %>
-      <% @budget.categories.each do |category| %>
-      <tr>
-        <% percent =  category['percent'] %>
-        <% amount  =  percent * @monthly_income * 0.01 %>
-        <td> <label> <%= category['name'] %> </label> </td>
-        <td> <label> <%=number_to_currency(amount.round, precision: 0) %> </label> </td>
-        <% sum += amount.round %>
-        <td> <label> <%= percent %>% </label> </td>  
-        <% end %>
-      </tr>   
-      <td> Total </td>
-      <td> <%= number_to_currency(sum, precision: 0) %> </td>
-      <td>  <%= number_to_currency(@budget.category_percent.sum.round, precision: 0) %>%</td>
-    </tr>
-  </table>
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
 
-  <!-- If there's no current user, ask user to log in or sign up -->
-  <% if !current_user %>
-  <a data-toggle="modal" data-target="#myModal"> Choose this Budget</a>
-  <a data-toggle="modal" data-target="#myModal"> Create your own Budget</a>
-  <% else %>
-  <%= form_tag '/budgets', method: :post do %>
-  <%= hidden_field_tag :location, @location %>
-  <%= hidden_field_tag :income, @income %>
-  <%= hidden_field_tag :user_id, current_user.id %>
-  <label>Name Your Budget: </label>
-  <%= text_field_tag :name, nil,placeholder: :default_name %>
-  <%= hidden_field_tag :default_chosen, true %>
-  <div>
-    <input type="submit" value="Create this budget!">
-  </div>
-  <% end %>
-  <a href="/budgets/new"> Create your own budget</a>
-  <% end %>
+          <thead class="table-success">
+            <tr>
+              <th>  Categories  </th>
+              <th>   Amount </th>
+              <th>  Percentage  </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% sum = 0 %>
+            <% @budget.categories.each do |category| %>              
+            <tr>
+              <% percent =  category['percent'] %>
+              <% amount  =  percent * @monthly_income * 0.01 %>
+              <td> <%= category['name'] %> </td>
+              <td> <%=number_to_currency(amount.round, precision: 0) %> </td>
+              <% sum += amount.round %>
+              <td> <%= percent %>% </td>  
+              <% end %>
+            </tr>
+            <tr>
+              <td> <label> Total </label>  </td>
+              <td> <label> <%= number_to_currency(sum, precision: 0) %> </label> </td>
+              <td> <label> <%= number_to_currency(@budget.category_percent.sum.round, precision: 0) %>% </label>  </td>
+            </tr>
+          </tbody>
+        </table>  
+         
+      </div>
+      <div class="col">
+        <div>
+          <div> <strong>  Location: </strong>  <%= @location %> </div> 
+          <div> <strong>  Monthly Income: </strong> <%= number_to_currency(sum, precision: 0) %> </div>
+        </div>
+
+        
+        <!-- If there's no current user, ask user to log in or sign up -->
+        <% if !current_user %>
+        <a data-toggle="modal" data-target="#myModal"> Choose this Budget</a>
+        <a data-toggle="modal" data-target="#myModal"> Create your own Budget</a>
+        <% else %>
+        <%= form_tag '/budgets', method: :post do %>
+        <%= hidden_field_tag :location, @location %>
+        <%= hidden_field_tag :income, @income %>
+        <%= hidden_field_tag :user_id, current_user.id %>
+        <div class="row align-items-center">
+          <div class="col-6 col-md-4">Give this budget a name: </div>
+          <div class="col-6 col-md-4"> <%= text_field_tag :name, nil,placeholder: :default_name, class: "form-control" %>
+            <%= hidden_field_tag :default_chosen, true %> </div>
+            <div class="w-100"></div>
+            <div class="col-6 col-md-4">   <input type="submit" value="Create this budget!" class="mb-2 btn btn-outline-primary"></div>
+            <div class="col-6 col-md-4"><a href="/budgets/new" class="mb-2 btn btn-outline-primary"> Create your own budget</a></div>
+          </div>
+          <div class="form-group">
+
+            <div>
+
+            </div>
+            <div class="col-md-5">
+              <div>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-   <div class="modal-dialog" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-         <h4 class="modal-title" id="myModalLabel">Log in or Sign up to Continue </h4>
-       </div>
-       <div class="modal-body">
-         <%= form_tag "/login", method: :post do %>
-           <div>
-             <label>Email:</label> 
-             <input type="email" name="email">
+              </div>
+            </div>
+
+            <% end %>               
+          </div> 
+          <% end %>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title" id="myModalLabel">Log in or Sign up to Continue </h4>
            </div>
-           <div>
-           <label>Password:</label> 
-            <input type="password" name="password">
+           <div class="modal-body">
+             <%= form_tag "/login", method: :post do %>
+             <div>
+               <label>Email:</label> 
+               <input type="email" name="email">
+             </div>
+             <div>
+               <label>Password:</label> 
+               <input type="password" name="password">
+             </div>
+             <input type="submit" value="Log In">
+             <% end %>
+             Don't have an account? <a class="btn btn-link" href="/users/new">Join Us!</a>
            </div>
-           <input type="submit" value="Log In">
-         <% end %>
-          Don't have an account? <a class="btn btn-link" href="/users/new">Join Us!</a>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           </div>
+         </div>
        </div>
      </div>
-   </div>
- </div>
-
-
-</body>
-</html>

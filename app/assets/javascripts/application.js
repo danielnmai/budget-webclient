@@ -61,7 +61,7 @@ function loadBarChart(category_names, category_percent) {
   });
 }
 function loadLineChart(cat_hash){
-  console.log(cat_hash);
+
  
   cat_names = Object.keys(cat_hash);
   cat_percent = cat_names.map(function(v) { return cat_hash[v]; });
@@ -79,8 +79,8 @@ function loadLineChart(cat_hash){
      labels: cat_names,
      datasets: [{
         label: 'Frequency of Transactions',
-       backgroundColor: "rgba(153,255,51,0.4)",
-       data: cat_percent
+        backgroundColor: "rgba(153,255,51,0.4)",
+        data: cat_percent
      }]
    }
  });
@@ -119,7 +119,12 @@ function loadPieChart(category_names, category_percent) {
 function loadDoughnutChart(cat_hash){
 
   cat_names = Object.keys(cat_hash);
-  cat_names.replace(/[[\]]/g,'');
+
+  for (i = 0; i < cat_names.length; i++){
+    JSON.stringify(cat_names[i]);
+    
+
+  };
   cat_percent = cat_names.map(function(v) { return cat_hash[v]; });
   
   var colors = [];

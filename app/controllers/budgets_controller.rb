@@ -31,8 +31,8 @@ class BudgetsController < ApplicationController
     @budget = Budget.find(1, current_user.id)
     public_token = params['public_token']
     client = Plaid::Client.new(
-      env: :sandbox,
-      # env: :development,
+      # env: :sandbox,
+      env: :development,
                               client_id: ENV['PLAID_CLIENT_ID'],
                               secret: ENV['PLAID_SECRET'],
                               public_key: ENV['PLAID_PUBLIC_KEY'])
@@ -40,7 +40,7 @@ class BudgetsController < ApplicationController
     access_token = response['access_token']
 
     now = Date.today
-    thirty_days_ago = (now - 120)
+    thirty_days_ago = (now - 30)
     trans_response = client.transactions.get(access_token, thirty_days_ago, now)
 
     @transactions = trans_response['transactions']
@@ -57,19 +57,26 @@ class BudgetsController < ApplicationController
       cat_amount[transaction['category']] = transaction['amount']
     end
 
-    # p @transactions
+    @cat_total = amounts.sum
     @cat_sum[['Other']] = 0
     @transactions.each do |transaction|
       cat = transaction['category']
       if @cat_sum.has_key?(cat)
         @cat_sum[cat] += transaction['amount']
         if cat.nil?
-          puts "This transaction has no category!"
-          @cat_sum[['Other']] += transaction['amount']
-        end      
+          @cat_sum[['Other']] += transaction['amount']   
+        end
       end
     end
-    p amounts.sum
+    
+    @cat_sum = Hash[@cat_sum.sort_by{|k, v| v}.reverse]
+
+    @cat_sum.each do |cat|
+      cat.compact!     
+    end
+    @cat_sum_keys = @cat_sum.keys
+
+    p @cat_sum
 
     category_ary = trans_ary.flatten
     category_ary.each do |cat|
@@ -86,6 +93,8 @@ class BudgetsController < ApplicationController
       count = category_ary.count(cat)
       @category_hash[cat] = count
     end
+
+    @sorted_cat_hash = @category_hash.sort_by {|_key, value| value}.reverse
     render 'transaction_show.html.erb'
   end
 

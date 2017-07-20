@@ -6,8 +6,6 @@
 </head>
 <body onload="loadLineChart(<%= @category_hash.to_json %>), loadDoughnutChart(<%= @cat_sum.to_json %>)">
 
-  <%= @cat_sum %>
-
  <% if @transactions %>
  <table class="table table-striped">
    <thead>
@@ -36,8 +34,38 @@
     <div class="col">
       <canvas id="lineChart"></canvas>
     </div>
-    <div class="col">
+    <div class="col md-4">
       <canvas id="doughnutChart"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      
+      <table class="table table-striped">
+        <thead class="table-success">
+          <tr>
+            <th>  Category  </th>
+            <th>  Your Spending </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @cat_sum_keys.each do |category| %>              
+          <tr>
+            <td> <%= category.to_s.delete "[" "]" "\"" %> </td>
+            <td> $<%= @cat_sum[category] %></td>  
+            <% end %>
+          </tr>
+          <tr>
+            <td> <label> Total </label>  </td>
+            <td> <label> <%= @cat_total %> </label> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <label> Most spending </label>
+      <div> <strong> <%= @sorted_cat_hash [0][1] %></strong>  Purchases in </div>
+      <div> <%= @sorted_cat_hash [0][0] %> </div>
     </div>
   </div>
 </div>

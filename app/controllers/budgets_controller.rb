@@ -40,10 +40,52 @@ class BudgetsController < ApplicationController
     access_token = response['access_token']
 
     now = Date.today
-    thirty_days_ago = (now - 30)
+    thirty_days_ago = (now - 120)
     trans_response = client.transactions.get(access_token, thirty_days_ago, now)
 
     @transactions = trans_response['transactions']
+
+    trans_ary = []
+    amounts = []
+    cat_amount = {}
+    @cat_sum = {}
+
+    @transactions.each do |transaction|
+      trans_ary << transaction['category']
+      @cat_sum[transaction['category']] = 0
+      amounts << transaction['amount']
+      cat_amount[transaction['category']] = transaction['amount']
+    end
+
+    # p @transactions
+    @cat_sum[['Other']] = 0
+    @transactions.each do |transaction|
+      cat = transaction['category']
+      if @cat_sum.has_key?(cat)
+        @cat_sum[cat] += transaction['amount']
+        if cat.nil?
+          puts "This transaction has no category!"
+          @cat_sum[['Other']] += transaction['amount']
+        end      
+      end
+    end
+    p amounts.sum
+
+    category_ary = trans_ary.flatten
+    category_ary.each do |cat|
+      if cat.nil?
+        category_ary << 'Other'
+      end
+    end
+
+    category_ary = category_ary.compact
+
+    @category_hash = {}
+
+    category_ary.each do |cat|
+      count = category_ary.count(cat)
+      @category_hash[cat] = count
+    end
     render 'transaction_show.html.erb'
   end
 

@@ -33,40 +33,134 @@ jQuery( document ).ready(function( $ ) {
   $input.autoNumeric('init', { currencySymbol : '$', mDec: '0' });
 });
 
+function sortObject(o) {
+    return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
+}
 
 function loadBarChart(category_names, category_percent) {
+
+  var cat_hash = {};
+  for (i = 0; i < category_names.length; i++) {
+      cat_hash[category_percent[i]] = category_names[i];
+  }
+ 
+  cat_percent = Object.keys(cat_hash);
+  cat_names = cat_percent.map(function(v) { return cat_hash[v]; });
+
   var ctx = document.getElementById('barChart').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: category_names,
+      labels: cat_names,
       datasets: [{
         label: 'Category Percent',
-        data: category_percent,
+        data: cat_percent,
         backgroundColor: "rgba(153,255,51,0.4)"
       }]
     }
   });
 }
+function loadLineChart(cat_hash){
+  console.log(cat_hash);
+ 
+  cat_names = Object.keys(cat_hash);
+  cat_percent = cat_names.map(function(v) { return cat_hash[v]; });
+
+  var colors = [];
+
+  for (i = 0; i < cat_percent.length; i++) {
+      colors[i] = '#'+Math.floor(Math.random()*16777215).toString(16);
+  }
+
+ var ctx = document.getElementById("lineChart").getContext('2d');
+ var myChart = new Chart(ctx, {
+   type: 'line',
+   data: {
+     labels: cat_names,
+     datasets: [{
+        label: 'Frequency of Transactions',
+       backgroundColor: "rgba(153,255,51,0.4)",
+       data: cat_percent
+     }]
+   }
+ });
+
+};
 
 function loadPieChart(category_names, category_percent) {
+
+  var cat_hash = {};
+  for (i = 0; i < category_names.length; i++) {
+      cat_hash[category_percent[i]] = category_names[i];
+  }
+  
+  cat_percent = Object.keys(cat_hash);
+  cat_names = cat_percent.map(function(v) { return cat_hash[v]; });
+  var colors = [];
+
+  for (i = 0; i < cat_percent.length; i++) {
+      colors[i] = '#'+Math.floor(Math.random()*16777215).toString(16);
+  }
+
   var ctx = document.getElementById("pieChart").getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-      labels: category_names,
+      labels: cat_names,
       datasets: [{
-        backgroundColor: [
-        "#2ecc71",
-        "#3498db",
-        "#95a5a6",
-        "#9b59b6",
-        "#f1c40f",
-        "#e74c3c",
-        "#34495e"
-        ],
-        data: category_percent
+        backgroundColor: colors,
+        data: cat_percent
       }]
     }
   });
 }
+
+
+function loadDoughnutChart(cat_hash){
+
+  cat_names = Object.keys(cat_hash);
+  cat_names.replace(/[[\]]/g,'');
+  cat_percent = cat_names.map(function(v) { return cat_hash[v]; });
+  
+  var colors = [];
+
+  for (i = 0; i < cat_percent.length; i++) {
+      colors[i] = '#'+Math.floor(Math.random()*16777215).toString(16);
+  }
+
+  var ctx = document.getElementById("doughnutChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: cat_names,
+      datasets: [{
+        backgroundColor: [
+          "#2ecc71",
+          "#3498db",
+          "#95a5a6",
+          "#9b59b6",
+          "#f1c40f",
+          "#e74c3c",
+          "#34495e"
+        ],
+        data: cat_percent
+      }]
+    }
+  });
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+

@@ -5,4 +5,4 @@
 #   json.amount transaction['amount']
 # end
 
-json.response @auth_response
+json.response @transactions

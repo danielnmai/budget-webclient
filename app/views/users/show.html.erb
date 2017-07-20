@@ -1,11 +1,11 @@
-<h3>Profile</h3>
-<h4>Your information:</h2>
-<h4>First Name: <%= @user.first_name%></h4>
-<h4>Last Name: <%= @user.last_name %></h4>
-<h4>Email: <%= @user.email %></h4>
-<a href="/users/<%= @user.id %>/edit"> Update Profile </a>
+<h4>Profile</h4>
+<p>Your information:</p>
+<p>First Name: <%= @user.first_name%></p>
+<p>Last Name: <%= @user.last_name %></p>
+<p>Email: <%= @user.email %></p>
+<a class="mb-2 btn btn-outline-primary" href="/users/<%= @user.id %>/edit"> Update Profile </a>
 <%= form_tag '/users', method: :delete do %>
-<input type="submit" value="Delete Account"> 
+<input class="mb-2 btn btn-outline-danger" type="submit" value="Delete Account"> 
 <% end %>
  
 

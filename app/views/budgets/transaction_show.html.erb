@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <title><%= @budget.name %></title>
 </head>
-<body>
+<body onload="loadLineChart(<%= @category_hash.to_json %>), loadDoughnutChart(<%= @cat_sum.to_json %>)">
+
+  <%= @cat_sum %>
+
  <% if @transactions %>
- <table class="table table-striped" style="width:800px">
+ <table class="table table-striped">
    <thead>
     <tr>
       <th>Date</th>
@@ -27,6 +30,17 @@
   </tbody>
 </table>
 <% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <canvas id="lineChart"></canvas>
+    </div>
+    <div class="col">
+      <canvas id="doughnutChart"></canvas>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 

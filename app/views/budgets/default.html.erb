@@ -39,8 +39,8 @@
         
         <!-- If there's no current user, ask user to log in or sign up -->
         <% if !current_user %>
-        <a data-toggle="modal" data-target="#myModal"> Choose this Budget</a>
-        <a data-toggle="modal" data-target="#myModal"> Create your own Budget</a>
+        <a  class="mb-2 btn btn-outline-primary" data-toggle="modal" data-target="#myModal"> Choose this Budget</a>
+        <a  class="mb-2 btn btn-outline-primary" data-toggle="modal" data-target="#myModal"> Create your own Budget</a>
         <% else %>
         <%= form_tag '/budgets', method: :post do %>
         <%= hidden_field_tag :location, @location %>
@@ -88,17 +88,18 @@
            </div>
            <div class="modal-body">
              <%= form_tag "/login", method: :post do %>
-             <div>
-               <label>Email:</label> 
-               <input type="email" name="email">
+             <div class="form-group">
+               <label class="sr-only" for="login-email">Email</label>
+               <input type="email" name="email" class="form-control email" placeholder="Email">
              </div>
-             <div>
-               <label>Password:</label> 
-               <input type="password" name="password">
+             <div class="form-group">
+               <label class="sr-only" for="login-password">Password</label>
+               <input type="password" name="password" class="form-control password" placeholder="Password">
              </div>
-             <input type="submit" value="Log In">
+             <input type="submit" class="btn btn-primary" value="Login">
              <% end %>
-             Don't have an account? <a class="btn btn-link" href="/users/new">Join Us!</a>
+
+             <small>Not a member? <a href="/users/new" class="signup">Sign up now!</a></small>
            </div>
            <div class="modal-footer">
              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -4,6 +4,6 @@
 <p>Last Name: <%= @user.last_name %></p>
 <p>Email: <%= @user.email %></p>
 <a class="mb-2 btn btn-outline-primary" href="/users/<%= @user.id %>/edit"> Update Profile </a>
-<%= form_tag '/users', method: :delete do %>
+<%= form_tag "/users/#{@user.id}", method: :delete do %>
 <input class="mb-2 btn btn-outline-danger" type="submit" value="Delete Account"> 
 <% end %>

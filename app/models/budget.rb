@@ -75,6 +75,7 @@ class Budget < ApplicationRecord
       parameters: {name: budget_name} 
         ).body
     budget = Budget.new(hash_budget)
+    
     cat_index = budget.categories.first['id']
 
     cat_names.each_with_index do |name, index|

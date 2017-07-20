@@ -10,6 +10,7 @@ class BudgetsController < ApplicationController
     session[:location] = params[:location]
     session[:income] = params[:income]
     @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
+
     cat_names = @budget.category_names
     cat_percent = @budget.calculate_budget(@location, @income)
     @budget.update('default_name', cat_names, cat_percent)

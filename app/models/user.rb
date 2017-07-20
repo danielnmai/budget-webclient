@@ -44,6 +44,6 @@ class User < ApplicationRecord
   end
 
   def destroy
-    Unirest.delete("#{ENV['API_ROOT_URL']}/users/#{id}", headers:{'Accept' => 'Application/json'} )   
+    Unirest.delete("#{ENV['API_ROOT_URL']}/users/#{id}", headers:{'Accept' => 'Application/json'})
   end
 end

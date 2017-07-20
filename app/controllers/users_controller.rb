@@ -51,4 +51,11 @@ class UsersController < ApplicationController
     flash[:success] = 'Profile successfully updated'
     redirect_to '/'
   end
+
+  def destroy
+    user = User.find(params[:id])   
+    user.destroy
+    flash[:success] = 'Successfully deleted account!'
+    redirect_to '/'
+  end
 end

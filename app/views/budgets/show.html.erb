@@ -23,26 +23,30 @@
     </div>
 
 
-
-    <div>Budget belongs to  :
-     <%= current_user.first_name %> <%= current_user.last_name %>
+    <div>Budget Owner:
+     <strong> <%= current_user.first_name %> <%= current_user.last_name %></strong>  
    </div> 
-   <a href="/budgets/<%=@budget.id%>/edit">Edit This Budget </a>
- </div>
-
- <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
- <input class="btn btn-danger" type="submit" value="Delete this Budget">  
- <% end %>
+   <!-- Edit -->
+   <div>
+     <a class="mb-1 btn btn-orange" href="/budgets/<%=@budget.id%>/edit">Edit</a>
+   </div>
+   <!-- Delete -->
+   <div>
+     <%= form_tag "/budgets/#{@budget.id}", method: :delete do %>
+     <input  class="mb-1 btn btn-red" type="submit" value="Delete">  
+     <% end %>     
+   </div>
+  
 
  <div class="row">
-   <div class="col-md-6">
+   <div class="col">
     <% @budget.categories.each do |category| %>
-  
+
     <div class="row mt-4">
       <div class="col-md-2"></div>
       <div class="col-md-10">
         <h5 class="mt-0">
-        <%= category['name'] %> (<%= category['percent'] %> %) 
+          <%= category['name'] %> (<%= category['percent'] %> %) 
         </h5>
         <div class="progress mb-3">
           <div class="progress-bar w-96" data-toggle="progress-bar-animated-progress" role="progressbar" aria-valuenow="<%= category['percent'] %>" aria-valuemin="0" aria-valuemax="100"></div>

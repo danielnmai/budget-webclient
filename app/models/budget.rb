@@ -275,6 +275,6 @@ class Budget < ApplicationRecord
     other_percent = (other / average_spending).round(2) * 100
     saving_percent = (saving / average_spending).round(2) * 100
 
-    percent_ary = [food_percent.round, housing_percent.round, medical_percent.round, transportation_percent.round, tax_percent.round, other_percent.round, saving_percent.round]
+    percent_ary = [food_percent.round, housing_percent.round, medical_percent.round, saving_percent.round, transportation_percent.round, tax_percent.round, other_percent.round]
   end
 end

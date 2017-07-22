@@ -12,6 +12,8 @@ class BudgetsController < ApplicationController
     @budget = Budget.new(Unirest.get("#{ENV['API_ROOT_URL']}/users/1/budgets/1").body)
 
     cat_names = @budget.category_names
+    puts "CAT NAMES"
+    p cat_names
     cat_percent = @budget.calculate_budget(@location, @income)
     @budget.update('default_name', cat_names, cat_percent)
     @monthly_income = @income.to_i / 12

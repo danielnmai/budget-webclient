@@ -46,7 +46,7 @@ class BudgetsController < ApplicationController
     thirty_days_ago = (now - 30)
     trans_response = client.transactions.get(access_token, thirty_days_ago, now)
 
-    @transactions = trans_response['transactions']
+    @transactions = trans_response['transactions']∂
 
     trans_ary = []
     amounts = []
